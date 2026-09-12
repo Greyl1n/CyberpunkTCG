@@ -1,0 +1,589 @@
+/* Cyberpunk TCG - Component Styles (Filters, Deck Canvas, Analytics, Modals) */
+
+/* Filter & Search Bar */
+.filter-bar-container {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.filter-row-primary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-box-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  background: #090b12;
+  border: 1px solid var(--border-dim);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 10px 14px 10px 38px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.filter-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.filter-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-dim);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.filter-pill:hover {
+  border-color: var(--neon-cyan);
+  color: #fff;
+}
+
+.filter-pill.active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+/* Specific Faction Pills */
+.filter-pill.active[data-faction="Arasaka"] {
+  background: rgba(255, 0, 60, 0.15);
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.3);
+}
+.filter-pill.active[data-faction="Militech"] {
+  background: rgba(255, 136, 0, 0.15);
+  border-color: var(--neon-orange);
+  color: var(--neon-orange);
+  box-shadow: 0 0 8px rgba(255, 136, 0, 0.3);
+}
+.filter-pill.active[data-faction="Netwatch"] {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+.filter-pill.active[data-faction="Edgerunners"] {
+  background: rgba(252, 238, 10, 0.15);
+  border-color: var(--neon-yellow);
+  color: var(--neon-yellow);
+  box-shadow: 0 0 8px rgba(252, 238, 10, 0.3);
+}
+.filter-pill.active[data-faction="Biotechnica"] {
+  background: rgba(0, 255, 102, 0.15);
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.3);
+}
+
+/* Split Deck Builder View */
+.deck-builder-layout {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .deck-builder-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.deck-pool-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Active Deck Panel */
+.active-deck-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.deck-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 12px;
+}
+
+.deck-name-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  outline: none;
+  padding: 4px 2px;
+  transition: border-color 0.2s;
+}
+
+.deck-name-input:focus {
+  border-bottom-color: var(--neon-cyan);
+}
+
+.deck-status-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.deck-status-badge.legal {
+  background: rgba(0, 255, 102, 0.15);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+}
+
+.deck-status-badge.illegal {
+  background: rgba(255, 0, 60, 0.15);
+  border: 1px solid var(--neon-magenta);
+  color: var(--neon-magenta);
+}
+
+/* Leader Slot Banner */
+.deck-leader-slot {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px dashed var(--border-bright);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leader-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--neon-yellow);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.leader-name {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Deck Cards List */
+.deck-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.deck-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #141724;
+  border: 1px solid var(--border-dim);
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.deck-card-row:hover {
+  background: #1c2033;
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.deck-card-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.deck-card-cost {
+  width: 22px;
+  height: 22px;
+  background: #000;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.deck-card-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deck-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deck-card-qty {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--neon-yellow);
+  min-width: 20px;
+  text-align: center;
+}
+
+.deck-qty-btn {
+  background: transparent;
+  border: 1px solid var(--border-dim);
+  color: var(--text-muted);
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  transition: all 0.1s;
+}
+
+.deck-qty-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.deck-qty-btn.remove:hover {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+}
+
+/* Deck Analytics Bar Chart */
+.analytics-curve-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-dim);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.curve-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.curve-bars {
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.curve-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.curve-bar {
+  width: 100%;
+  background: linear-gradient(180deg, var(--neon-cyan) 0%, rgba(0, 240, 255, 0.2) 100%);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: height 0.3s ease;
+  position: relative;
+}
+
+.curve-bar-count {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--neon-cyan);
+}
+
+.curve-cost-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+/* Analytics Hub Dashboard */
+.analytics-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-card-value {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.stat-card-sub {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+/* Faction Split Bars */
+.faction-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faction-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faction-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.faction-bar-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.faction-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Modals */
+.cyber-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 6, 10, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cyber-modal-backdrop.active {
+  display: flex;
+}
+
+.cyber-modal-content {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-bright);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  color: var(--neon-magenta);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 160px;
+  background: #090b12;
+  border: 1px solid var(--border-dim);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  resize: vertical;
+}
+
+.modal-textarea:focus {
+  border-color: var(--neon-cyan);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 40px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.cyber-toast {
+  background: #0f111e;
+  border-left: 4px solid var(--neon-cyan);
+  border-top: 1px solid var(--border-dim);
+  border-right: 1px solid var(--border-dim);
+  border-bottom: 1px solid var(--border-dim);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  padding: 12px 18px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideInToast 0.25s ease forwards;
+  pointer-events: auto;
+}
+
+.cyber-toast.warn {
+  border-left-color: var(--neon-yellow);
+}
+
+.cyber-toast.error {
+  border-left-color: var(--neon-magenta);
+}
+
+@keyframes slideInToast {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}

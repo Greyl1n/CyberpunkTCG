@@ -1,0 +1,197 @@
+[
+  {
+    "id": "deck-arasaka-destruction",
+    "name": "Arasaka Embracing Destruction",
+    "faction": "Red",
+    "description": "Official WeirdCo Arasaka control deck featuring Yorinobu Arasaka, heavy firepower, and subroutines.",
+    "leaderId": "cb-yorinobu-arasaka-embracing-destruction",
+    "cards": [
+      {
+        "cardId": "cb-yorinobu-arasaka-embracing-destruction",
+        "count": 1
+      },
+      {
+        "cardId": "cb-japantown-jonin",
+        "count": 3
+      },
+      {
+        "cardId": "cb-ruthless-lowlife",
+        "count": 3
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-guerrera",
+        "count": 3
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kerry-eurodyne-the-last-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-fang",
+        "count": 3
+      },
+      {
+        "cardId": "cb-el-sombrero-n-la-venganza-lenta",
+        "count": 3
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 3
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "deck-the-heist-mercs",
+    "name": "The Heist: V Streetkid Crew",
+    "faction": "Red",
+    "description": "Fast edgerunner street deck led by V: Streetkid, cycling braindance programs and aggressive units.",
+    "leaderId": "cb-v-streetkid",
+    "cards": [
+      {
+        "cardId": "cb-v-streetkid",
+        "count": 1
+      },
+      {
+        "cardId": "cb-carnage-at-the-colosseum",
+        "count": 3
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gunpoint-diplomacy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-over-the-edge",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 3
+      },
+      {
+        "cardId": "cb-appetite-for-destruction",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-deadman-transmitter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "deck-rogue-afterlife",
+    "name": "Afterlife Legend: Rogue Syndicate",
+    "faction": "Yellow",
+    "description": "High-powered combat deck utilizing Rogue Amendiares, heavy solos, and cyberware tech.",
+    "leaderId": "cb-rogue-amendiares-preem-solo",
+    "cards": [
+      {
+        "cardId": "cb-rogue-amendiares-preem-solo",
+        "count": 1
+      },
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gilded-mato-n",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hanako-arasaka-in-a-gilded-cage",
+        "count": 3
+      },
+      {
+        "cardId": "cb-offduty-malfini",
+        "count": 3
+      },
+      {
+        "cardId": "cb-t-bug-amateur-philosopher",
+        "count": 3
+      },
+      {
+        "cardId": "cb-caliber-totentanz-s-top-dog",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      }
+    ]
+  }
+]

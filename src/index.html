@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBERPUNK TCG // WEIRDCO OFFICIAL ARCHIVE & BUILDER</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Ambient Background Grid -->
+  <div class="cyber-bg-grid"></div>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-glitch">
+        <span>⚡ CYBERPUNK</span>
+        <span style="color: var(--neon-cyan);">TCG</span>
+      </div>
+      <span class="brand-badge">WEIRDCO OFFICIAL • 151 CARDS</span>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="inventory">
+        <span>🗃️</span> CARD INVENTORY
+      </button>
+      <button class="nav-tab" data-tab="deck-builder">
+        <span>🛠️</span> DECK BUILDER
+      </button>
+      <button class="nav-tab" data-tab="analytics">
+        <span>📊</span> ANALYTICS
+      </button>
+      <button class="nav-tab" data-tab="starter-decks">
+        <span>⚡</span> STARTER DECKS
+      </button>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button class="cyber-btn" id="export-deck-btn">
+        <span>📤</span> EXPORT DECK
+      </button>
+      <button class="cyber-btn" id="import-deck-btn">
+        <span>📥</span> IMPORT
+      </button>
+      <button class="cyber-btn" id="audio-toggle-btn">
+        🔊 AUDIO: ON
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Panels -->
+  <main class="app-container">
+
+    <!-- TAB 1: INVENTORY & OFFICIAL CARD DATABASE -->
+    <section class="tab-panel active" id="tab-inventory">
+      <!-- Filter Bar -->
+      <div class="filter-bar-container">
+        <div class="filter-row-primary">
+          <div class="search-box-wrap">
+            <span class="search-icon">🔎</span>
+            <input type="text" id="inventory-search" class="search-input" placeholder="Search official cards by name (V, Smasher...), ability, traits, or #...">
+          </div>
+          <button class="cyber-btn" id="reset-filters-btn">CLEAR FILTERS</button>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);" id="inventory-count-display">
+            Loading official card database...
+          </div>
+        </div>
+
+        <!-- Official Colors -->
+        <div class="filter-pills-row">
+          <span class="filter-label">COLOR:</span>
+          <button class="filter-pill" data-color="Red" style="border-color: rgba(255, 0, 60, 0.4);">Red</button>
+          <button class="filter-pill" data-color="Yellow" style="border-color: rgba(252, 238, 10, 0.4);">Yellow</button>
+          <button class="filter-pill" data-color="Green" style="border-color: rgba(0, 255, 102, 0.4);">Green</button>
+          <button class="filter-pill" data-color="Blue" style="border-color: rgba(0, 240, 255, 0.4);">Blue</button>
+        </div>
+
+        <!-- Official Card Types -->
+        <div class="filter-pills-row">
+          <span class="filter-label">TYPE:</span>
+          <button class="filter-pill" data-type="Legend">Legend</button>
+          <button class="filter-pill" data-type="Unit">Unit</button>
+          <button class="filter-pill" data-type="Program">Program</button>
+          <button class="filter-pill" data-type="Gear">Gear</button>
+        </div>
+
+        <!-- Official Rarities -->
+        <div class="filter-pills-row">
+          <span class="filter-label">RARITY:</span>
+          <button class="filter-pill" data-rarity="Common">Common</button>
+          <button class="filter-pill" data-rarity="Uncommon">Uncommon</button>
+          <button class="filter-pill" data-rarity="Rare">Rare</button>
+          <button class="filter-pill" data-rarity="Epic">Epic</button>
+          <button class="filter-pill" data-rarity="Secret">Secret</button>
+          <button class="filter-pill" data-rarity="Nova Rare">Nova Rare</button>
+        </div>
+      </div>
+
+      <!-- Inventory Grid -->
+      <div class="cards-grid" id="inventory-cards-grid"></div>
+    </section>
+
+    <!-- TAB 2: DECK BUILDER -->
+    <section class="tab-panel" id="tab-deck-builder">
+      <div class="deck-builder-layout">
+        
+        <!-- Left: Card Pool -->
+        <div class="deck-pool-section">
+          <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-panel); padding: 12px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-dim);">
+            <div style="font-family: var(--font-mono); font-weight: bold; color: var(--neon-cyan); font-size: 0.9rem;">
+              OFFICIAL WEIRDCO CARD POOL
+            </div>
+            <input type="text" id="deck-pool-search" class="search-input" style="max-width: 320px; padding: 6px 12px;" placeholder="Quick filter pool...">
+          </div>
+          
+          <div class="cards-grid" id="deck-pool-cards"></div>
+        </div>
+
+        <!-- Right: Active Deck Canvas -->
+        <div class="active-deck-panel">
+          <div class="deck-header-info">
+            <input type="text" class="deck-name-input" id="deck-name-input" value="The Heist: V Streetkid Crew">
+            <div id="deck-status-badge" class="deck-status-badge legal">
+              <span>✓</span> 40/40 CARDS • LEGAL
+            </div>
+          </div>
+
+          <!-- Leader Slot -->
+          <div class="deck-leader-slot" id="deck-leader-slot">
+            <div>
+              <div class="leader-label">Designated Legend:</div>
+              <div class="leader-name">V: Streetkid</div>
+            </div>
+          </div>
+
+          <!-- Deck Actions -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button class="cyber-btn cyber-btn-yellow" id="save-deck-btn" style="flex: 1;">💾 SAVE</button>
+            <button class="cyber-btn" id="new-deck-btn">➕ NEW</button>
+            <button class="cyber-btn" id="clear-deck-btn" style="border-color: var(--neon-magenta); color: var(--neon-magenta);">CLEAR</button>
+          </div>
+
+          <!-- Cards in Deck List -->
+          <div class="deck-cards-list" id="deck-cards-list"></div>
+
+          <!-- Mini Eddie Cost Curve -->
+          <div class="analytics-curve-container">
+            <span class="curve-title">EDDIE COST CURVE (€$):</span>
+            <div class="curve-bars" id="deck-curve-bars"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: ANALYTICS -->
+    <section class="tab-panel" id="tab-analytics">
+      <!-- High Level Stats -->
+      <div class="analytics-dashboard-grid">
+        <div class="stat-card">
+          <div class="stat-card-title">Total Deck Cards</div>
+          <div class="stat-card-value" id="stat-total-cards">0</div>
+          <div class="stat-card-sub">Official minimum: 40 cards</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-title">Average Eddie Cost</div>
+          <div class="stat-card-value" id="stat-avg-cost">€$ 0.0</div>
+          <div class="stat-card-sub">Resource curve per card</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-title">Active Legend</div>
+          <div class="stat-card-value" style="font-size: 1.3rem;" id="stat-leader-name">None</div>
+          <div class="stat-card-sub">Deck identity & RAM limit</div>
+        </div>
+      </div>
+
+      <!-- Type Breakdown -->
+      <div class="analytics-dashboard-grid" id="analytics-type-breakdown"></div>
+
+      <!-- Color Composition -->
+      <div class="stat-card">
+        <div class="stat-card-title" style="margin-bottom: 8px;">Color Distribution in Deck</div>
+        <div class="faction-breakdown-list" id="analytics-faction-list"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: STARTER DECKS -->
+    <section class="tab-panel" id="tab-starter-decks">
+      <div style="margin-bottom: 12px; font-family: var(--font-mono); color: var(--text-muted);">
+        Load an official pre-constructed 40-card deck to test drive or customize in the deck builder:
+      </div>
+      <div class="analytics-dashboard-grid" id="starter-decks-catalog"></div>
+    </section>
+
+  </main>
+
+  <!-- Cyber Terminal Status Footer -->
+  <footer class="app-footer">
+    <div class="footer-status-pill">
+      <div class="status-dot"></div>
+      <span>SYSTEM STATUS: CONNECTED • 151 OFFICIAL WEIRDCO CARDS</span>
+    </div>
+    <div>WEIRDCO CYBERPUNK TRADING CARD GAME • WELCOME TO NIGHT CITY</div>
+  </footer>
+
+  <!-- Large Card Inspection Modal -->
+  <div class="cyber-modal-backdrop" id="inspect-modal">
+    <div class="cyber-modal-content" style="max-width: 750px;">
+      <div class="modal-header">
+        <div class="modal-title" id="inspect-modal-title">CARD INSPECTOR</div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="inspect-modal-body">
+        <img id="inspect-modal-img" class="inspect-card-large" src="" alt="Card Render">
+        <div class="inspect-details-col">
+          <div id="inspect-modal-type" style="font-size: 1rem; color: var(--neon-cyan); font-weight: bold;"></div>
+          <div id="inspect-modal-stats" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+          <div class="inspect-rules-box" id="inspect-modal-rules"></div>
+          <div id="inspect-modal-artist" style="font-size: 0.75rem; color: var(--text-dim); font-style: italic;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Deck Modal -->
+  <div class="cyber-modal-backdrop" id="export-modal">
+    <div class="cyber-modal-content">
+      <div class="modal-header">
+        <div class="modal-title">EXPORT CYBER DECK</div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div style="display: flex; gap: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
+        <label><input type="radio" name="export-format" value="code" checked> Base64 Code</label>
+        <label><input type="radio" name="export-format" value="text"> Plain Text List</label>
+        <label><input type="radio" name="export-format" value="json"> JSON Object</label>
+      </div>
+
+      <textarea id="export-textarea" class="modal-textarea" readonly></textarea>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="cyber-btn cyber-btn-yellow" id="modal-copy-btn">📋 COPY TO CLIPBOARD</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Deck Modal -->
+  <div class="cyber-modal-backdrop" id="import-modal">
+    <div class="cyber-modal-content">
+      <div class="modal-header">
+        <div class="modal-title">IMPORT CYBER DECK</div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <p style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
+        Paste a Base64 Cyberpunk Deck string, JSON object, or text list below:
+      </p>
+
+      <textarea id="import-textarea" class="modal-textarea" placeholder="Paste CPTCG_... or JSON deck code here"></textarea>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="cyber-btn cyber-btn-accent" id="modal-process-import-btn">⚡ IMPORT INTO BUILDER</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/card_renderer.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/deck_builder.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/export_import.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

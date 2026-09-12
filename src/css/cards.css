@@ -1,0 +1,301 @@
+/* Cyberpunk TCG - Official Card Components, Holographic Shaders & 3D Tilt */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Individual Card Container */
+.cyber-card-wrapper {
+  perspective: 1000px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cyber-card {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  height: 380px;
+  background: #0d0e17;
+  border-radius: 12px;
+  border: 2px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease, border-color 0.25s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Card Hover & 3D Tilt */
+.cyber-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 14px 34px rgba(0, 240, 255, 0.3);
+  z-index: 5;
+}
+
+/* Holographic Foil Overlay */
+.cyber-card .holo-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 0, 128, 0.18) 0%,
+    rgba(0, 240, 255, 0.25) 30%,
+    rgba(252, 238, 10, 0.2) 60%,
+    transparent 85%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 10;
+}
+
+.cyber-card:hover .holo-glare,
+.cyber-card.rarity-legendary .holo-glare,
+.cyber-card.rarity-secret .holo-glare,
+.cyber-card.rarity-nova-rare .holo-glare,
+.cyber-card.rarity-epic .holo-glare {
+  opacity: 0.85;
+}
+
+/* Card Rarity Accents */
+.cyber-card.rarity-legendary,
+.cyber-card.rarity-nova-rare,
+.cyber-card.rarity-secret {
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 18px rgba(252, 238, 10, 0.35);
+}
+.cyber-card.rarity-legendary:hover,
+.cyber-card.rarity-nova-rare:hover,
+.cyber-card.rarity-secret:hover {
+  box-shadow: 0 0 28px rgba(252, 238, 10, 0.7);
+}
+
+.cyber-card.rarity-epic,
+.cyber-card.rarity-rare {
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 14px rgba(185, 66, 255, 0.3);
+}
+
+.cyber-card.rarity-uncommon {
+  border-color: var(--neon-cyan);
+}
+
+/* Official Card Artwork Mode */
+.card-art-image-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  background: #000;
+}
+
+.card-art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.cyber-card:hover .card-art-img {
+  transform: scale(1.02);
+}
+
+/* Quick HUD Overlay on top of Art Image */
+.card-art-hud-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.hud-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hud-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hud-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hud-badge.eddie-cost {
+  color: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  font-size: 0.85rem;
+}
+
+.hud-badge.ram-badge {
+  color: var(--neon-cyan);
+  border-color: var(--neon-cyan);
+}
+
+.hud-badge.power-badge {
+  color: var(--neon-magenta);
+  border-color: var(--neon-magenta);
+  font-size: 0.85rem;
+}
+
+.hud-badge.color-red { color: #ff003c; border-color: #ff003c; }
+.hud-badge.color-yellow { color: #fcee0a; border-color: #fcee0a; }
+.hud-badge.color-green { color: #00ff66; border-color: #00ff66; }
+.hud-badge.color-blue { color: #00f0ff; border-color: #00f0ff; }
+
+/* Inspect Magnifier Button */
+.card-inspect-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cyber-card:hover .card-inspect-btn {
+  opacity: 1;
+}
+
+.card-inspect-btn:hover {
+  transform: scale(1.15);
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+/* Card Overlay Controls (Add to Deck, Quantity) */
+.card-action-bar {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 0 4px;
+}
+
+.qty-counter {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: var(--font-mono);
+  transition: all 0.15s;
+}
+
+.qty-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.deck-add-btn {
+  flex: 1;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+}
+
+/* Large Card Inspection Modal */
+.inspect-modal-body {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inspect-card-large {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+}
+
+.inspect-details-col {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-mono);
+}
+
+.inspect-rules-box {
+  background: #090a12;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}

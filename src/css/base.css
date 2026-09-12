@@ -1,0 +1,310 @@
+/* Cyberpunk TCG - Base Styles & Theme Variables */
+:root {
+  --bg-dark: #07080d;
+  --bg-panel: #0f111a;
+  --bg-surface: #171926;
+  --bg-surface-hover: #1f2233;
+  --border-dim: #252a3d;
+  --border-bright: rgba(0, 240, 255, 0.4);
+  
+  /* Cyberpunk Accent Colors */
+  --neon-cyan: #00f0ff;
+  --neon-magenta: #ff003c;
+  --neon-yellow: #fcee0a;
+  --neon-green: #00ff66;
+  --neon-purple: #b942ff;
+  --neon-orange: #ff7700;
+  
+  /* Text */
+  --text-main: #e2e8f0;
+  --text-muted: #8892b0;
+  --text-dim: #505979;
+  
+  /* Faction Colors */
+  --faction-arasaka: #ff003c;
+  --faction-militech: #ff8800;
+  --faction-netwatch: #00f0ff;
+  --faction-edgerunners: #fcee0a;
+  --faction-biotechnica: #00ff66;
+  
+  /* Card Rarities */
+  --rarity-common: #8892b0;
+  --rarity-uncommon: #00f0ff;
+  --rarity-rare: #b942ff;
+  --rarity-legendary: #fcee0a;
+
+  --font-mono: 'Consolas', 'Courier New', monospace;
+  --font-display: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-display);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Cyberpunk Scanline & Grid Ambient Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: 
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
+}
+
+/* Subtle background grid */
+.cyber-bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top Cyberpunk Header */
+.app-header {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(180deg, #10121d 0%, #0a0b12 100%);
+  border-bottom: 2px solid var(--border-bright);
+  box-shadow: 0 4px 25px rgba(0, 240, 255, 0.15);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-glitch {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px var(--neon-magenta), -2px -2px var(--neon-cyan);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge {
+  font-size: 0.7rem;
+  background: var(--neon-yellow);
+  color: #000;
+  padding: 2px 8px;
+  font-weight: 800;
+  border-radius: 2px;
+  text-shadow: none;
+  letter-spacing: 1px;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-dim);
+}
+
+.nav-tab {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.nav-tab:hover {
+  color: var(--neon-cyan);
+  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.nav-tab.active {
+  background: var(--neon-cyan);
+  color: #000;
+  font-weight: 900;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+  border-color: var(--neon-cyan);
+}
+
+/* Header Controls & Telemetry */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cyber-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-bright);
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn:hover {
+  background: var(--neon-cyan);
+  color: #000;
+  box-shadow: 0 0 12px var(--neon-cyan);
+}
+
+.cyber-btn-accent {
+  background: var(--neon-magenta);
+  border-color: var(--neon-magenta);
+  color: #fff;
+}
+
+.cyber-btn-accent:hover {
+  background: #ff2a5f;
+  box-shadow: 0 0 14px var(--neon-magenta);
+  color: #fff;
+}
+
+.cyber-btn-yellow {
+  background: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  color: #000;
+}
+
+.cyber-btn-yellow:hover {
+  background: #fff;
+  box-shadow: 0 0 14px var(--neon-yellow);
+  color: #000;
+}
+
+/* App Main Container */
+.app-container {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px;
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.tab-panel.active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cyber Terminal Status Footer */
+.app-footer {
+  position: relative;
+  z-index: 10;
+  background: #090a10;
+  border-top: 1px solid var(--border-dim);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neon-green);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--neon-green);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-dim);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+}

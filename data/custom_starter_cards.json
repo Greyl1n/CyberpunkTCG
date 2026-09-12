@@ -1,0 +1,606 @@
+[
+  {
+    "id": "CP-001",
+    "name": "Saburo's Ghost",
+    "faction": "Arasaka",
+    "type": "Operative",
+    "rarity": "Legendary",
+    "cost": 7,
+    "atk": 6,
+    "def": 8,
+    "keywords": [
+      "Leader",
+      "Black ICE",
+      "Subroutine"
+    ],
+    "ability": "When deployed, purge 2 hostile Programs from the Net. While this card is active, hostile Quickhacks cost +2 RAM.",
+    "flavor": "\"The relic remembers what flesh forgets.\"",
+    "icon": "terminal"
+  },
+  {
+    "id": "CP-002",
+    "name": "Arasaka Cyber-Ninja",
+    "faction": "Arasaka",
+    "type": "Operative",
+    "rarity": "Rare",
+    "cost": 4,
+    "atk": 5,
+    "def": 3,
+    "keywords": [
+      "Stealth",
+      "First Strike"
+    ],
+    "ability": "Cannot be targeted by hostile Quickhacks during the turn it is deployed.",
+    "flavor": "\"Silent as a cold disconnect.\"",
+    "icon": "swords"
+  },
+  {
+    "id": "CP-003",
+    "name": "Subdermal ICE Wall",
+    "faction": "Arasaka",
+    "type": "Cyberware",
+    "rarity": "Uncommon",
+    "cost": 3,
+    "atk": 0,
+    "def": 4,
+    "keywords": [
+      "Hardened",
+      "Shield"
+    ],
+    "ability": "Equipped Operative gains +4 DEF and immunity to Breach attacks.",
+    "flavor": "\"Military-grade lattice woven under the dermal layer.\"",
+    "icon": "shield"
+  },
+  {
+    "id": "CP-004",
+    "name": "Soulkiller Daemon",
+    "faction": "Arasaka",
+    "type": "Quickhack",
+    "rarity": "Legendary",
+    "cost": 6,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Breach",
+      "Lethal"
+    ],
+    "ability": "Target hostile Operative. Erase their engram (destroy card) and add their base ATK to your RAM pool this turn.",
+    "flavor": "\"You won't feel a thing. You won't feel anything ever again.\"",
+    "icon": "skull"
+  },
+  {
+    "id": "CP-005",
+    "name": "Mikoshi Data Fortress",
+    "faction": "Arasaka",
+    "type": "Infrastructure",
+    "rarity": "Rare",
+    "cost": 4,
+    "atk": 0,
+    "def": 6,
+    "keywords": [
+      "Fortress",
+      "Resource"
+    ],
+    "ability": "Generates +1 RAM at the start of your turn. You may tap Mikoshi to draw 1 Arasaka card.",
+    "flavor": "\"The cloud where digital ghosts reside.\"",
+    "icon": "database"
+  },
+  {
+    "id": "CP-006",
+    "name": "Arasaka Riot Trooper",
+    "faction": "Arasaka",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 2,
+    "def": 3,
+    "keywords": [
+      "Guard"
+    ],
+    "ability": "Hostile Operatives must target Riot Trooper before attacking your Leader.",
+    "flavor": "\"Standard pacification unit. Disobedience is not tolerated.\"",
+    "icon": "user-check"
+  },
+  {
+    "id": "CP-007",
+    "name": "Data Interceptor Unit",
+    "faction": "Arasaka",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 1,
+    "atk": 1,
+    "def": 2,
+    "keywords": [
+      "Recon"
+    ],
+    "ability": "On deploy: Reveal the top 2 cards of your opponent's deck.",
+    "flavor": "\"Watching every packet on the grid.\"",
+    "icon": "eye"
+  },
+  {
+    "id": "CP-008",
+    "name": "Col. Jackson Kane",
+    "faction": "Militech",
+    "type": "Operative",
+    "rarity": "Legendary",
+    "cost": 6,
+    "atk": 7,
+    "def": 5,
+    "keywords": [
+      "Leader",
+      "Overdrive",
+      "Heavy Armor"
+    ],
+    "ability": "Whenever a friendly Militech Operative attacks, all friendly units gain +1 ATK until end of turn.",
+    "flavor": "\"Peace through overwhelming firepower.\"",
+    "icon": "award"
+  },
+  {
+    "id": "CP-009",
+    "name": "Militech Minotaur Mech",
+    "faction": "Militech",
+    "type": "Operative",
+    "rarity": "Rare",
+    "cost": 5,
+    "atk": 6,
+    "def": 6,
+    "keywords": [
+      "Overdrive",
+      "Siege"
+    ],
+    "ability": "Deals 2 overflow damage to the opponent's main terminal when it destroys a defending Operative.",
+    "flavor": "\"Walking iron, spitting 50-caliber diplomacy.\"",
+    "icon": "cpu"
+  },
+  {
+    "id": "CP-010",
+    "name": "Arm-Mounted Micro-Missile",
+    "faction": "Militech",
+    "type": "Cyberware",
+    "rarity": "Uncommon",
+    "cost": 2,
+    "atk": 3,
+    "def": 0,
+    "keywords": [
+      "Ranged"
+    ],
+    "ability": "Equipped Operative deals 3 instant direct damage upon entering combat.",
+    "flavor": "\"Point, lock, vaporize.\"",
+    "icon": "crosshair"
+  },
+  {
+    "id": "CP-011",
+    "name": "Orbital Strike Uplink",
+    "faction": "Militech",
+    "type": "Quickhack",
+    "rarity": "Rare",
+    "cost": 5,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Destruction"
+    ],
+    "ability": "Deal 5 damage split among all hostile Operatives.",
+    "flavor": "\"Raining tungsten rods from low orbit.\"",
+    "icon": "zap"
+  },
+  {
+    "id": "CP-012",
+    "name": "Militech SpecOps Recon",
+    "faction": "Militech",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 3,
+    "def": 1,
+    "keywords": [
+      "Rush"
+    ],
+    "ability": "Can attack immediately on the turn it is deployed.",
+    "flavor": "\"In and out before the sirens spin up.\"",
+    "icon": "zap-fast"
+  },
+  {
+    "id": "CP-013",
+    "name": "Armory Depot 4",
+    "faction": "Militech",
+    "type": "Infrastructure",
+    "rarity": "Common",
+    "cost": 3,
+    "atk": 0,
+    "def": 4,
+    "keywords": [
+      "Arsenal"
+    ],
+    "ability": "Reduce the Eurodollar cost of all Cyberware cards in your hand by 1.",
+    "flavor": "\"Locked, loaded, and discounted in bulk.\"",
+    "icon": "box"
+  },
+  {
+    "id": "CP-014",
+    "name": "Agent Bryce Mosley",
+    "faction": "Netwatch",
+    "type": "Operative",
+    "rarity": "Legendary",
+    "cost": 5,
+    "atk": 4,
+    "def": 6,
+    "keywords": [
+      "Leader",
+      "Lockdown",
+      "Firewall"
+    ],
+    "ability": "Nullifies enemy Quickhacks on a 50% dice roll. Opponents cannot play more than 2 Quickhacks per turn.",
+    "flavor": "\"The Blackwall stays intact. Whatever the cost.\"",
+    "icon": "shield-alert"
+  },
+  {
+    "id": "CP-015",
+    "name": "Blackwall Sentinel",
+    "faction": "Netwatch",
+    "type": "Operative",
+    "rarity": "Rare",
+    "cost": 4,
+    "atk": 3,
+    "def": 5,
+    "keywords": [
+      "ICE",
+      "Purge"
+    ],
+    "ability": "When this card blocks an Operative, that Operative loses all cyberware attachments.",
+    "flavor": "\"Beyond the digital fence lies chaos. Do not open the gate.\"",
+    "icon": "lock"
+  },
+  {
+    "id": "CP-016",
+    "name": "System Override Command",
+    "faction": "Netwatch",
+    "type": "Quickhack",
+    "rarity": "Uncommon",
+    "cost": 3,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Counter",
+      "Stun"
+    ],
+    "ability": "Exhaust target enemy Operative. They cannot attack or use abilities during their next turn.",
+    "flavor": "\"Kernel panic initiated. Goodbye locomotion.\"",
+    "icon": "power"
+  },
+  {
+    "id": "CP-017",
+    "name": "Netwatch Quarantine Node",
+    "faction": "Netwatch",
+    "type": "Infrastructure",
+    "rarity": "Uncommon",
+    "cost": 2,
+    "atk": 0,
+    "def": 3,
+    "keywords": [
+      "Defense"
+    ],
+    "ability": "Whenever an opponent plays a Quickhack, they suffer 1 damage to their main terminal.",
+    "flavor": "\"Trace routine activated. Location tagged.\"",
+    "icon": "wifi-off"
+  },
+  {
+    "id": "CP-018",
+    "name": "Cyber-Investigator",
+    "faction": "Netwatch",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 2,
+    "def": 3,
+    "keywords": [
+      "Trace"
+    ],
+    "ability": "When deployed, pick a card type. The next card of that type played by your opponent costs +1 RAM.",
+    "flavor": "\"Following the digital breadcrumbs through Night City's grime.\"",
+    "icon": "search"
+  },
+  {
+    "id": "CP-019",
+    "name": "Johnny 'Silverhand' Engram",
+    "faction": "Edgerunners",
+    "type": "Operative",
+    "rarity": "Legendary",
+    "cost": 6,
+    "atk": 8,
+    "def": 4,
+    "keywords": [
+      "Leader",
+      "Anarchy",
+      "Rebel"
+    ],
+    "ability": "When attacking Corporate Operatives (Arasaka/Militech), gains double ATK. Cannot be mind-hacked.",
+    "flavor": "\"Wake up, Samurai. We have a city to burn.\"",
+    "icon": "flame"
+  },
+  {
+    "id": "CP-020",
+    "name": "Rogue - Queen of Afterlife",
+    "faction": "Edgerunners",
+    "type": "Operative",
+    "rarity": "Rare",
+    "cost": 5,
+    "atk": 5,
+    "def": 5,
+    "keywords": [
+      "Fixer",
+      "Synergy"
+    ],
+    "ability": "Friendly Edgerunner cards cost 1 less RAM. Once per turn, you may draw a card when you deploy an Edgerunner.",
+    "flavor": "\"Everyone in this bar owes me something.\"",
+    "icon": "crown"
+  },
+  {
+    "id": "CP-021",
+    "name": "Sandevistan Neural Booster",
+    "faction": "Edgerunners",
+    "type": "Cyberware",
+    "rarity": "Rare",
+    "cost": 3,
+    "atk": 4,
+    "def": 1,
+    "keywords": [
+      "Hyper-Speed",
+      "Double Strike"
+    ],
+    "ability": "Equipped Operative attacks twice in combat and cannot be intercepted.",
+    "flavor": "\"The world slows down to a crawl. You don't.\"",
+    "icon": "activity"
+  },
+  {
+    "id": "CP-022",
+    "name": "Overheat Daemon",
+    "faction": "Edgerunners",
+    "type": "Quickhack",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Burn",
+      "DoT"
+    ],
+    "ability": "Deal 2 damage now and 2 damage at the beginning of the target's next turn.",
+    "flavor": "\"Blood boiling at 105 degrees Celsius.\"",
+    "icon": "thermometer"
+  },
+  {
+    "id": "CP-023",
+    "name": "Mantis Blades Mk.4",
+    "faction": "Edgerunners",
+    "type": "Cyberware",
+    "rarity": "Uncommon",
+    "cost": 2,
+    "atk": 3,
+    "def": 0,
+    "keywords": [
+      "Piercing"
+    ],
+    "ability": "Equipped Operative bypasses target's DEF shields directly to their core health.",
+    "flavor": "\"Carbon-composite edges slicing through heavy composite plating.\"",
+    "icon": "scissors"
+  },
+  {
+    "id": "CP-024",
+    "name": "Afterlife Nightclub",
+    "faction": "Edgerunners",
+    "type": "Infrastructure",
+    "rarity": "Rare",
+    "cost": 3,
+    "atk": 0,
+    "def": 5,
+    "keywords": [
+      "Haven",
+      "Merc Hub"
+    ],
+    "ability": "Restores 2 DEF to your wounded Operatives at the end of every round.",
+    "flavor": "\"To legendary drinks and short, glorious lives.\"",
+    "icon": "glass"
+  },
+  {
+    "id": "CP-025",
+    "name": "Street Scav Netrunner",
+    "faction": "Edgerunners",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 1,
+    "atk": 1,
+    "def": 1,
+    "keywords": [
+      "Scavenge"
+    ],
+    "ability": "On defeat: Salvage 1 random Quickhack from your graveyard into your hand.",
+    "flavor": "\"One man's fried cyberdeck is another punk's golden ticket.\"",
+    "icon": "code"
+  },
+  {
+    "id": "CP-026",
+    "name": "Dr. Meredith Vance",
+    "faction": "Biotechnica",
+    "type": "Operative",
+    "rarity": "Legendary",
+    "cost": 6,
+    "atk": 4,
+    "def": 7,
+    "keywords": [
+      "Leader",
+      "Bio-Synthesis",
+      "Regen"
+    ],
+    "ability": "All friendly units heal 2 DEF at the start of your turn. When an Operative receives Cyberware, draw 1 card.",
+    "flavor": "\"Evolution is too slow. We are drafting the upgrade patch.\"",
+    "icon": "dna"
+  },
+  {
+    "id": "CP-027",
+    "name": "Synthetic Chitin Exoskeleton",
+    "faction": "Biotechnica",
+    "type": "Cyberware",
+    "rarity": "Rare",
+    "cost": 4,
+    "atk": 1,
+    "def": 6,
+    "keywords": [
+      "Carapace",
+      "Armor"
+    ],
+    "ability": "Equipped Operative gains +6 DEF and reflects 1 damage back to attackers.",
+    "flavor": "\"Cloned arthropod DNA bonded with diamond nanothreads.\"",
+    "icon": "shield-check"
+  },
+  {
+    "id": "CP-028",
+    "name": "Cellular Regeneration Serum",
+    "faction": "Biotechnica",
+    "type": "Quickhack",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Heal"
+    ],
+    "ability": "Restore 5 DEF to any friendly Operative or repair 3 DEF on an Infrastructure.",
+    "flavor": "\"Instant stem cell mitosis in a needle.\"",
+    "icon": "heart"
+  },
+  {
+    "id": "CP-029",
+    "name": "Hydroponic Lab 07",
+    "faction": "Biotechnica",
+    "type": "Infrastructure",
+    "rarity": "Uncommon",
+    "cost": 2,
+    "atk": 0,
+    "def": 4,
+    "keywords": [
+      "Biomass",
+      "Economy"
+    ],
+    "ability": "Generates 1 Bio-Credit token per turn. Spend 2 tokens to grant an Operative +1/+1 permanently.",
+    "flavor": "\"Feeding the starving megacity while funding genetic revolutions.\"",
+    "icon": "feather"
+  },
+  {
+    "id": "CP-030",
+    "name": "Genetically Altered Pit-Brawler",
+    "faction": "Biotechnica",
+    "type": "Operative",
+    "rarity": "Uncommon",
+    "cost": 3,
+    "atk": 4,
+    "def": 3,
+    "keywords": [
+      "Berserk",
+      "Growth"
+    ],
+    "ability": "Whenever this unit takes damage and survives, it gains +2 ATK.",
+    "flavor": "\"Adrenaline glands firing at 400% baseline.\"",
+    "icon": "alert-circle"
+  },
+  {
+    "id": "CP-031",
+    "name": "Synaptic Disconnector",
+    "faction": "Netwatch",
+    "type": "Quickhack",
+    "rarity": "Rare",
+    "cost": 4,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Disrupt"
+    ],
+    "ability": "Detach all Cyberware from target Operative and place them back into their owner's hand.",
+    "flavor": "\"One pulse, severed neural conduits.\"",
+    "icon": "scissors"
+  },
+  {
+    "id": "CP-032",
+    "name": "Gorilla Arms Titan-Grip",
+    "faction": "Militech",
+    "type": "Cyberware",
+    "rarity": "Uncommon",
+    "cost": 3,
+    "atk": 4,
+    "def": 2,
+    "keywords": [
+      "Brutal"
+    ],
+    "ability": "Equipped Operative deals crushing damage, ignoring shields and barriers.",
+    "flavor": "\"Hydraulic knuckles capable of tearing steel bulkheads open.\"",
+    "icon": "target"
+  },
+  {
+    "id": "CP-033",
+    "name": "Ping Relay Beacon",
+    "faction": "Edgerunners",
+    "type": "Quickhack",
+    "rarity": "Common",
+    "cost": 1,
+    "atk": 0,
+    "def": 0,
+    "keywords": [
+      "Recon",
+      "Draw"
+    ],
+    "ability": "Draw 1 card. Reveal 1 random card from opponent's hand.",
+    "flavor": "\"Pinging local subnet... network topology mapped.\"",
+    "icon": "radio"
+  },
+  {
+    "id": "CP-034",
+    "name": "Ripperdoc Back-Alley Clinic",
+    "faction": "Edgerunners",
+    "type": "Infrastructure",
+    "rarity": "Common",
+    "cost": 2,
+    "atk": 0,
+    "def": 3,
+    "keywords": [
+      "Clinic",
+      "Upgrade"
+    ],
+    "ability": "Whenever you play a Cyberware card, reduce its cost by 1 RAM (minimum 1).",
+    "flavor": "\"No license, no questions, cash upfront.\"",
+    "icon": "plus-circle"
+  },
+  {
+    "id": "CP-035",
+    "name": "Black ICE Hydra Daemon",
+    "faction": "Arasaka",
+    "type": "Operative",
+    "rarity": "Rare",
+    "cost": 5,
+    "atk": 5,
+    "def": 5,
+    "keywords": [
+      "Digital",
+      "Multi-Target"
+    ],
+    "ability": "Attacks can target up to two enemy Operatives simultaneously.",
+    "flavor": "\"Cut off one neural probe, two more strike from the deep net.\"",
+    "icon": "git-branch"
+  },
+  {
+    "id": "CP-036",
+    "name": "Militech Combat Drone Swarm",
+    "faction": "Militech",
+    "type": "Operative",
+    "rarity": "Common",
+    "cost": 3,
+    "atk": 3,
+    "def": 2,
+    "keywords": [
+      "Flying",
+      "Swarm"
+    ],
+    "ability": "Takes -1 damage from non-ranged attacks.",
+    "flavor": "\"Autonomous micro-rotors humming in lethal harmony.\"",
+    "icon": "navigation"
+  }
+]
