@@ -29,6 +29,7 @@ An interactive companion, card inventory manager, and tournament deck builder fo
   - Live collection dashboard: **Total Cards Owned**, **Unique Cards Collected**, **Full Playsets (3+ copies)**, and **Completion %**.
   - Quick filters: `In Inventory (>0)`, `Missing (0)`, `Need Playset (<3)`.
   - Batch collection utilities: Set all 1x, Set all 3x playset, or Reset all to 0.
+  - **📦 Complete Inventory Export & Backup:** Export entire collection to **Full JSON Backup (`.json`)**, **Spreadsheet (`.csv`)**, or **Text Checklist (`.txt`)** with instant **Save to File** or **Copy to Clipboard**. Supports filtering to only owned cards (`>0`).
 
 - **🔍 Full Card Inspector Modal:**
   - Multi-tier resilient image resolution with active DOM cache and directory fallbacks.
@@ -51,8 +52,9 @@ An interactive companion, card inventory manager, and tournament deck builder fo
   - Searchable by name, author, archetype, or color.
   - Faction-themed **"⚡ Load into Deck Builder"** buttons matching each deck's primary color.
 
-- **📤 Deck Sharing & Codes:**
-  - Export/import via compact Base64 codes (`CPTCG_...`), formatted text decklists, or raw JSON.
+- **📤 Deck & Inventory Sharing, Backup & File Downloads:**
+  - **Export Decks:** Export via compact Base64 codes (`CPTCG_...`), formatted text decklists, or raw JSON, with **💾 Save to File** (`.cptcg`, `.txt`, `.json`) and **📋 Copy to Clipboard**.
+  - **Universal Import:** 1-click import supporting deck codes, deck JSON, text lists, and full inventory JSON backups.
 
 ---
 
@@ -70,7 +72,26 @@ Launch directly from file explorer:
 dist/Cyberpunk_TCG.exe
 ```
 
-### Option 3: Local Development Server
+### Option 3: Standalone Linux Desktop App (Fedora & Ubuntu)
+Launch the native Linux standalone binary:
+```bash
+./dist/Cyberpunk_TCG_Linux
+```
+*(See `standalone_linux/README.md` to build or install desktop shortcut).*
+
+### Option 4: Production Container / Online Server (Docker / Podman)
+Run the web application container locally or on a remote VPS:
+```bash
+# On Fedora / RHEL (Podman):
+bash server_container/run_podman.sh
+
+# On Ubuntu / Debian (Docker):
+bash server_container/run_docker.sh
+```
+Access at: `http://localhost:8080/`
+*(See `server_container/README.md` for full cloud deployment & Nginx SSL instructions).*
+
+### Option 5: Local Development Server
 ```powershell
 python scripts/server.py
 ```
@@ -81,7 +102,7 @@ python scripts/server.py
 
 ## 🛠️ Build Scripts
 
-All build and maintenance scripts are organized inside `scripts/`:
+All build and maintenance scripts are organized across dedicated directories:
 
 ### Rebuild Monolith HTML
 ```powershell
@@ -91,6 +112,15 @@ python scripts/build_monolith.py
 ### Rebuild Windows Executable (.exe)
 ```powershell
 python scripts/build_exe.py
+```
+
+### Rebuild Linux Standalone Executable
+```bash
+# On Linux:
+bash standalone_linux/build.sh
+
+# Or via isolated container (Podman/Docker):
+bash standalone_linux/build_with_container.sh
 ```
 
 ### Run Unit Tests
@@ -111,14 +141,30 @@ Cyberpunk_TCG/
 │   └── starter_decks.json     # 59 official and community tournament legal decks
 ├── dist/
 │   ├── cyberpunk_tcg_monolith.html # Standalone single-file HTML bundle
+│   ├── Cyberpunk_TCG.exe      # Windows standalone executable
 │   └── assets/cards/          # Standalone card assets mirror for portable distribution
-├── scripts/                   # Build tools, servers, and utilities
+├── scripts/                   # Build tools, dev servers, and utilities
 │   ├── build_monolith.py      # Monolith HTML compiler
 │   ├── build_exe.py           # PyInstaller Windows .exe builder
 │   ├── server.py              # Local HTTP development server
 │   ├── launcher.py            # Desktop app GUI launcher (pywebview)
 │   ├── download_official_cards.py # Asset downloader utility
 │   └── fetch_all_raw.py       # Raw card data extractor
+├── server_container/          # Containerized web server for local & online VPS hosting
+│   ├── Dockerfile             # Production Python slim container
+│   ├── docker-compose.yml     # 1-command orchestration
+│   ├── server_prod.py         # Production server with /health and env config
+│   ├── run_docker.sh          # Quick launch with Docker (Ubuntu/Debian)
+│   ├── run_podman.sh          # Quick launch with Podman (Fedora/RHEL)
+│   └── README.md              # VPS hosting & Nginx SSL reverse-proxy guide
+├── standalone_linux/          # Standalone Linux desktop application packaging
+│   ├── build.sh               # Native build script for Fedora & Ubuntu
+│   ├── build_standalone.py    # PyInstaller Linux packager
+│   ├── Dockerfile.builder     # Hermetic container builder (Ubuntu 22.04 LTS glibc)
+│   ├── build_with_container.sh# One-click containerized binary compiler
+│   ├── cyberpunk-tcg.desktop  # Linux desktop application entry
+│   ├── install_desktop_shortcut.sh # Application menu shortcut installer
+│   └── README.md              # Linux setup and desktop integration guide
 ├── src/                       # Modular source code
 │   ├── index.html             # Main application template
 │   ├── css/                   # Stylesheets (base, cards, components, layout)
@@ -128,3 +174,4 @@ Cyberpunk_TCG/
 ├── .gitignore                 # Clean Git configuration for GitHub
 └── README.md                  # Project documentation
 ```
+
