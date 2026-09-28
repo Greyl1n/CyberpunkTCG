@@ -201,7 +201,7 @@ body::before {
 .app-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9990;
   background: linear-gradient(180deg, #10121d 0%, #0a0b12 100%);
   border-bottom: 2px solid var(--border-bright);
   box-shadow: 0 4px 25px rgba(0, 240, 255, 0.15);
@@ -322,6 +322,9 @@ body::before {
   font-size: 0.78rem;
   padding: 6px 12px;
   white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  z-index: 9996;
 }
 
 .header-actions {
@@ -337,7 +340,7 @@ body::before {
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
-  z-index: 9970;
+  z-index: 9998;
   min-width: 200px;
   opacity: 0;
   pointer-events: none;
@@ -486,10 +489,20 @@ body::before {
   pointer-events: none;
 }
 
-.mobile-drawer-backdrop.active {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
+@media (max-width: 768px) {
+  .mobile-drawer-backdrop.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-drawer-backdrop,
+  .mobile-drawer-backdrop.active {
+    display: none !important;
+    pointer-events: none !important;
+  }
 }
 
 /* Mobile Bottom Navigation Bar (Phone Screens) */
@@ -675,7 +688,7 @@ body::before {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-    z-index: 9970;
+    z-index: 9998;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px);
@@ -20364,8 +20377,13 @@ class App {
         e.stopPropagation();
         window.cyberAudio.click();
         const isOpen = headerActionsMenu.classList.toggle('open');
+        // Only activate drawer backdrop on mobile viewports (<= 768px)
         if (mobileBackdrop) {
-          mobileBackdrop.classList.toggle('active', isOpen);
+          if (window.innerWidth <= 768) {
+            mobileBackdrop.classList.toggle('active', isOpen);
+          } else {
+            mobileBackdrop.classList.remove('active');
+          }
         }
       });
     }
@@ -20394,10 +20412,21 @@ class App {
       });
     }
 
+    // Dismiss Actions menu on outside click (desktop & mobile)
+    document.addEventListener('click', (e) => {
+      if (headerActionsMenu && headerActionsMenu.classList.contains('open')) {
+        if (!headerActionsMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          closeAllDrawers();
+        }
+      }
+    });
+
     if (headerActionsMenu) {
       headerActionsMenu.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
-          closeAllDrawers();
+          if (btn.id !== 'audio-toggle-btn') {
+            closeAllDrawers();
+          }
         });
       });
     }
