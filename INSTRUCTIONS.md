@@ -8,7 +8,7 @@ Complete step-by-step instructions for building and running **Cyberpunk TCG** on
 
 | Feature | Option 1: Standalone Linux Desktop | Option 2: Production Web Container |
 | :--- | :--- | :--- |
-| **Location** | `standalone_linux/` | `server_container/` |
+| **Location** | `scripts/linux/` | `scripts/container/` |
 | **Output** | Single native executable (`Cyberpunk_TCG_Linux`) | Docker / Podman container image |
 | **Target Use Case** | Personal desktop gameplay without containers | Local container or hosting online on a VPS |
 | **Host Distros** | Fedora, Ubuntu, Debian, Arch Linux | Any system with Docker or Podman installed |
@@ -16,7 +16,7 @@ Complete step-by-step instructions for building and running **Cyberpunk TCG** on
 
 ---
 
-# 🖥️ Part 1: Standalone Linux Desktop App (`standalone_linux/`)
+# 🖥️ Part 1: Standalone Linux Desktop App (`scripts/linux/`)
 
 This option compiles a self-contained portable executable file (`dist/Cyberpunk_TCG_Linux`) containing the Python runtime, desktop window interface (`pywebview`), 151 card images, and audio engine.
 
@@ -55,14 +55,14 @@ cd Cyberpunk_TCG
 
 #### Option A: Direct Native Build (Fastest on Linux)
 ```bash
-bash standalone_linux/build.sh
+bash scripts/linux/build.sh
 ```
 This automatically installs `pyinstaller` (if missing) and compiles `dist/Cyberpunk_TCG_Linux`.
 
 #### Option B: Hermetic Container Build (No local Python setup required)
 If you do not want to install build tools or pip packages on your host OS:
 ```bash
-bash standalone_linux/build_with_container.sh
+bash scripts/linux/build_with_container.sh
 ```
 *This uses Podman (Fedora) or Docker (Ubuntu) to compile inside a clean Ubuntu 22.04 LTS container, ensuring universal `glibc` backward-compatibility across Fedora 38–41+, Ubuntu 22.04/24.04+, Debian 12+, and Arch.*
 
@@ -83,7 +83,7 @@ Or double-click the file inside your desktop file manager (**Files / Nautilus**)
 To launch Cyberpunk TCG from your system search or application launcher:
 
 ```bash
-bash standalone_linux/install_desktop_shortcut.sh
+bash scripts/linux/install_desktop_shortcut.sh
 ```
 
 Now you can press the `Super` (Windows) key and search for **"Cyberpunk TCG"**.
@@ -92,7 +92,7 @@ Now you can press the `Super` (Windows) key and search for **"Cyberpunk TCG"**.
 
 ---
 
-# 🌐 Part 2: Production Web Container (`server_container/`)
+# 🌐 Part 2: Production Web Container (`scripts/container/`)
 
 Use this option to run the game as an isolated containerized service or to host it online on a remote VPS for multiplayer/community access.
 
@@ -108,17 +108,17 @@ cd Cyberpunk_TCG
 #### On **Fedora / RHEL** (Using Podman):
 Podman is daemonless, rootless, and pre-installed on Fedora:
 ```bash
-bash server_container/run_podman.sh
+bash scripts/container/run_podman.sh
 ```
 
 #### On **Ubuntu / Debian** (Using Docker):
 ```bash
-bash server_container/run_docker.sh
+bash scripts/container/run_docker.sh
 ```
 
 #### Universal (Using Docker Compose):
 ```bash
-docker compose -f server_container/docker-compose.yml up -d
+docker compose -f scripts/container/docker-compose.yml up -d
 ```
 
 Open your browser and visit:
@@ -133,7 +133,7 @@ podman stop cptcg-web
 docker stop cptcg-web
 
 # Docker Compose:
-docker compose -f server_container/docker-compose.yml down
+docker compose -f scripts/container/docker-compose.yml down
 ```
 
 ---
@@ -150,8 +150,8 @@ cd /opt/cyberpunk-tcg
 
 #### 2. Start the container in background mode:
 ```bash
-docker compose -f server_container/docker-compose.yml up -d
-# (or with Podman: bash server_container/run_podman.sh)
+docker compose -f scripts/container/docker-compose.yml up -d
+# (or with Podman: bash scripts/container/run_podman.sh)
 ```
 The application is now accessible at `http://YOUR_SERVER_IP:8080`.
 
@@ -229,9 +229,9 @@ docker logs -f cptcg-web
 
 | Script | Purpose |
 | :--- | :--- |
-| `standalone_linux/build.sh` | Builds native Linux desktop executable on Ubuntu/Fedora. |
-| `standalone_linux/build_with_container.sh` | Compiles executable inside an isolated Ubuntu 22.04 container. |
-| `standalone_linux/install_desktop_shortcut.sh` | Installs launcher icon into GNOME/KDE application menus. |
-| `server_container/run_podman.sh` | Launches production container server with Podman (Fedora default). |
-| `server_container/run_docker.sh` | Launches production container server with Docker (Ubuntu default). |
-| `server_container/docker-compose.yml` | 1-command Docker Compose orchestration. |
+| `scripts/linux/build.sh` | Builds native Linux desktop executable on Ubuntu/Fedora. |
+| `scripts/linux/build_with_container.sh` | Compiles executable inside an isolated Ubuntu 22.04 container. |
+| `scripts/linux/install_desktop_shortcut.sh` | Installs launcher icon into GNOME/KDE application menus. |
+| `scripts/container/run_podman.sh` | Launches production container server with Podman (Fedora default). |
+| `scripts/container/run_docker.sh` | Launches production container server with Docker (Ubuntu default). |
+| `scripts/container/docker-compose.yml` | 1-command Docker Compose orchestration. |

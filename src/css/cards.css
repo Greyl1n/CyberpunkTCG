@@ -2,9 +2,10 @@
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--card-grid-min, 240px)), 1fr));
+  gap: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* Individual Card Container */
@@ -15,13 +16,19 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .cyber-card {
   position: relative;
   width: 100%;
-  max-width: 270px;
-  height: 380px;
+  max-width: var(--card-max-width, 270px);
+  aspect-ratio: 270 / 380;
+  height: auto;
+  min-height: 0;
   background: #0d0e17;
   border-radius: 12px;
   border: 2px solid var(--border-dim);
@@ -33,6 +40,7 @@
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 /* Card Hover & 3D Tilt */
@@ -202,11 +210,12 @@
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 12;
-  opacity: 0;
+  opacity: 0.8;
   transition: opacity 0.2s, transform 0.2s;
 }
 
-.cyber-card:hover .card-inspect-btn {
+.cyber-card:hover .card-inspect-btn,
+.cyber-card:focus-within .card-inspect-btn {
   opacity: 1;
 }
 
@@ -216,7 +225,19 @@
   color: #000;
 }
 
-/* Card Overlay Controls (Add to Deck, Quantity) */
+/* Unowned Card Visual Styling */
+.cyber-card-wrapper.is-unowned .cyber-card {
+  filter: grayscale(45%) brightness(0.85);
+  opacity: 0.85;
+  transition: all 0.25s ease;
+}
+
+.cyber-card-wrapper.is-unowned:hover .cyber-card {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+/* Card Overlay Controls (Add to Deck, Inventory Quantity) */
 .card-action-bar {
   margin-top: 10px;
   width: 100%;
@@ -224,22 +245,39 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
-  padding: 0 4px;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(14, 17, 27, 0.9);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.qty-counter {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
+.inventory-control-group {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
+.inv-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--neon-yellow);
+  letter-spacing: 0.5px;
+}
+
+.qty-counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .qty-btn {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   background: var(--bg-surface);
   border: 1px solid var(--border-dim);
   color: #fff;
@@ -250,25 +288,94 @@
   justify-content: center;
   font-weight: bold;
   font-family: var(--font-mono);
+  font-size: 0.8rem;
   transition: all 0.15s;
 }
 
 .qty-btn:hover {
   border-color: var(--neon-cyan);
   color: var(--neon-cyan);
+  background: rgba(0, 240, 255, 0.15);
+  transform: scale(1.1);
+}
+
+.qty-val {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 1px 4px;
+  border-radius: 3px;
+  border-bottom: 1px dashed rgba(0, 240, 255, 0.4);
+  transition: all 0.15s;
+}
+
+.qty-val:hover {
+  background: rgba(0, 240, 255, 0.15);
+  border-bottom-color: var(--neon-cyan);
+  color: #fff;
+}
+
+.cyber-card-wrapper.is-unowned .qty-val {
+  color: var(--neon-magenta);
+  border-bottom-color: rgba(255, 0, 60, 0.4);
+}
+
+.qty-input {
+  width: 38px;
+  height: 22px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--neon-cyan);
+  background: #090b12;
+  border: 1px solid var(--border-dim);
+  border-radius: 3px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: all 0.15s;
+  padding: 0 2px;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-input:focus {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+  background: #101422;
+  color: #fff;
+}
+
+.cyber-card-wrapper.is-unowned .qty-input {
+  color: var(--neon-magenta);
+  border-color: rgba(255, 0, 60, 0.35);
+  background: rgba(20, 10, 15, 0.6);
+}
+
+.cyber-card-wrapper.is-unowned .qty-input:focus {
+  border-color: var(--neon-magenta);
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
 }
 
 .deck-add-btn {
-  flex: 1;
-  padding: 5px 12px;
+  padding: 4px 10px;
   font-size: 0.75rem;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
 }
 
 /* Large Card Inspection Modal */
 .inspect-modal-body {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  gap: 24px;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -276,8 +383,14 @@
 .inspect-card-large {
   max-width: 320px;
   width: 100%;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  background: #090a12;
   border-radius: 12px;
+  border: 2px solid var(--neon-cyan);
   box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+  display: block;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .inspect-details-col {
@@ -298,4 +411,108 @@
   line-height: 1.5;
   color: #e2e8f0;
   white-space: pre-wrap;
+}
+
+/* Responsive Media Queries for Cards & Modals */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--card-grid-min, 180px)), 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  /* Dynamic scale overrides on mobile */
+  html.scale-large .cards-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  html.scale-large .cyber-card {
+    max-width: 320px;
+  }
+
+  html.scale-compact .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .cyber-card {
+    border-radius: 8px;
+    padding: 4px;
+    border-width: 1.5px;
+  }
+
+  .card-art-hud-overlay {
+    padding: 4px;
+  }
+
+  .hud-badge {
+    font-size: 0.58rem;
+    padding: 1px 3px;
+  }
+
+  .hud-badge.eddie-cost,
+  .hud-badge.power-badge {
+    font-size: 0.72rem;
+  }
+
+  .card-inspect-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.65rem;
+    top: 4px;
+    right: 4px;
+    opacity: 0.85;
+  }
+
+  .card-action-bar {
+    margin-top: 4px;
+    padding: 3px 4px;
+    gap: 2px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .inv-label {
+    display: none;
+  }
+
+  .qty-counter {
+    gap: 2px;
+  }
+
+  .qty-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+
+  .qty-input {
+    width: 28px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+
+  .deck-add-btn {
+    font-size: 0.68rem;
+    padding: 3px 6px;
+    white-space: nowrap;
+  }
+
+  .inspect-modal-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .inspect-card-large {
+    max-width: 220px;
+  }
 }

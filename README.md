@@ -77,19 +77,19 @@ Launch the native Linux standalone binary:
 ```bash
 ./dist/Cyberpunk_TCG_Linux
 ```
-*(See `standalone_linux/README.md` to build or install desktop shortcut).*
+*(See `scripts/linux/README.md` to build or install desktop shortcut).*
 
 ### Option 4: Production Container / Online Server (Docker / Podman)
 Run the web application container locally or on a remote VPS:
 ```bash
 # On Fedora / RHEL (Podman):
-bash server_container/run_podman.sh
+bash scripts/container/run_podman.sh
 
 # On Ubuntu / Debian (Docker):
-bash server_container/run_docker.sh
+bash scripts/container/run_docker.sh
 ```
 Access at: `http://localhost:8080/`
-*(See `server_container/README.md` for full cloud deployment & Nginx SSL instructions).*
+*(See `scripts/container/README.md` for full cloud deployment & Nginx SSL instructions).*
 
 ### Option 5: Local Development Server
 ```powershell
@@ -98,15 +98,34 @@ python scripts/server.py
 - Modular App: http://localhost:8080/
 - Monolith Bundle: http://localhost:8080/monolith
 
+### Option 6: Android APK (Phone & Tablet)
+Build and run on any Android device with offline database and responsive phone/tablet scaling:
+```powershell
+# Sync assets & build Android project:
+python scripts/build_android.py
+
+# Compile debug APK:
+.\android\gradlew.bat -p android assembleDebug
+
+# Or open in Android Studio:
+npx cap open android
+```
+Output APK location: `dist/Cyberpunk_TCG.apk` (and `android/app/build/outputs/apk/debug/app-debug.apk`)
+
 ---
 
 ## 🛠️ Build Scripts
 
-All build and maintenance scripts are organized across dedicated directories:
+All build, helper, packaging, and scraping scripts are neatly organized in the `scripts/` directory:
 
 ### Rebuild Monolith HTML
 ```powershell
 python scripts/build_monolith.py
+```
+
+### Build & Sync Android APK Project
+```powershell
+python scripts/build_android.py
 ```
 
 ### Rebuild Windows Executable (.exe)
@@ -117,10 +136,10 @@ python scripts/build_exe.py
 ### Rebuild Linux Standalone Executable
 ```bash
 # On Linux:
-bash standalone_linux/build.sh
+bash scripts/linux/build.sh
 
 # Or via isolated container (Podman/Docker):
-bash standalone_linux/build_with_container.sh
+bash scripts/linux/build_with_container.sh
 ```
 
 ### Run Unit Tests
@@ -134,44 +153,62 @@ python -m unittest discover tests
 
 ```
 Cyberpunk_TCG/
-├── assets/                    # 151 high-resolution official card artwork renders (.webp)
-│   └── cards/
-├── data/
-│   ├── cards.json             # 151 official WeirdCo cards with full stats & rules
-│   └── starter_decks.json     # 59 official and community tournament legal decks
-├── dist/
-│   ├── cyberpunk_tcg_monolith.html # Standalone single-file HTML bundle
-│   ├── Cyberpunk_TCG.exe      # Windows standalone executable
-│   └── assets/cards/          # Standalone card assets mirror for portable distribution
-├── scripts/                   # Build tools, dev servers, and utilities
-│   ├── build_monolith.py      # Monolith HTML compiler
-│   ├── build_exe.py           # PyInstaller Windows .exe builder
-│   ├── server.py              # Local HTTP development server
-│   ├── launcher.py            # Desktop app GUI launcher (pywebview)
-│   ├── download_official_cards.py # Asset downloader utility
-│   └── fetch_all_raw.py       # Raw card data extractor
-├── server_container/          # Containerized web server for local & online VPS hosting
-│   ├── Dockerfile             # Production Python slim container
-│   ├── docker-compose.yml     # 1-command orchestration
-│   ├── server_prod.py         # Production server with /health and env config
-│   ├── run_docker.sh          # Quick launch with Docker (Ubuntu/Debian)
-│   ├── run_podman.sh          # Quick launch with Podman (Fedora/RHEL)
-│   └── README.md              # VPS hosting & Nginx SSL reverse-proxy guide
-├── standalone_linux/          # Standalone Linux desktop application packaging
-│   ├── build.sh               # Native build script for Fedora & Ubuntu
-│   ├── build_standalone.py    # PyInstaller Linux packager
-│   ├── Dockerfile.builder     # Hermetic container builder (Ubuntu 22.04 LTS glibc)
-│   ├── build_with_container.sh# One-click containerized binary compiler
-│   ├── cyberpunk-tcg.desktop  # Linux desktop application entry
-│   ├── install_desktop_shortcut.sh # Application menu shortcut installer
-│   └── README.md              # Linux setup and desktop integration guide
-├── src/                       # Modular source code
-│   ├── index.html             # Main application template
-│   ├── css/                   # Stylesheets (base, cards, components, layout)
-│   └── js/                    # Modular controllers (state, audio, deck_builder, etc.)
-├── tests/                     # Automated validation tests
-│   └── test_tcg_logic.py
-├── .gitignore                 # Clean Git configuration for GitHub
-└── README.md                  # Project documentation
+├── index.html                  # Standalone monolith HTML (1-click run & GitHub Pages)
+├── LICENSE                     # Creative Commons Attribution-NonCommercial 4.0 International
+├── README.md                   # Complete documentation
+├── INSTRUCTIONS.md             # Linux & Container deployment manual
+├── .gitignore                  # Git ignore rules for build artifacts and large binaries
+├── package.json                # Capacitor bridge configuration
+├── capacitor.config.json       # Android runtime configuration
+│
+├── src/                        # Modular web application source code
+│   ├── index.html              # Main application template
+│   ├── css/                    # Modular styles (base, cards, components, scanner)
+│   └── js/                     # Modular controllers (state, audio, deck_builder, scanner, etc.)
+│
+├── data/                       # Official card datasets and rules
+│   ├── cards.json              # 151 official WeirdCo cards with complete stats & rules
+│   ├── starter_decks.json      # 59 official and community tournament legal decks
+│   ├── cardmarket_prices.json  # Live pricing data from Cardmarket
+│   ├── sets.json               # Expansion sets manifest
+│   └── rules_manifest.json     # Deck building constraints & tournament rules
+│
+├── assets/                     # 151 high-resolution official card artwork renders (.webp)
+│   ├── cards/                  # Offline card artwork library
+│   ├── background.webp         # Cyberpunk theme background
+│   ├── logo.png                # Official branding
+│   └── icon.ico / icon.png     # Application icons
+│
+├── android/                    # Native Android Studio / Gradle project (Capacitor)
+├── dist/                       # Output distribution packages (APK, EXE, Monolith HTML)
+├── tests/                      # Automated unit test suite (test_tcg_logic.py)
+│
+└── scripts/                    # ALL HELPER, BUILD, AND MAINTENANCE SCRIPTS
+    ├── build_monolith.py       # Monolith single-file HTML bundle compiler
+    ├── build_exe.py            # Windows standalone .exe PyInstaller builder
+    ├── build_android.py        # Android Capacitor sync & Gradle APK builder
+    ├── server.py               # Local development server
+    ├── launcher.py             # Desktop app GUI launcher (PyQt5 / WebKit)
+    │
+    ├── linux/                  # Standalone Linux desktop packaging
+    │   ├── build.sh            # Native Linux desktop compiler (Fedora / Ubuntu)
+    │   ├── build_standalone.py # Linux PyInstaller packager
+    │   ├── build_with_container.sh # Containerized hermetic compiler
+    │   ├── Dockerfile.builder  # Builder container configuration
+    │   ├── cyberpunk-tcg.desktop # System desktop entry
+    │   ├── install_desktop_shortcut.sh # Application menu shortcut installer
+    │   └── README.md           # Linux packaging documentation
+    │
+    ├── container/              # Production web server container (Docker / Podman)
+    │   ├── Dockerfile          # Production Python slim container
+    │   ├── docker-compose.yml  # 1-command orchestration
+    │   ├── server_prod.py      # Hardened web server with /health endpoint
+    │   ├── run_docker.sh       # Quick launch with Docker (Ubuntu / Debian)
+    │   ├── run_podman.sh       # Quick launch with Podman (Fedora / RHEL)
+    │   └── README.md           # Cloud VPS hosting & reverse-proxy guide
+    │
+    └── scrapers/               # Card database scrapers & NetDeck utilities
+        ├── download_official_cards.py # Asset downloader utility
+        └── fetch_all_raw.py    # Raw API extractor
 ```
 

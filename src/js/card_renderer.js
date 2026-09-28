@@ -121,16 +121,23 @@ class CardRenderer {
 
     // 6. Action Bar (Inventory quantity +/- and "+ Deck" button)
     if (showActions) {
-      const ownedQty = window.stateStore ? (window.stateStore.inventory[card.id] || 0) : 3;
+      const ownedQty = window.stateStore ? (window.stateStore.inventory[card.id] || 0) : 0;
+      if (ownedQty === 0) {
+        wrapper.classList.add('is-unowned');
+      }
+
       const actionBar = document.createElement('div');
       actionBar.className = 'card-action-bar';
       actionBar.innerHTML = `
-        <div class="qty-counter">
-          <button class="qty-btn" data-action="dec" title="Decrease owned copy">-</button>
-          <span class="qty-val" title="Owned Quantity">x${ownedQty}</span>
-          <button class="qty-btn" data-action="inc" title="Increase owned copy">+</button>
+        <div class="inventory-control-group" title="Personal Card Inventory">
+          <span class="inv-label">OWNED:</span>
+          <div class="qty-counter">
+            <button class="qty-btn dec-btn" data-action="dec" title="Remove 1 from Inventory">−</button>
+            <input type="number" class="qty-input" min="0" max="99" value="${ownedQty}" title="Type how many cards you own" data-card-id="${card.id}">
+            <button class="qty-btn inc-btn" data-action="inc" title="Add 1 to Inventory">＋</button>
+          </div>
         </div>
-        <button class="cyber-btn deck-add-btn" data-action="add-deck">
+        <button class="cyber-btn deck-add-btn" data-action="add-deck" title="Add 1 card to Active Deck">
           + Deck
         </button>
       `;
@@ -138,14 +145,20 @@ class CardRenderer {
       const decBtn = actionBar.querySelector('[data-action="dec"]');
       const incBtn = actionBar.querySelector('[data-action="inc"]');
       const addDeckBtn = actionBar.querySelector('[data-action="add-deck"]');
-      const qtyVal = actionBar.querySelector('.qty-val');
+      const qtyInput = actionBar.querySelector('.qty-input');
+
+      const applyQty = (next) => {
+        const val = Math.min(99, Math.max(0, next));
+        qtyInput.value = val;
+        window.stateStore.setInventoryCount(card.id, val);
+        wrapper.classList.toggle('is-unowned', val === 0);
+      };
 
       decBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const cur = window.stateStore.inventory[card.id] || 0;
         if (cur > 0) {
-          window.stateStore.setInventoryCount(card.id, cur - 1);
-          qtyVal.textContent = `x${cur - 1}`;
+          applyQty(cur - 1);
           window.cyberAudio.click();
         }
       });
@@ -153,9 +166,42 @@ class CardRenderer {
       incBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const cur = window.stateStore.inventory[card.id] || 0;
-        window.stateStore.setInventoryCount(card.id, cur + 1);
-        qtyVal.textContent = `x${cur + 1}`;
+        applyQty(cur + 1);
         window.cyberAudio.click();
+        if (cur === 0 && window.app && window.app.showToast) {
+          window.app.showToast(`+1 ${card.name} added to inventory!`);
+        }
+      });
+
+      qtyInput.addEventListener('click', (e) => {
+        e.stopPropagation();
+        qtyInput.select();
+      });
+
+      qtyInput.addEventListener('input', (e) => {
+        e.stopPropagation();
+        const parsed = parseInt(qtyInput.value, 10);
+        const val = isNaN(parsed) ? 0 : Math.min(99, Math.max(0, parsed));
+        window.stateStore.setInventoryCount(card.id, val);
+        wrapper.classList.toggle('is-unowned', val === 0);
+      });
+
+      qtyInput.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const parsed = parseInt(qtyInput.value, 10);
+        const val = isNaN(parsed) ? 0 : Math.min(99, Math.max(0, parsed));
+        applyQty(val);
+        window.cyberAudio.click();
+        if (window.app && window.app.showToast) {
+          window.app.showToast(`${card.name} inventory: ${val} copies`);
+        }
+      });
+
+      qtyInput.addEventListener('keydown', (e) => {
+        e.stopPropagation();
+        if (e.key === 'Enter') {
+          qtyInput.blur();
+        }
       });
 
       addDeckBtn.addEventListener('click', (e) => {

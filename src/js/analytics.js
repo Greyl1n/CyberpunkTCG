@@ -43,18 +43,23 @@ class AnalyticsController {
 
     // Update Stat Cards
     const totalEl = document.getElementById('stat-total-cards');
-    if (totalEl) totalEl.textContent = totalCards;
+    if (totalEl) totalEl.textContent = `${totalCards} / 40–50`;
 
     const avgEl = document.getElementById('stat-avg-cost');
     if (avgEl) avgEl.textContent = `€$ ${avgCost}`;
 
-    const leaderCard = deck.leaderId ? window.stateStore.getCardById(deck.leaderId) : null;
+    const legends = deck.legends || [];
+    const ramPool = window.stateStore.getDeckCumulativeRAM();
     const leaderEl = document.getElementById('stat-leader-name');
     if (leaderEl) {
-      if (leaderCard) {
-        leaderEl.textContent = `${leaderCard.name} (${leaderCard.ram} RAM)`;
+      if (legends.length > 0) {
+        const names = legends.map(id => {
+          const c = window.stateStore.getCardById(id);
+          return c ? c.card_title || c.name : id;
+        }).join(', ');
+        leaderEl.textContent = `${legends.length}/3 Legends (${names})`;
       } else {
-        leaderEl.textContent = 'None Assigned';
+        leaderEl.textContent = '0/3 Legends Assigned';
       }
     }
 

@@ -1,15 +1,16 @@
 [
   {
-    "id": "deck-arasaka-destruction",
+    "id": "deck-red-yorinobu-a",
     "name": "Arasaka Embracing Destruction",
     "faction": "Red",
-    "description": "Official WeirdCo Arasaka control deck featuring Yorinobu Arasaka, heavy firepower, and subroutines.",
+    "description": "Official Arasaka control deck featuring Yorinobu Arasaka, Adam Smasher, and Royce with heavy firepower.",
+    "legends": [
+      "cb-yorinobu-arasaka-embracing-destruction",
+      "cb-adam-smasher-ender-of-legends",
+      "cb-royce-psycho-on-the-edge"
+    ],
     "leaderId": "cb-yorinobu-arasaka-embracing-destruction",
     "cards": [
-      {
-        "cardId": "cb-yorinobu-arasaka-embracing-destruction",
-        "count": 1
-      },
       {
         "cardId": "cb-japantown-jonin",
         "count": 3
@@ -61,85 +62,99 @@
       {
         "cardId": "cb-v-roamer-of-the-badlands",
         "count": 3
+      },
+      {
+        "cardId": "cb-animals-wrecker",
+        "count": 1
       }
-    ]
+    ],
+    "category": "Official Starter",
+    "source": "WeirdCo Official"
   },
   {
-    "id": "deck-the-heist-mercs",
+    "id": "deck-red-v-streetki",
     "name": "The Heist: V Streetkid Crew",
     "faction": "Red",
-    "description": "Fast edgerunner street deck led by V: Streetkid, cycling braindance programs and aggressive units.",
+    "description": "Fast edgerunner street deck led by V: Streetkid, Johnny Silverhand, and Dexter DeShawn.",
+    "legends": [
+      "cb-v-streetkid",
+      "cb-johnny-silverhand-rocking-renegade",
+      "cb-dexter-deshawn-off-the-grid"
+    ],
     "leaderId": "cb-v-streetkid",
     "cards": [
       {
-        "cardId": "cb-v-streetkid",
+        "cardId": "cb-japantown-jonin",
+        "count": 3
+      },
+      {
+        "cardId": "cb-ruthless-lowlife",
+        "count": 3
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-guerrera",
+        "count": 3
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kerry-eurodyne-the-last-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-fang",
+        "count": 3
+      },
+      {
+        "cardId": "cb-el-sombrero-n-la-venganza-lenta",
+        "count": 3
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 3
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 3
+      },
+      {
+        "cardId": "cb-animals-wrecker",
         "count": 1
-      },
-      {
-        "cardId": "cb-carnage-at-the-colosseum",
-        "count": 3
-      },
-      {
-        "cardId": "cb-shattered-memories",
-        "count": 3
-      },
-      {
-        "cardId": "cb-gunpoint-diplomacy",
-        "count": 3
-      },
-      {
-        "cardId": "cb-over-the-edge",
-        "count": 3
-      },
-      {
-        "cardId": "cb-bonnie-and-clyde",
-        "count": 3
-      },
-      {
-        "cardId": "cb-appetite-for-destruction",
-        "count": 3
-      },
-      {
-        "cardId": "cb-industrial-assembly",
-        "count": 3
-      },
-      {
-        "cardId": "cb-detonate",
-        "count": 3
-      },
-      {
-        "cardId": "cb-all-is-lost",
-        "count": 3
-      },
-      {
-        "cardId": "cb-deadman-transmitter",
-        "count": 3
-      },
-      {
-        "cardId": "cb-satori-sword-of-saburo",
-        "count": 3
-      },
-      {
-        "cardId": "cb-arasaka-emergency-radioport",
-        "count": 3
-      },
-      {
-        "cardId": "cb-mantis-blades",
-        "count": 3
       }
-    ]
+    ],
+    "category": "Official Starter",
+    "source": "WeirdCo Official"
   },
   {
-    "id": "deck-rogue-afterlife",
-    "name": "Afterlife Legend: Rogue Syndicate",
+    "id": "deck-yellow-rogue-amen",
+    "name": "Afterlife Syndicate: Rogue Solos",
     "faction": "Yellow",
-    "description": "High-powered combat deck utilizing Rogue Amendiares, heavy solos, and cyberware tech.",
+    "description": "High-powered Night City combat deck led by Rogue Amendiares, Kerry Eurodyne, and Viktor Vektor.",
+    "legends": [
+      "cb-rogue-amendiares-preem-solo",
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-viktor-vektor-sit-down-and-relax"
+    ],
     "leaderId": "cb-rogue-amendiares-preem-solo",
     "cards": [
-      {
-        "cardId": "cb-rogue-amendiares-preem-solo",
-        "count": 1
-      },
       {
         "cardId": "cb-secondhand-bombus",
         "count": 3
@@ -191,7 +206,4751 @@
       {
         "cardId": "cb-rockn-rockerboy",
         "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-drop-your-illusions",
+        "count": 1
       }
-    ]
+    ],
+    "category": "Official Starter",
+    "source": "WeirdCo Official"
+  },
+  {
+    "id": "deck-green-saburo-ara",
+    "name": "Arasaka Corporate Dynasty",
+    "faction": "Green",
+    "description": "Corporate dynasty defense deck led by Saburo Arasaka, Goro Takemura, and Hanako Arasaka.",
+    "legends": [
+      "cb-saburo-arasaka-stubborn-patriarch",
+      "cb-goro-takemura-hands-unclean",
+      "cb-hanako-arasaka-daughter-of-the-emperor"
+    ],
+    "leaderId": "cb-saburo-arasaka-stubborn-patriarch",
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 3
+      },
+      {
+        "cardId": "cb-tyger-s-whisper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-emergency-atlus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-field-operator",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-squadron",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-street-racer",
+        "count": 3
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maelstrom-zealots",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pacifica-netrunner",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-av",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riding-nomad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-wraith-marauders",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nadia-fighting-through-grief",
+        "count": 1
+      }
+    ],
+    "category": "Official Starter",
+    "source": "WeirdCo Official"
+  },
+  {
+    "id": "netdeck-77d04894-2555-4139-baa9-b004cf68d3ea",
+    "name": "Merc Turbo",
+    "faction": "Red",
+    "description": "Top NetDeck community archetype anchored by V, Jackie Welles, Rogue Amendiares with focus on Red synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-v-streetkid",
+      "cb-jackie-welles-mama-s-favorite",
+      "cb-rogue-amendiares-preem-solo"
+    ],
+    "leaderId": "cb-v-streetkid",
+    "cards": [
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-av",
+        "count": 1
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 1
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 1
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 1
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 1
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-c53f719a-e626-48f2-af36-1165b5c2daa7",
+    "name": "Ladies of Night City",
+    "faction": "Blue",
+    "description": "Top NetDeck community archetype anchored by Alt Cunningham, Judy \u00c1lvarez, Sasha Yakovleva with focus on Blue synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-sasha-yakovleva-won-t-let-you-down"
+    ],
+    "leaderId": "cb-alt-cunningham-soulkiller-architect",
+    "cards": [
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maman-brigitte-spirit-of-death",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 2
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 1
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 3
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-unlikely-bond",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 1
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-22e11e42-a926-4976-9991-b9c192372253",
+    "name": "BBY Programs",
+    "faction": "Blue",
+    "description": "Top NetDeck community archetype anchored by Alt Cunningham, Judy \u00c1lvarez, Muamar Reyes with focus on Blue synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-muamar-reyes-el-capita-n"
+    ],
+    "leaderId": "cb-alt-cunningham-soulkiller-architect",
+    "cards": [
+      {
+        "cardId": "cb-hacked-corpo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-hanako-arasaka-in-a-gilded-cage",
+        "count": 1
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 1
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-8a8805d2-17d5-4ed1-a9a6-897faa527ed6",
+    "name": "Placide Ramp YYB",
+    "faction": "Blue",
+    "description": "Top NetDeck community archetype anchored by Jackie Welles, Kerry Eurodyne, River Ward with focus on Blue synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "leaderId": "cb-jackie-welles-pour-one-out-for-me",
+    "cards": [
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-9244d1f2-c162-4271-adbf-f8df4acf473e",
+    "name": "Panam GGR",
+    "faction": "Green",
+    "description": "Top NetDeck community archetype anchored by Hanako Arasaka, Panam Palmer, V with focus on Green synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-v-streetkid"
+    ],
+    "leaderId": "cb-hanako-arasaka-daughter-of-the-emperor",
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 2
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 2
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-av",
+        "count": 2
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 2
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 2
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 2
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 2
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 3
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-ea658100-7d9c-406e-ae86-8e8c719816de",
+    "name": "YYG Chippin' in",
+    "faction": "Green",
+    "description": "Top NetDeck community archetype anchored by Hanako Arasaka, Muamar Reyes, River Ward with focus on Green synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-muamar-reyes-el-capita-n",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "leaderId": "cb-hanako-arasaka-daughter-of-the-emperor",
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 2
+      },
+      {
+        "cardId": "cb-hanako-arasaka-in-a-gilded-cage",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-drop-your-illusions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-06a40354-8a59-4096-806d-fa818183ea1f",
+    "name": "RRB - Brainrock",
+    "faction": "Red",
+    "description": "Top NetDeck community archetype anchored by Johnny Silverhand, Judy \u00c1lvarez, V with focus on Red synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-johnny-silverhand-rocking-renegade",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-streetkid"
+    ],
+    "leaderId": "cb-johnny-silverhand-rocking-renegade",
+    "cards": [
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-animals-wrecker",
+        "count": 2
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 2
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-over-the-edge",
+        "count": 2
+      },
+      {
+        "cardId": "cb-gunpoint-diplomacy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-carnage-at-the-colosseum",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-5fc6e443-9894-437c-b0b2-8768fc6d3a1a",
+    "name": "YYY Attrition",
+    "faction": "Yellow",
+    "description": "Top NetDeck community archetype anchored by Kerry Eurodyne, Muamar Reyes, River Ward with focus on Yellow synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-muamar-reyes-el-capita-n",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "leaderId": "cb-kerry-eurodyne-axe-attitude-audience",
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 1
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 3
+      },
+      {
+        "cardId": "cb-safety-override",
+        "count": 3
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-8bea5c49-843c-457d-bbe8-18722ad087d2",
+    "name": "YELLOW SMASH",
+    "faction": "Yellow",
+    "description": "Top NetDeck community archetype anchored by Dum Dum, River Ward, Rogue Amendiares with focus on Yellow synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-rogue-amendiares-preem-solo"
+    ],
+    "leaderId": "cb-dum-dum-maelstrom-triggerman",
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 2
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-a1558e8e-1bd1-42f8-9763-625f6c1edaa6",
+    "name": "Arasaka Control",
+    "faction": "Green",
+    "description": "Top NetDeck community archetype anchored by Hanako Arasaka, Saburo Arasaka, Yorinobu Arasaka with focus on Green synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-saburo-arasaka-stubborn-patriarch",
+      "cb-yorinobu-arasaka-embracing-destruction"
+    ],
+    "leaderId": "cb-hanako-arasaka-daughter-of-the-emperor",
+    "cards": [
+      {
+        "cardId": "cb-field-operator",
+        "count": 2
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 2
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 2
+      },
+      {
+        "cardId": "cb-kerry-eurodyne-the-last-rockerboy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 2
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 2
+      },
+      {
+        "cardId": "cb-minotaur",
+        "count": 1
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 1
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 2
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 1
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 1
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 2
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 1
+      },
+      {
+        "cardId": "cb-we-gotta-live-together",
+        "count": 3
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 1
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-1e01a5a5-32d6-4f36-96b9-ed94f6a09218",
+    "name": "Ghost in the Machine",
+    "faction": "Blue",
+    "description": "Top NetDeck community archetype anchored by Alt Cunningham, Hanako Arasaka, Judy \u00c1lvarez with focus on Blue synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "leaderId": "cb-alt-cunningham-soulkiller-architect",
+    "cards": [
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 2
+      },
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 1
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-take-control",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "netdeck-e17e4229-19b1-47fb-8c20-4145526d4871",
+    "name": "Automatic Love BBR",
+    "faction": "Blue",
+    "description": "Top NetDeck community archetype anchored by Alt Cunningham, Judy \u00c1lvarez, V with focus on Blue synergy.",
+    "author": "Community",
+    "source": "NetDeck.gg",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-streetkid"
+    ],
+    "leaderId": "cb-alt-cunningham-soulkiller-architect",
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hacked-corpo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "category": "Community Deck"
+  },
+  {
+    "id": "cyberpunktcg-812f80a1",
+    "netdeck_deck_id": "812f80a1-c754-4b3a-9ee9-3a534d1a735d",
+    "name": "Meta BBG",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 1
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maman-brigitte-spirit-of-death",
+        "count": 2
+      },
+      {
+        "cardId": "cb-modded-kusanagi",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-take-control",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-60a25b7f",
+    "netdeck_deck_id": "60a25b7f-f3c0-400b-9d38-d387173b2f73",
+    "name": "Overwatch",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-jackie-welles-mama-s-favorite"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 2
+      },
+      {
+        "cardId": "cb-riding-nomad",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-drop-your-illusions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 3
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 2
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 2
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 3
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-85e80323",
+    "netdeck_deck_id": "85e80323-5ccb-4b68-9637-f095e685439c",
+    "name": "BBG",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Terrelldactyl",
+    "description": "Community deck curated from cyberpunktcg.com by Terrelldactyl.",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-639afc2e",
+    "netdeck_deck_id": "639afc2e-8a7f-4057-af99-2be2743ff5df",
+    "name": "DJC's Yellow Protocol",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "DJC",
+    "description": "Community deck curated from cyberpunktcg.com by DJC.",
+    "legends": [
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-viktor-vektor-sit-down-and-relax",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-guerrera",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 3
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "total_cards": 42
+  },
+  {
+    "id": "cyberpunktcg-73ba6a63",
+    "netdeck_deck_id": "73ba6a63-2d59-4366-81d2-3e3c84ab0a14",
+    "name": "TrtleNek's Blue Protocol",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "TrtleNek",
+    "description": "Community deck curated from cyberpunktcg.com by TrtleNek.",
+    "legends": [
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-muamar-reyes-el-capita-n"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hacked-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 46
+  },
+  {
+    "id": "cyberpunktcg-e10c1550",
+    "netdeck_deck_id": "e10c1550-bb14-424c-8f5a-900ce30a0555",
+    "name": "Yellow jacket",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 2
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 2
+      },
+      {
+        "cardId": "cb-wraith-marauders",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 1
+      },
+      {
+        "cardId": "cb-maxtac-heavy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 3
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 3
+      },
+      {
+        "cardId": "cb-we-gotta-live-together",
+        "count": 3
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 1
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-2b6f322a",
+    "netdeck_deck_id": "2b6f322a-db16-451c-b8d3-908d8b7b485f",
+    "name": "Judy + Placide",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "morsdraconis",
+    "description": "Community deck curated from cyberpunktcg.com by morsdraconis.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-4c536a71",
+    "netdeck_deck_id": "4c536a71-bea9-4afa-81c7-d836710bd36a",
+    "name": "RRG",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "DJ Death Star",
+    "description": "Community deck curated from cyberpunktcg.com by DJ Death Star.",
+    "legends": [
+      "cb-dexter-deshawn-off-the-grid",
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-royce-psycho-on-the-edge"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 3
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-av",
+        "count": 3
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-yorinobu-arasaka-steel-dragon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 2
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-deadman-transmitter",
+        "count": 2
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 2
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 2
+      },
+      {
+        "cardId": "cb-gunpoint-diplomacy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      }
+    ],
+    "total_cards": 41
+  },
+  {
+    "id": "cyberpunktcg-a986b92a",
+    "netdeck_deck_id": "a986b92a-0fe3-4fca-a5d5-5c693ffe92c6",
+    "name": "V/Dex/Padre - RRG",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "caelebq",
+    "description": "Community deck curated from cyberpunktcg.com by caelebq.",
+    "legends": [
+      "cb-dexter-deshawn-off-the-grid",
+      "cb-padre-man-of-the-cross",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-field-operator",
+        "count": 3
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nadia-fighting-through-grief",
+        "count": 3
+      },
+      {
+        "cardId": "cb-yorinobu-arasaka-steel-dragon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 3
+      },
+      {
+        "cardId": "cb-over-the-edge",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-carnage-at-the-colosseum",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-0b00c9f5",
+    "netdeck_deck_id": "0b00c9f5-2323-42fe-8185-b9dd57713df1",
+    "name": "Y/G Gear",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "uglypoodle",
+    "description": "Community deck curated from cyberpunktcg.com by uglypoodle.",
+    "legends": [
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-viktor-vektor-sit-down-and-relax"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-tyger-s-whisper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hanako-arasaka-in-a-gilded-cage",
+        "count": 3
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 2
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 1
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 2
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-78209917",
+    "netdeck_deck_id": "78209917-c87b-49e0-8ed9-f9544d003a82",
+    "name": "RYG Trauma team",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Boulder_Builder",
+    "description": "Community deck curated from cyberpunktcg.com by Boulder_Builder.",
+    "legends": [
+      "cb-dexter-deshawn-off-the-grid",
+      "cb-padre-man-of-the-cross",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-street-racer",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 1
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 3
+      },
+      {
+        "cardId": "cb-we-gotta-live-together",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-9906b8a3",
+    "netdeck_deck_id": "9906b8a3-d8e5-4eb4-8672-778505d35043",
+    "name": "The Old Crew",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "wOPtimusPrime",
+    "description": "Community deck curated from cyberpunktcg.com by wOPtimusPrime.",
+    "legends": [
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-viktor-vektor-sit-down-and-relax",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 2
+      },
+      {
+        "cardId": "cb-valentino-guerrera",
+        "count": 2
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 2
+      },
+      {
+        "cardId": "cb-t-bug-amateur-philosopher",
+        "count": 2
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-05f435e9",
+    "netdeck_deck_id": "05f435e9-ef59-4732-8432-3126df8bb53a",
+    "name": "GGB - Panam on Overwatch",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "brappi",
+    "description": "Community deck curated from cyberpunktcg.com by brappi.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-panam-palmer-nomad-cavalry"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-av",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nadia-fighting-through-grief",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 2
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-54e4378e",
+    "netdeck_deck_id": "54e4378e-f1f3-4261-a04d-c9267e655adc",
+    "name": "Ew, a meta deck",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Bulawa",
+    "description": "Community deck curated from cyberpunktcg.com by Bulawa.",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maman-brigitte-spirit-of-death",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-e2a9fa93",
+    "netdeck_deck_id": "e2a9fa93-aecc-4bf1-a938-24019774442e",
+    "name": "Arasaka",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Choom",
+    "description": "Community deck curated from cyberpunktcg.com by Choom.",
+    "legends": [
+      "cb-goro-takemura-vengeful-bodyguard",
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-adam-smasher-ender-of-legends"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 2
+      },
+      {
+        "cardId": "cb-ruthless-lowlife",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-street-racer",
+        "count": 3
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 3
+      },
+      {
+        "cardId": "cb-corporate-surveillance",
+        "count": 1
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-ebe52fa5",
+    "netdeck_deck_id": "ebe52fa5-576d-45d6-8719-4f59ed307f8f",
+    "name": "R/Y/G Bin",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "uglypoodle",
+    "description": "Community deck curated from cyberpunktcg.com by uglypoodle.",
+    "legends": [
+      "cb-hanako-arasaka-daughter-of-the-emperor",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-tyger-s-whisper",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-street-racer",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 2
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 3
+      },
+      {
+        "cardId": "cb-we-gotta-live-together",
+        "count": 3
+      }
+    ],
+    "total_cards": 50
+  },
+  {
+    "id": "cyberpunktcg-284be5c2",
+    "netdeck_deck_id": "284be5c2-35ed-44bb-955c-5458d6e853e4",
+    "name": "YYR Gear",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Vizix",
+    "description": "Community deck curated from cyberpunktcg.com by Vizix.",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-royce-psycho-on-the-edge"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 2
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 1
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 1
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 2
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-fd833b41",
+    "netdeck_deck_id": "fd833b41-794a-41ee-a255-ca99632682d7",
+    "name": "Toothey's Yellow Protocol",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Toothey",
+    "description": "Community deck curated from cyberpunktcg.com by Toothey.",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-muamar-reyes-el-capita-n",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 3
+      },
+      {
+        "cardId": "cb-offduty-malfini",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 3
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 2
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 3
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-safety-override",
+        "count": 2
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-ac1cffaa",
+    "netdeck_deck_id": "ac1cffaa-27e9-479f-9bdb-5d31d0d2f4db",
+    "name": "Piece of Meat",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "wOPtimusPrime",
+    "description": "Community deck curated from cyberpunktcg.com by wOPtimusPrime.",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-royce-psycho-on-the-edge",
+      "cb-adam-smasher-ender-of-legends"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-caliber-totentanz-s-top-dog",
+        "count": 3
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 2
+      },
+      {
+        "cardId": "cb-animals-wrecker",
+        "count": 2
+      },
+      {
+        "cardId": "cb-heywood-ripperdoc",
+        "count": 2
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 2
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-deadman-transmitter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 2
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-ef121b39",
+    "netdeck_deck_id": "ef121b39-1ae4-4188-b908-efa4814668a0",
+    "name": "Flesh is for the weak",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-muamar-reyes-el-capita-n",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gilded-mato-n",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 2
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 1
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 3
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-d9658f58",
+    "netdeck_deck_id": "d9658f58-fdcb-45d7-8ef8-5dc6d35f59a0",
+    "name": "V and his two boyfriends",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Kysera",
+    "description": "Community deck curated from cyberpunktcg.com by Kysera.",
+    "legends": [
+      "cb-johnny-silverhand-rocking-renegade",
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 2
+      },
+      {
+        "cardId": "cb-kerry-eurodyne-the-last-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-viktor-vektor-drop-your-illusions",
+        "count": 1
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 1
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 1
+      },
+      {
+        "cardId": "cb-octant",
+        "count": 1
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-deadman-transmitter",
+        "count": 1
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 2
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 2
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 1
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 2
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 1
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-a830f277",
+    "netdeck_deck_id": "a830f277-2762-459b-87eb-b0062c618261",
+    "name": "RYB Rocker",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Reed",
+    "description": "Community deck curated from cyberpunktcg.com by Reed.",
+    "legends": [
+      "cb-johnny-silverhand-rocking-renegade",
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-v-corporate-exile"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kerry-eurodyne-the-last-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-v-roamer-of-the-badlands",
+        "count": 2
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-unlikely-bond",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-a19bfe21",
+    "netdeck_deck_id": "a19bfe21-e340-40d7-8633-f17a34e8b108",
+    "name": "Christmas Aggro",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Chronocoretcg",
+    "description": "Community deck curated from cyberpunktcg.com by Chronocoretcg.",
+    "legends": [
+      "cb-dexter-deshawn-off-the-grid",
+      "cb-saburo-arasaka-stubborn-patriarch",
+      "cb-goro-takemura-hands-unclean"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 3
+      },
+      {
+        "cardId": "cb-field-operator",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-arasaka-emergency-radioport",
+        "count": 2
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 2
+      },
+      {
+        "cardId": "cb-corporate-surveillance",
+        "count": 2
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 3
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 2
+      }
+    ],
+    "total_cards": 42
+  },
+  {
+    "id": "cyberpunktcg-bfdff63c",
+    "netdeck_deck_id": "bfdff63c-c639-4846-83ee-9404a667bcc0",
+    "name": "OldManGankins's Blue Protocol",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "OldManGankins",
+    "description": "Community deck curated from cyberpunktcg.com by OldManGankins.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-wakako-okada-peace-and-harmony"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 1
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-unlikely-bond",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 3
+      }
+    ],
+    "total_cards": 50
+  },
+  {
+    "id": "cyberpunktcg-53194ee9",
+    "netdeck_deck_id": "53194ee9-a59f-435c-8f68-80659752a452",
+    "name": "The Sun GGY",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Viserion",
+    "description": "Community deck curated from cyberpunktcg.com by Viserion.",
+    "legends": [
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-jackie-welles-mama-s-favorite"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 2
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 3
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-wild-in-the-streets",
+        "count": 2
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 2
+      }
+    ],
+    "total_cards": 41
+  },
+  {
+    "id": "cyberpunktcg-776e9e20",
+    "netdeck_deck_id": "776e9e20-2c93-41aa-adf0-01130b73e016",
+    "name": "V Alt and judy team",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Nebres",
+    "description": "Community deck curated from cyberpunktcg.com by Nebres.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maman-brigitte-spirit-of-death",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 3
+      }
+    ],
+    "total_cards": 41
+  },
+  {
+    "id": "cyberpunktcg-2baf505a",
+    "netdeck_deck_id": "2baf505a-bc61-498a-b522-8038214ac9b7",
+    "name": "Program Control",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 3
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 3
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 2
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-unlikely-bond",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-23c4c6cf",
+    "netdeck_deck_id": "23c4c6cf-c0a1-4af9-bdf7-b8c7a590b39d",
+    "name": "YellowYellowPanam",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "WilliamTrainor",
+    "description": "Community deck curated from cyberpunktcg.com by WilliamTrainor.",
+    "legends": [
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-rogue-amendiares-preem-solo"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-field-operator",
+        "count": 3
+      },
+      {
+        "cardId": "cb-valentino-street-racer",
+        "count": 1
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 2
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 3
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 2
+      },
+      {
+        "cardId": "cb-we-gotta-live-together",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-ceadf9ec",
+    "netdeck_deck_id": "ceadf9ec-82dd-444a-aa7e-291272e5298d",
+    "name": "Going Rogue",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Seraph017",
+    "description": "Community deck curated from cyberpunktcg.com by Seraph017.",
+    "legends": [
+      "cb-sasha-yakovleva-won-t-let-you-down",
+      "cb-v-corporate-exile",
+      "cb-rogue-amendiares-preem-solo"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 3
+      },
+      {
+        "cardId": "cb-caliber-totentanz-s-top-dog",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-ce3fff88",
+    "netdeck_deck_id": "ce3fff88-941a-4884-91f7-ac1fb2f8955c",
+    "name": "BLUE rogue",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Trashpanda",
+    "description": "Community deck curated from cyberpunktcg.com by Trashpanda.",
+    "legends": [
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-corporate-exile"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 3
+      },
+      {
+        "cardId": "cb-modded-kusanagi",
+        "count": 1
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 3
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-d651b9cf",
+    "netdeck_deck_id": "d651b9cf-6bfc-48e3-9c40-b606b80d511c",
+    "name": "mono blue",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Trashpanda",
+    "description": "Community deck curated from cyberpunktcg.com by Trashpanda.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 2
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 3
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 3
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 3
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-d3ee99b1",
+    "netdeck_deck_id": "d3ee99b1-92ad-4ac6-9e07-ff357d115e40",
+    "name": "Royce Build",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "ajvito03",
+    "description": "Community deck curated from cyberpunktcg.com by ajvito03.",
+    "legends": [
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-viktor-vektor-sit-down-and-relax",
+      "cb-royce-psycho-on-the-edge"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-sketchy-ripper",
+        "count": 2
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dexter-deshawn-one-last-chance",
+        "count": 1
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 1
+      },
+      {
+        "cardId": "cb-gilded-mato-n",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 1
+      },
+      {
+        "cardId": "cb-t-bug-amateur-philosopher",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 2
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 2
+      },
+      {
+        "cardId": "cb-viktor-vektor-drop-your-illusions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 2
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 2
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 1
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 2
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-industrial-assembly",
+        "count": 2
+      },
+      {
+        "cardId": "cb-safety-override",
+        "count": 1
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 1
+      },
+      {
+        "cardId": "cb-over-the-edge",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-4bfa4585",
+    "netdeck_deck_id": "4bfa4585-4ed4-4116-a1cd-b62056b5789a",
+    "name": "CiMaK's Red Protocol",
+    "faction": "Red",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "CiMaK",
+    "description": "Community deck curated from cyberpunktcg.com by CiMaK.",
+    "legends": [
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-streetkid",
+      "cb-royce-psycho-on-the-edge"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-japantown-jonin",
+        "count": 1
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 1
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 1
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 1
+      },
+      {
+        "cardId": "cb-westbrook-netrunner",
+        "count": 2
+      },
+      {
+        "cardId": "cb-chrome-fang",
+        "count": 2
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-screw-lovelorn-fool",
+        "count": 3
+      },
+      {
+        "cardId": "cb-animals-wrecker",
+        "count": 1
+      },
+      {
+        "cardId": "cb-modded-kusanagi",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 1
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-deadman-transmitter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 1
+      },
+      {
+        "cardId": "cb-appetite-for-destruction",
+        "count": 1
+      },
+      {
+        "cardId": "cb-bonnie-and-clyde",
+        "count": 1
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-gunpoint-diplomacy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 2
+      },
+      {
+        "cardId": "cb-carnage-at-the-colosseum",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-429d7eb1",
+    "netdeck_deck_id": "429d7eb1-8c3a-4e84-aefe-45ae239d6d49",
+    "name": "Counter Deck",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "TCG_TALK",
+    "description": "Community deck curated from cyberpunktcg.com by TCG_TALK.",
+    "legends": [
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-royce-psycho-on-the-edge",
+      "cb-rogue-amendiares-preem-solo"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 3
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hanako-arasaka-in-a-gilded-cage",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rockn-rockerboy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-royce-don-t-call-me-simon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 3
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-48490f99",
+    "netdeck_deck_id": "48490f99-d725-4a36-8de5-b7ea3baa6d37",
+    "name": "BBB Min Gig",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Dair",
+    "description": "Community deck curated from cyberpunktcg.com by Dair.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-v-corporate-exile"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-evelyn-parker-scheming-siren",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 2
+      },
+      {
+        "cardId": "cb-delamain-cab",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-westbrook-netrunner",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 1
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 1
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 1
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 1
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 2
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-aef40052",
+    "netdeck_deck_id": "aef40052-6c57-4d24-8dd3-6bfdb9d3f329",
+    "name": "BBR Min Gig",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Dair",
+    "description": "Community deck curated from cyberpunktcg.com by Dair.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-evelyn-parker-scheming-siren",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-japantown-jonin",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 2
+      },
+      {
+        "cardId": "cb-swordwise-huscle",
+        "count": 2
+      },
+      {
+        "cardId": "cb-delamain-cab",
+        "count": 2
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 1
+      },
+      {
+        "cardId": "cb-rita-wheeler-no-stupid-questions",
+        "count": 2
+      },
+      {
+        "cardId": "cb-westbrook-netrunner",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mt0d12-flathead",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 1
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 1
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 1
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 2
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 2
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-les-e-le-mens",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 50
+  },
+  {
+    "id": "cyberpunktcg-aefa1f1d",
+    "netdeck_deck_id": "aefa1f1d-d0b1-40c5-be62-15ca8a23bee7",
+    "name": "TavelVI's Yellow Protocol",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "TavelVI",
+    "description": "Community deck curated from cyberpunktcg.com by TavelVI.",
+    "legends": [
+      "cb-dum-dum-maelstrom-triggerman",
+      "cb-river-ward-detective-on-the-hunt",
+      "cb-viktor-vektor-sit-down-and-relax"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-maelstrom-goons",
+        "count": 3
+      },
+      {
+        "cardId": "cb-viktor-vektor-you-might-feel-a-little-pinch",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gilded-mato-n",
+        "count": 2
+      },
+      {
+        "cardId": "cb-jackie-welles-ride-or-die-choom",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 3
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 2
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-gorilla-arms",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 2
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 2
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 1
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-9a1e19f8",
+    "netdeck_deck_id": "9a1e19f8-4e0b-40cf-88a9-c82c38a61ca9",
+    "name": "Backalley Beatdown",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "NerdyNova",
+    "description": "Community deck curated from cyberpunktcg.com by NerdyNova.",
+    "legends": [
+      "cb-padre-man-of-the-cross",
+      "cb-jackie-welles-mama-s-favorite",
+      "cb-adam-smasher-ender-of-legends"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-corpo-security",
+        "count": 2
+      },
+      {
+        "cardId": "cb-japantown-jonin",
+        "count": 2
+      },
+      {
+        "cardId": "cb-ruthless-lowlife",
+        "count": 2
+      },
+      {
+        "cardId": "cb-la-llorona-ghost-of-the-past",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-squadron",
+        "count": 2
+      },
+      {
+        "cardId": "cb-6th-street-recruits",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 2
+      },
+      {
+        "cardId": "cb-johnny-silverhand-never-stop-fighting",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 1
+      },
+      {
+        "cardId": "cb-sandayu-oda-hanako-s-guardian",
+        "count": 2
+      },
+      {
+        "cardId": "cb-saul-bright-stormrider",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mantis-blades",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-satori-sword-of-saburo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 2
+      },
+      {
+        "cardId": "cb-detonate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 3
+      },
+      {
+        "cardId": "cb-fool-on-the-hill",
+        "count": 3
+      },
+      {
+        "cardId": "cb-over-the-edge",
+        "count": 2
+      },
+      {
+        "cardId": "cb-shattered-memories",
+        "count": 2
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 2
+      }
+    ],
+    "total_cards": 50
+  },
+  {
+    "id": "cyberpunktcg-f76b0401",
+    "netdeck_deck_id": "f76b0401-f365-4147-af31-e4cf03d12aa7",
+    "name": "Beyond the Blackwall",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "NerdyNova",
+    "description": "Community deck curated from cyberpunktcg.com by NerdyNova.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-jackie-welles-pour-one-out-for-me",
+      "cb-judy-a-lvarez-braindance-maestro"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-evelyn-parker-scheming-siren",
+        "count": 3
+      },
+      {
+        "cardId": "cb-jacked-in-voodoo-boy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-delamain-rideshare-ai",
+        "count": 3
+      },
+      {
+        "cardId": "cb-misty-olszewski-mender-of-broken-spirits",
+        "count": 2
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-westbrook-netrunner",
+        "count": 2
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 3
+      },
+      {
+        "cardId": "cb-judy-a-lvarez-nothing-to-doubt",
+        "count": 3
+      },
+      {
+        "cardId": "cb-modded-kusanagi",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 3
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 2
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-unlikely-bond",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 3
+      }
+    ],
+    "total_cards": 50
+  },
+  {
+    "id": "cyberpunktcg-1b834d10",
+    "netdeck_deck_id": "1b834d10-f80b-4bdc-b9ef-4b178d7de54c",
+    "name": "B/G Suppressing fire",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "MaelstromMitch",
+    "description": "Community deck curated from cyberpunktcg.com by MaelstromMitch.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-padre-man-of-the-cross",
+      "cb-panam-palmer-nomad-cavalry"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-psycho-squad",
+        "count": 3
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-heavy",
+        "count": 2
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 1
+      },
+      {
+        "cardId": "cb-netwatch-netdriver",
+        "count": 2
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 2
+      },
+      {
+        "cardId": "cb-overwatch-panam-s-gift",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-peace-offering",
+        "count": 2
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 2
+      },
+      {
+        "cardId": "cb-nocturne-op55-n1",
+        "count": 3
+      },
+      {
+        "cardId": "cb-memory-relapse",
+        "count": 3
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-c2043ff0",
+    "netdeck_deck_id": "c2043ff0-c2fc-4650-b3fa-bfa3e90ff12e",
+    "name": "Bringing Them Down",
+    "faction": "Green",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "Community Netrunner",
+    "description": "Community deck curated from cyberpunktcg.com by Community Netrunner.",
+    "legends": [
+      "cb-panam-palmer-nomad-cavalry",
+      "cb-sasha-yakovleva-won-t-let-you-down",
+      "cb-jackie-welles-mama-s-favorite"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-maxtac-squadron",
+        "count": 2
+      },
+      {
+        "cardId": "cb-goro-takemura-losing-his-way",
+        "count": 2
+      },
+      {
+        "cardId": "cb-pepe-najarro-working-doubles",
+        "count": 3
+      },
+      {
+        "cardId": "cb-rogue-amendiares-queen-of-the-afterlife",
+        "count": 2
+      },
+      {
+        "cardId": "cb-wraith-marauders",
+        "count": 2
+      },
+      {
+        "cardId": "cb-panam-palmer-strength-through-family",
+        "count": 1
+      },
+      {
+        "cardId": "cb-maxtac-heavy",
+        "count": 3
+      },
+      {
+        "cardId": "cb-tetratronic-rippler",
+        "count": 3
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 3
+      },
+      {
+        "cardId": "cb-riot-shield",
+        "count": 3
+      },
+      {
+        "cardId": "cb-sandevistan",
+        "count": 3
+      },
+      {
+        "cardId": "cb-zetatech-berserk",
+        "count": 3
+      },
+      {
+        "cardId": "cb-synapse-burnout",
+        "count": 2
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 2
+      },
+      {
+        "cardId": "cb-don-t-fear-the-reaper",
+        "count": 3
+      }
+    ],
+    "total_cards": 40
+  },
+  {
+    "id": "cyberpunktcg-cab57435",
+    "netdeck_deck_id": "cab57435-26be-455b-a044-ea3488be75c8",
+    "name": "Million Edd13 Man",
+    "faction": "Yellow",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "SIRMCVILLAIN",
+    "description": "Community deck curated from cyberpunktcg.com by SIRMCVILLAIN.",
+    "legends": [
+      "cb-kerry-eurodyne-axe-attitude-audience",
+      "cb-muamar-reyes-el-capita-n",
+      "cb-river-ward-detective-on-the-hunt"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-secondhand-bombus",
+        "count": 3
+      },
+      {
+        "cardId": "cb-augmented-negotiators",
+        "count": 2
+      },
+      {
+        "cardId": "cb-gilded-mato-n",
+        "count": 2
+      },
+      {
+        "cardId": "cb-maxtac-suppression-team",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trauma-team-operatives",
+        "count": 2
+      },
+      {
+        "cardId": "cb-alt-cunningham-mother-of-daemons",
+        "count": 1
+      },
+      {
+        "cardId": "cb-adam-smasher-metal-over-meat",
+        "count": 3
+      },
+      {
+        "cardId": "cb-kiroshi-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mandibular-upgrade",
+        "count": 3
+      },
+      {
+        "cardId": "cb-adrenaline-converter",
+        "count": 2
+      },
+      {
+        "cardId": "cb-zetatech-faceplate",
+        "count": 3
+      },
+      {
+        "cardId": "cb-the-relic-experimental-biochip",
+        "count": 2
+      },
+      {
+        "cardId": "cb-afterparty-at-lizzie-s",
+        "count": 3
+      },
+      {
+        "cardId": "cb-safety-override",
+        "count": 2
+      },
+      {
+        "cardId": "cb-the-heist",
+        "count": 3
+      },
+      {
+        "cardId": "cb-cyberpsychosis",
+        "count": 2
+      },
+      {
+        "cardId": "cb-live-with-the-aftermath",
+        "count": 2
+      },
+      {
+        "cardId": "cb-bootleg-black-sapphire-show",
+        "count": 2
+      }
+    ],
+    "total_cards": 43
+  },
+  {
+    "id": "cyberpunktcg-d7394eb7",
+    "netdeck_deck_id": "d7394eb7-5e88-4083-9387-c86d29855f30",
+    "name": "BBR Runner Deck",
+    "faction": "Blue",
+    "category": "Community Deck",
+    "source": "cyberpunktcg.com",
+    "author": "SLVRrose",
+    "description": "Community deck curated from cyberpunktcg.com by SLVRrose.",
+    "legends": [
+      "cb-alt-cunningham-soulkiller-architect",
+      "cb-judy-a-lvarez-braindance-maestro",
+      "cb-v-streetkid"
+    ],
+    "cards": [
+      {
+        "cardId": "cb-japantown-jonin",
+        "count": 3
+      },
+      {
+        "cardId": "cb-mox-inciters",
+        "count": 3
+      },
+      {
+        "cardId": "cb-hacked-corpo",
+        "count": 3
+      },
+      {
+        "cardId": "cb-meredith-stout-stone-cold-corpo",
+        "count": 2
+      },
+      {
+        "cardId": "cb-lizzy-wizzy-delicate-weapon",
+        "count": 3
+      },
+      {
+        "cardId": "cb-placide-voodoo-sentinel",
+        "count": 2
+      },
+      {
+        "cardId": "cb-dying-night-v-s-pistol",
+        "count": 2
+      },
+      {
+        "cardId": "cb-all-is-lost",
+        "count": 3
+      },
+      {
+        "cardId": "cb-floor-it",
+        "count": 3
+      },
+      {
+        "cardId": "cb-trust-no-one",
+        "count": 3
+      },
+      {
+        "cardId": "cb-reboot-optics",
+        "count": 3
+      },
+      {
+        "cardId": "cb-three-mouths-one-desire",
+        "count": 3
+      },
+      {
+        "cardId": "cb-chrome-reverie",
+        "count": 3
+      },
+      {
+        "cardId": "cb-pyramid-song",
+        "count": 2
+      },
+      {
+        "cardId": "cb-towerfall",
+        "count": 2
+      }
+    ],
+    "total_cards": 40
   }
 ]

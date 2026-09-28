@@ -1,0 +1,2645 @@
+{
+  "items": [
+    {
+      "id": "eb048367-1d7d-4db1-9362-0ad6a5f944c8",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 53,
+      "is_valid": true,
+      "updated_at": "2026-09-13T07:49:18.205Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "f5a600ca-50c7-4150-8880-6f73c7649eb0",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 10,
+          "Legend": 3,
+          "Program": 15,
+          "Unit": 25
+        },
+        "featured_cards": [
+          {
+            "name": "Dexter DeShawn \u2014 Off the Grid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9a298f42-3a9f-4510-b2fd-9cf1b34ade27/render-mpvml9cl.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Smc3gpqnx2-x2TAdsnz2o9nfhn~3b4p4tWyWBkfoC~m0sxqDxUa2bm0S~7e2FxLvxgniQ~BJ2VP-q9JhGWnfrmujfqlMAW32wvVAFAC9qxJk9zQSu8Innh~tcTVJnzL8nG6~QqV3TkM42ULjIyn89AGSrsMfGt45VGZqJEbJ6BACmmybN1HwXY-OIA48ni-52ozRhaPBApufkuuZjRb-lllsP2Wx5CC-Ku9jEqax4yLSkkhpN2mmLHEIq~KmSZln6FP72z8uIJFhE83E7ifa3-sCJ~9tVjH2OlV4vRVOzRJ91lW2pjysq83D8UPCfozRq5CSOSMsNSBNWCqqLfpeXA__"
+          },
+          {
+            "name": "Johnny Silverhand \u2014 Rocking Renegade",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4f8fbab4-7aad-4271-8dd6-8cdf68654c5e/render-mpxm40x1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Vla2ptPEuyzy8OdPe~n8cE-qlKYcqzT-4jAdPVO9OoCLEvU6gWGfvb1m1ZGKiTTq6p2GuyJcLdAJTLiwQ0QcW~rtw~m28S6d9UIUNs6EnxctpHzz904r7ye4dhV8Rh5KUU3KPTj7sl3O89TW1mbeHdZ8ed-d79ebgoMl2p46XQ10VHgn~iFBOSbFbKHYL92QMCsXK-pEzfBvz5VA1xqtnPjTJdrgOcu77cw2lCZRLLaXwZNNwrYBpoqVvxdJpNRkIYgxA8ROvEgXCFDQtTs3~P2x4sgeNkJT6l6CVofqRznLo3BTsBCz-7wyY6Q-TJzxfsllPiflK4X1q3OaRWB9Xg__"
+          },
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "Ruthless Lowlife",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e1b674d0-4ac7-4523-be19-809308871d49/render-mpvls72n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=iu2EYcsBEm~jDFTiy7xFjZ0gx6RPdVOEOGJj7P~FZQMNYQMGHVU269XFx6dxSMtFwwjhJU62OfN1vUAgoXLSWCtDwpzZKgLYBQid02iKGfEpTwz08ZfuGYPQ-9ws1Uk-3pGUQXfmFHb2Snw-t71yH2OUii51UpIaFQZfEKbRSI~MdQMe7CR-1C0ilOhUQdfQiPH~TGUHazH7Tltn0yZKFw7rJqoSIGGF-0mt9W2dLrVBeFuMUexLq8lwswS7Hhfe2sg0pkfb77hZgfPs6ivDfe3netPIDufmxDkv2gSdIFpLGqGgOT49yvcpqx4ONSbNNI2eCHI7eJ3OJwBHrpK~2g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "77d04894-2555-4139-baa9-b004cf68d3ea",
+      "name": "Merc Turbo",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T07:11:17.838Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "d82f18a5-8940-4d33-9e61-dcf25d0a7684",
+        "display_name": "Lazylouie"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Yellow",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 13,
+          "Unit": 17,
+          "Gear": 10
+        },
+        "featured_cards": [
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Mama's Favorite",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9f61ebda-53fd-4b23-8383-d0e0bd32b847/render-mpvmloq3.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=OVGksmyfsndZ3TrxdnEcVHe-C32z3XDhL0l4kk4LwZBHXBSRLYEtFIqpDsZiAFdshZbgDsUQfaOKEWQrEqAtCqVWV1kR9kOrLfTeCun4W74JtXOLWe90r3qKhKKrIVL1SDeT1vhhZYFcE3jMrDaxmYKXL1SrAhEx6FCcddle8Jt3Q12PfEraGiuF2yHASO42r9UFD6vS2lTs9JBPy~Ugm9rCGQowky32qUSNeK0NtbS0akH6Ee839C~T39aeBSkxacUKIWqBusNebcDQyBugCjNCs1eSQzuai2I86zarCvH0ANXiRY78-ERkL5EdrosNp68asENEFUcB~SLd1E1PLw__"
+          },
+          {
+            "name": "Rogue Amendiares \u2014 Preem Solo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2dd7547d-5098-4082-a98b-f39a583a222f/render-mpvmmwyz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=KqW3TkUHCMOz3cgIZt9uDDMl-MVQsv9oEKJnTJHe9dPR-0j3UpJMKojaH2LuVijdfBzovb7cRnK6HjmTE7-XacOrWxPxstP9oV2Z-svuKAA0NOtOVX11qnS4Z57HoOrEh0xZ9RIdaFndunaLAIlOQ0mH63hN2o-IAoqe0d4~aoqbRYpAMRoBvQA0mUOU71VyIDXUmp8kWNa3SDoKR4TCLi9DLjK71e8Rj-rx0MqMT1eVOnwXn0H-1KyqHcmPm4dNQUj4Laps5HWU64r-Rs2ADsU-NF7yhkvfJXAmAqD7-vDGhEgKcfIAIGvyN0BALOAfBaflA-L5mOeKEqVPNWBl9A__"
+          },
+          {
+            "name": "Augmented Negotiators",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a195323a-e29e-4c05-8e6c-7f1638c8264c/render-mpvm290s.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=tNDykVHlAWVIpvjG3gZkigDBiVZyyNs21ieWJpOCoPybh82ySPTLGnfB-2202j6dCevyYthymtn8m84-TN4wkRZAbbVLJRuS~qt4YE7fsnQd61lcz11ouhBPAU~PpsnPV2~8M-q3oaNwMA1UycW15E8LTzm0I~XCtJ7SkvUJ8w0Qh3lC~B8waKS0kq3BQwSJG6ocbzOlViudMGWQ2wNWu0UNJ12mD3DVyekFnmK57CyCbGNUTZHfsHDsUvtvnpQqO~AbD9o5KCb~kUa1VsVgtt9j--5H4bT8utzmAtviXvnQvKlbA~cnz-QQNOQbeC7nVfD5SqaNpcoAfrdY4tIULQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "812f80a1-c754-4b3a-9ee9-3a534d1a735d",
+      "name": "Meta BBG",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T07:05:21.495Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "579eed7e-3212-4523-a217-e72dc2f621d9",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 28,
+          "Unit": 12
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "60a25b7f-f3c0-400b-9d38-d387173b2f73",
+      "name": "Overwatch",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T07:05:04.470Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "579eed7e-3212-4523-a217-e72dc2f621d9",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 14,
+          "Legend": 3,
+          "Program": 10,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Mama's Favorite",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9f61ebda-53fd-4b23-8383-d0e0bd32b847/render-mpvmloq3.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=OVGksmyfsndZ3TrxdnEcVHe-C32z3XDhL0l4kk4LwZBHXBSRLYEtFIqpDsZiAFdshZbgDsUQfaOKEWQrEqAtCqVWV1kR9kOrLfTeCun4W74JtXOLWe90r3qKhKKrIVL1SDeT1vhhZYFcE3jMrDaxmYKXL1SrAhEx6FCcddle8Jt3Q12PfEraGiuF2yHASO42r9UFD6vS2lTs9JBPy~Ugm9rCGQowky32qUSNeK0NtbS0akH6Ee839C~T39aeBSkxacUKIWqBusNebcDQyBugCjNCs1eSQzuai2I86zarCvH0ANXiRY78-ERkL5EdrosNp68asENEFUcB~SLd1E1PLw__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c53f719a-e626-48f2-af36-1165b5c2daa7",
+      "name": "Ladies of Night City",
+      "slug": "ladies-of-night-city",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:54:22.268Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "479c4ca7-6713-457e-b1eb-5bfbf6960b9e",
+        "display_name": "wOPtimusPrime"
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 6,
+          "Legend": 3,
+          "Program": 18,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Sasha Yakovleva \u2014 Won't Let You Down",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2647f881-5a7e-4ffb-b231-6574dc531f43/render-mpvmpbjg.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HECpsw8LY56KB3uyC9gv4QFZpOvqWMdKHA86kP3fqQ9jow4v5mxw2FSWcDTI0R4gATgJweA4g1-QhaSAAMH3q6Jr8I2FWYD7gUOFXcj4JPcKVSDLCOUJfAt4DO9nIK1JiivkLtOSJrGhWSterB1KmpT4CY8jjGuDvYte1e2FapzAa7GPbEOOXBEmtFdFZt0al8wrbJ-~hK6sXKeX~zqSp4tZ2YKjzEWIvVYvnbKDOdjUqMg76cjvfgHZ7Y1gRxVAXJML76Uxl6pvo6ovYqJMgXjCwNahwCYJt-pq8i8ZduybfwD3GlVKm1aJ8tvPcVmty8qIvPcYdmiVpy5mGHEouQ__"
+          },
+          {
+            "name": "Misty Olszewski \u2014 Mender of Broken Spirits",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/17252514-02ba-4d0d-a9cc-3590cee528af/render-mpvm7tns.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QWaNlRn7dK0BYxVvoPPShaWTYyu34x0cb92vIMLkz2zJ6I9RwvXVuCXs9wLkkP3k4RW3J~IAWWTlGhZTRTUa6EM6qUPu6iUWBPaPKD3JRTEfy3r0AXpH53z~115LesvDWHpFWtqZ4tGTJ1N03OrAu1y9amwdMJ9tDa1NJtCYglZTRB3ruvEvOw5JnWgQvV3D4~h5oDlOVQEY-ZSvjEFPvchAjpLNCiF45iXHj0r1T7yY46FOJSIeO4fglbAmQduFdKPl~P0iNFWd1gntC-eo-6GFKx6HNG7YphVQgWDZ~kYqn~w2eKTtXcYwMGMhPpFgPiLNXv0q5zg7oxTI2ehtUw__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "85e80323-5ccb-4b68-9637-f095e685439c",
+      "name": "BBG",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:52:55.423Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "ad7b36d4-a76b-4ada-bb0c-3ba546b422f2",
+        "display_name": "Terrelldactyl"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 25,
+          "Unit": 15
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cc3ed2c4-6e6d-47aa-b358-152c56b24bad/render-mpxm68r4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=I0iy8acUgM5mYQIKbHyDJLrxyO5LPqpYSW1gl~HIfhCer-O~mYowczpb0p17fzukMNrQIRNGoxM62f~5WizjdSphCklau-hWwg6xl9LZ6jnygfN1l-iuNYZvVggb4S8Aqrk8sy7JpFn630~nv3jbVCCz3rNk--3u0lInV6f-m6ZEPUlqBTELzgefjwiLbyyrIf2k1cwkpWjCsJNJ1BEmOuGcuPTi3N1Q2zlQI2lMTHG555ykS8dO1zOYR4SPE68kwC8uobuvYmcVcm2ApGAQr2ncuvi1db4smueyxpX0Tohhm-uGnh5hppri3gdtsHMvuEIDzBsMVnpTLu3~OnFfiQ__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/328cd3e4-4177-4d6a-86c0-00d1a5a12b38/render-mpvsu9ju.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=UN-C3FqSBtR0K-v-bcshk5WL7TXL59sEqHWczgzI89ckso-qLWv81r8x7KQoRN9uW2jX1WtQ6HHqmT85fzhHwUhJhazGEXcbI9RswxTQPvFq-zWujymX~R4UEnFYKv5FJCkVplfCHkZt5B0nWVYT6y~T70A4PBlXeg-qcNvlA~Fvrv-oAcUD~UUNrnKrxOfInq35LMqvkXS~CUtiR2OyvsQU49kn7OKGda3HPVOMGJSaeAFvg1y2zSBwANYXd86yMGMyHt~JauT~yz5vHW25RXKpq8EAY90llsIUs5D-CQrTF1G0snV8PMyZPNNEDE2MBRrutvpFnZ-p0zq4JpQs9A__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e902c6ed-7f60-42e1-b3e1-e3804181222f/render-mqi3atsw.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IOksHvwdfkwKyhZ4YqhRdAY5Rlg5wdY-sw3zNoEDswcrc~qbPNSox0TE5WC0818LN9xo4Dz4TW4ahrs0BLeD~8fbZXJC~-a2MMKIbgj56isS0jUuVQQ6AOl4KY-WH44N3w7qahLnBBtn1v~HTc60Oio~mZABXULKwGW5sucGbL7rQe4OqzpXTkF3BFwzYOeASbIykFt25UVQeKE9MQPTKUnMHt4d1AZgjdFIghWpXvw83wcce8VkrjYCf2nl4sBcaNmc6GQmCzGM6ByQ8CTmphwm5D7sYhVP3Io3p3mj0vSzx8h9cLhF~QEKZZpLwY5EQvtsc7aG~Zl7e04aextbqw__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "639afc2e-8a7f-4057-af99-2be2743ff5df",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 45,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:46:21.210Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "5553d4af-1150-49f3-8ef3-7b3971c28d77",
+        "display_name": "DJC"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 12,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 Sit Down and Relax",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d539173-4022-402e-a9f4-100338935fd2/render-mpwcnsje.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EPAZFAx2og21uJLr0ZF-RDSgReEvnacPqDn0044fUIOj~-R0rz3OpIH8jTMEFHgNehzH3aZA6rIcsAll6IDr9wgPxIuQoDEebETvRc3UVu9K0~CBc0sgKwgGlu6SiB3kQSzHndbvegnqBbpOt5r8buCnJDLJvko2B6FkE~imgd6PJTE7w~Gd5~ZG2WuoGwAmBytohrPPbP32mONYLzxrnSCdYwU4ch35eg8plND0aWog7qDRR0hwGB53JnclkFB22FEXaJVB75dvLxuGxP~l2k6KLXvOZBgfZEdmvysKtnJYCchT2D-x7iUcTbDXH10MqPwcKt1SGzeqTN04GD1GIw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "22e11e42-a926-4976-9991-b9c192372253",
+      "name": "BBY Programs",
+      "slug": "bby-programs",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:45:40.838Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "7e6dbc43-75ca-41c0-8017-0f38d3a5b42d",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 4,
+          "Legend": 3,
+          "Program": 22,
+          "Unit": 14
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "Hacked Corpo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7dc71978-0995-4b93-9ba3-83d1118c3c4b/render-mpvlwinn.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=n0TWIbpwPDdPjBrKAOeFILCfPFm56qZm0ER5ZQc2Pe6qwYltCGu9dFG17J3D1G92nerYCnoSQTorybkE8BLfBb-Zs4~RH8AmsaVbQnJSFl-dTim22yvUq2c4fPwRq75n5ble-AeP4Rl9fE6FcT8yPrCfz9G1dreZA0SWmzztR3tuULhxwVcW89ST9z1NVv0J-PuYbvSnLclGq~~exA2aEpkIkLXL-3NFqCFfSJi-3fRw1RQ26T31LZr5gRz5AwxUymwK~BwNdsZl06xUxCrrDLNAMt~H7XdL-iTTc4qGZdX95qNDgyZY7Q9-QFroVPElzQULXN8O~vS0R7sUnOD5qQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "73ba6a63-2d59-4366-81d2-3e3c84ab0a14",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 49,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:41:12.505Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "c0bcd6f6-83af-43f7-ae0a-7ac5d36f8e0f",
+        "display_name": "TrtleNek"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 26,
+          "Unit": 20
+        },
+        "featured_cards": [
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8a8805d2-17d5-4ed1-a9a6-897faa527ed6",
+      "name": "Placide Ramp YYB",
+      "slug": "placide-ramp-yyb",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:34:24.984Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "ff813b7b-01f3-4864-84b3-60596fb34ce9",
+        "display_name": "KP"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Blue"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 15,
+          "Unit": 16,
+          "Gear": 9
+        },
+        "featured_cards": [
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Psycho Squad",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/d7e0e2e5-6e22-4b45-9e91-50936773e2e1/render-mpvlz3xb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=mtT9g56erE4-5HcSu8KbPdb8MVaByWuG0oQjebXmBVw8uM7VTylG~~61xyXbpolM5BQM~zff2MlIrn16xtEt8Q4XN~QK4Q~Yws-lI0BEdAozZVOVwU1d8FWI6DtCXtlaNX2-KxtwsaiZpJ48VKLn1i9nJ7rNZDiy-bo-5eKQDHg1236kd7-6j4bpxkOhQ3vTOg~qG33poPwBwIl5TENM2nxmHOb9XZQ2W301GnGVkb1Ma29KDB4l6asDJsnGxppz01eN8S0YpuHVfEG3ERZctXXc55V3J~pvTtFQwu7Vt66p0tjKUGPug0AG0N--PP49-UbelZWDchZXn6KYTvJ5Pg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e10c1550-bb14-424c-8f5a-900ce30a0555",
+      "name": "Yellow jacket",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T06:08:37.444Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "a23e9830-9ccd-4936-8c8d-e6c8f8adafeb",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 17,
+          "Legend": 3,
+          "Program": 7,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "9244d1f2-c162-4271-adbf-f8df4acf473e",
+      "name": "Panam GGR",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T05:36:06.485Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "4b533582-9191-44d6-9fcb-b729d0c33177",
+        "display_name": "Dan G"
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 11,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Corpo Security",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/80dcc139-d31d-4b89-86ff-cdbdd2664953/render-mpvlxrn4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bI1JfDJMYpKVxWsk--pOJqK2Uw2mk6wykYDM5ttr9tpP6fH8TlH-s6rWl75wmKf1fFe7tL5f0Ti-8Hadx6wwUvXeRZOAxmrCX7fIsP40OGsTqxeryTiHk3-8Y2ZjHJsfayeVKphCEgvYBWHJkJ-Dt4NDyie5s0LXG5JLa6fE1ASiZ4kK5V85ZfcMBaZ2W44-M94GWy8lmfHz6qZwOnuUA~k2ygbdghCGTYsIFHd5iiYMtaVeNd4~sjTmSLKx98dLGW5VT1Is7vDo1sIYknZvGosZLqvcy3rrjL69TQVir3dyhtAlOXA-6dHoMVe3h-sbddTWicxPqKMCR27aIofEew__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2b6f322a-db16-451c-b8d3-908d8b7b485f",
+      "name": "Judy + Placide",
+      "slug": "judy-placide",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T05:32:44.253Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "18f61fd5-242d-498d-8870-dc6d1ffff246",
+        "display_name": "morsdraconis"
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 26,
+          "Unit": 14
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Delamain \u2014 Rideshare AI",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7eba3a0-63cb-4311-988e-d487a7c0841a/render-mpvm49le.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Z66bCJ4yg-eY5iuRHOelbd1dVexhJq6U5WE32XDvv2ThcE15Xa2vdhTYZ3aTIjd41FhiswlqmCI5Bk5HychBWAqomQQZfkZYU9rC-alxj6PmEXs7OQybEcQZANObcxcmDQfJiQUPT5Nna3UR8ODkfU-8smGmvaN1OHCdJYjNvVcQLRzQh6R1K1xmAikB7y~9Vpx6YmrQyHGdSzfbYaPpRGXAanCma1MzyILCP5MKP-uehhxx0jS6fwWNH7C-MWpM5S7hMOCc3XrwQyfKqckIEWkUdPjThr~LrfPpNpvMd0jKnhvaZ~j4U5~geL5DqWi086FNbP8vRlFNaTdVoSlm~Q__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4c536a71-bea9-4afa-81c7-d836710bd36a",
+      "name": "RRG",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 44,
+      "is_valid": true,
+      "updated_at": "2026-09-13T05:23:36.921Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "0890b6bb-cda6-490e-bbb5-16d095a01252",
+        "display_name": "DJ Death Star"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 9,
+          "Legend": 3,
+          "Program": 14,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Dexter DeShawn \u2014 Off the Grid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9a298f42-3a9f-4510-b2fd-9cf1b34ade27/render-mpvml9cl.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Smc3gpqnx2-x2TAdsnz2o9nfhn~3b4p4tWyWBkfoC~m0sxqDxUa2bm0S~7e2FxLvxgniQ~BJ2VP-q9JhGWnfrmujfqlMAW32wvVAFAC9qxJk9zQSu8Innh~tcTVJnzL8nG6~QqV3TkM42ULjIyn89AGSrsMfGt45VGZqJEbJ6BACmmybN1HwXY-OIA48ni-52ozRhaPBApufkuuZjRb-lllsP2Wx5CC-Ku9jEqax4yLSkkhpN2mmLHEIq~KmSZln6FP72z8uIJFhE83E7ifa3-sCJ~9tVjH2OlV4vRVOzRJ91lW2pjysq83D8UPCfozRq5CSOSMsNSBNWCqqLfpeXA__"
+          },
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Corpo Security",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/80dcc139-d31d-4b89-86ff-cdbdd2664953/render-mpvlxrn4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bI1JfDJMYpKVxWsk--pOJqK2Uw2mk6wykYDM5ttr9tpP6fH8TlH-s6rWl75wmKf1fFe7tL5f0Ti-8Hadx6wwUvXeRZOAxmrCX7fIsP40OGsTqxeryTiHk3-8Y2ZjHJsfayeVKphCEgvYBWHJkJ-Dt4NDyie5s0LXG5JLa6fE1ASiZ4kK5V85ZfcMBaZ2W44-M94GWy8lmfHz6qZwOnuUA~k2ygbdghCGTYsIFHd5iiYMtaVeNd4~sjTmSLKx98dLGW5VT1Is7vDo1sIYknZvGosZLqvcy3rrjL69TQVir3dyhtAlOXA-6dHoMVe3h-sbddTWicxPqKMCR27aIofEew__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a986b92a-0fe3-4fca-a5d5-5c693ffe92c6",
+      "name": "V/Dex/Padre - RRG",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T05:21:22.980Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "e806d1c4-4d94-4f66-9c84-106436d64590",
+        "display_name": "caelebq"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 17,
+          "Unit": 17,
+          "Gear": 6
+        },
+        "featured_cards": [
+          {
+            "name": "Dexter DeShawn \u2014 Off the Grid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9a298f42-3a9f-4510-b2fd-9cf1b34ade27/render-mpvml9cl.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Smc3gpqnx2-x2TAdsnz2o9nfhn~3b4p4tWyWBkfoC~m0sxqDxUa2bm0S~7e2FxLvxgniQ~BJ2VP-q9JhGWnfrmujfqlMAW32wvVAFAC9qxJk9zQSu8Innh~tcTVJnzL8nG6~QqV3TkM42ULjIyn89AGSrsMfGt45VGZqJEbJ6BACmmybN1HwXY-OIA48ni-52ozRhaPBApufkuuZjRb-lllsP2Wx5CC-Ku9jEqax4yLSkkhpN2mmLHEIq~KmSZln6FP72z8uIJFhE83E7ifa3-sCJ~9tVjH2OlV4vRVOzRJ91lW2pjysq83D8UPCfozRq5CSOSMsNSBNWCqqLfpeXA__"
+          },
+          {
+            "name": "Padre \u2014 Man of the Cross",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7f0583f-2493-4e1f-9967-977bc0c6fa15/render-mpvmm9qu.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Dx61vABQRY42lrfTfY1I1rUXQC0efPT-Rb-gsxk-zzTngJRey6-WrDZV4GB6Tg7zRTE~rk7MG9deeeH~9lLm~OjwSGuPpreZDhdzMLnGaosJlysz0yV1GthHLNGgIeS2cswIFarOhArSRuVCxzR-CsDwpGlZANEu4SMnqejXnuiIKiEh265LzFg0jj8eutDXi3oL4NpW7-jlQu~txcCuL98qCYAuQr4tLgFr~~gzZGH8wv2RuGkDx4-xaoczVUjXLzyKrB659CmYxHwnRoFLocdNYDYklxAFy~8QGoIVJVREuBMkK78uyTeW~yJf5iubYDR1rSQGaCb7BemwsJzk4Q__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Field Operator",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/876dfa5c-6df4-4930-b284-f2c466e6b90c/render-mpvlzp1w.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NT5-ARvB2loYcTVS47ASpX-nbgUhDlMuNHs~cry7a21WJtLu5wd5CeywfhGnHxCyHrSUltZfCkVSm8yvqW3mLoDhXuq5TjJCzoGPmkmRRL~FWtHwFzVEjOEEwZn48NXDG2BXBoC4J5eWSBc4s57gaovmMV~2EkpDI07ijgJ60dKn5ysScBMe7TA46sgfsm7ixdLaIQmZTWh7I8ZjjhsRuwHx9AjqsAfpTu-dJUXeJMKsEM-g~HbcAQYAoRGNwZblgdrXVkIi5c82Ed1fEaXWQdPpJuvfNw6p1xsl6E3SFY3cIQvo0o2-jYKJflxbP4~s8BIUxzY0acP3YbJCTbxO4A__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0b00c9f5-2323-42fe-8185-b9dd57713df1",
+      "name": "Y/G Gear",
+      "slug": "yg-gear",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:51:50.234Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "2ad9b66f-27c9-4e25-8bd0-761b93f7d477",
+        "display_name": "uglypoodle"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 21,
+          "Legend": 3,
+          "Unit": 15,
+          "Program": 4
+        },
+        "featured_cards": [
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 Sit Down and Relax",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d539173-4022-402e-a9f4-100338935fd2/render-mpwcnsje.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EPAZFAx2og21uJLr0ZF-RDSgReEvnacPqDn0044fUIOj~-R0rz3OpIH8jTMEFHgNehzH3aZA6rIcsAll6IDr9wgPxIuQoDEebETvRc3UVu9K0~CBc0sgKwgGlu6SiB3kQSzHndbvegnqBbpOt5r8buCnJDLJvko2B6FkE~imgd6PJTE7w~Gd5~ZG2WuoGwAmBytohrPPbP32mONYLzxrnSCdYwU4ch35eg8plND0aWog7qDRR0hwGB53JnclkFB22FEXaJVB75dvLxuGxP~l2k6KLXvOZBgfZEdmvysKtnJYCchT2D-x7iUcTbDXH10MqPwcKt1SGzeqTN04GD1GIw__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "78209917-c87b-49e0-8ed9-f9544d003a82",
+      "name": "RYG Trauma team",
+      "slug": "new-deck-2",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:51:07.415Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "764f8c56-ddd9-46c3-9d3a-0da6e950795b",
+        "display_name": "Boulder_Builder"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 13,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Dexter DeShawn \u2014 Off the Grid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9a298f42-3a9f-4510-b2fd-9cf1b34ade27/render-mpvml9cl.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Smc3gpqnx2-x2TAdsnz2o9nfhn~3b4p4tWyWBkfoC~m0sxqDxUa2bm0S~7e2FxLvxgniQ~BJ2VP-q9JhGWnfrmujfqlMAW32wvVAFAC9qxJk9zQSu8Innh~tcTVJnzL8nG6~QqV3TkM42ULjIyn89AGSrsMfGt45VGZqJEbJ6BACmmybN1HwXY-OIA48ni-52ozRhaPBApufkuuZjRb-lllsP2Wx5CC-Ku9jEqax4yLSkkhpN2mmLHEIq~KmSZln6FP72z8uIJFhE83E7ifa3-sCJ~9tVjH2OlV4vRVOzRJ91lW2pjysq83D8UPCfozRq5CSOSMsNSBNWCqqLfpeXA__"
+          },
+          {
+            "name": "Padre \u2014 Man of the Cross",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7f0583f-2493-4e1f-9967-977bc0c6fa15/render-mpvmm9qu.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Dx61vABQRY42lrfTfY1I1rUXQC0efPT-Rb-gsxk-zzTngJRey6-WrDZV4GB6Tg7zRTE~rk7MG9deeeH~9lLm~OjwSGuPpreZDhdzMLnGaosJlysz0yV1GthHLNGgIeS2cswIFarOhArSRuVCxzR-CsDwpGlZANEu4SMnqejXnuiIKiEh265LzFg0jj8eutDXi3oL4NpW7-jlQu~txcCuL98qCYAuQr4tLgFr~~gzZGH8wv2RuGkDx4-xaoczVUjXLzyKrB659CmYxHwnRoFLocdNYDYklxAFy~8QGoIVJVREuBMkK78uyTeW~yJf5iubYDR1rSQGaCb7BemwsJzk4Q__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ea658100-7d9c-406e-ae86-8e8c719816de",
+      "name": "YYG Chippin' in",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:41:42.341Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "61e3c111-fcef-42dd-a3e7-39292e2b7e1d",
+        "display_name": "TheGreatLake0_0"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 16,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 15
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "9906b8a3-d8e5-4eb4-8672-778505d35043",
+      "name": "The Old Crew",
+      "slug": "the-old-crew",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:38:14.297Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "479c4ca7-6713-457e-b1eb-5bfbf6960b9e",
+        "display_name": "wOPtimusPrime"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Red",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 14,
+          "Legend": 3,
+          "Program": 10,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 Sit Down and Relax",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d539173-4022-402e-a9f4-100338935fd2/render-mpwcnsje.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EPAZFAx2og21uJLr0ZF-RDSgReEvnacPqDn0044fUIOj~-R0rz3OpIH8jTMEFHgNehzH3aZA6rIcsAll6IDr9wgPxIuQoDEebETvRc3UVu9K0~CBc0sgKwgGlu6SiB3kQSzHndbvegnqBbpOt5r8buCnJDLJvko2B6FkE~imgd6PJTE7w~Gd5~ZG2WuoGwAmBytohrPPbP32mONYLzxrnSCdYwU4ch35eg8plND0aWog7qDRR0hwGB53JnclkFB22FEXaJVB75dvLxuGxP~l2k6KLXvOZBgfZEdmvysKtnJYCchT2D-x7iUcTbDXH10MqPwcKt1SGzeqTN04GD1GIw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Misty Olszewski \u2014 Mender of Broken Spirits",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/17252514-02ba-4d0d-a9cc-3590cee528af/render-mpvm7tns.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QWaNlRn7dK0BYxVvoPPShaWTYyu34x0cb92vIMLkz2zJ6I9RwvXVuCXs9wLkkP3k4RW3J~IAWWTlGhZTRTUa6EM6qUPu6iUWBPaPKD3JRTEfy3r0AXpH53z~115LesvDWHpFWtqZ4tGTJ1N03OrAu1y9amwdMJ9tDa1NJtCYglZTRB3ruvEvOw5JnWgQvV3D4~h5oDlOVQEY-ZSvjEFPvchAjpLNCiF45iXHj0r1T7yY46FOJSIeO4fglbAmQduFdKPl~P0iNFWd1gntC-eo-6GFKx6HNG7YphVQgWDZ~kYqn~w2eKTtXcYwMGMhPpFgPiLNXv0q5zg7oxTI2ehtUw__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "06a40354-8a59-4096-806d-fa818183ea1f",
+      "name": "RRB - Brainrock",
+      "slug": "rrb-rockin-out",
+      "credit": "brappi",
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:31:17.933Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "6ab84bd0-4185-40c6-845c-91e390125e73",
+        "display_name": "brappi"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 5,
+          "Legend": 3,
+          "Program": 20,
+          "Unit": 15
+        },
+        "featured_cards": [
+          {
+            "name": "Johnny Silverhand \u2014 Rocking Renegade",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a8a7d286-0c66-4f01-aca7-45570474d9e4/render-mpvmpqtq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kComspmE-gBfH74oTS9tmK5L~E9-UrKmYUnHU-Er6dHwyGEHOS8Z2PogvEsdCkbPz6AKrNmnOoXUFoBNn0vWtWjUvneIDBwCSkkvtWcAo0dRh896qPfYJPASgxqFlkCFKtnttck3DeAArXChQJtrArP-Sl0kbLC8PRGD7NHuzcFP1bekJ1SmNZMvbk8OnKlH~jBU0PDCaoIprDesKqacHIwDEyjQyc6arPz1yjGWxE36vU0zm2tg0W2IvvdpVVYu7mJdjo1dKy6WAGRHZj-Odwo-D~p0XDxWBM5ahdggR1sSEt3flSYfr8-UiqXHsZX1hsZ5AjMOu0j7AyoiFfrgug__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "6th Street Recruits",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/756f3e53-9ff3-4c01-9f33-bb27a1cd5957/render-mpvlsra8.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=hfePnqTLMIHqcosSRaYO3-plp8I9cpNmqN6y0rCwZR48J0GjMEtb2XsF4r06PlOItQtwVnaEx7UluYK2Bogp4zpEPSJI6onM~7IXLUIN09qe5b1arjaN~84AW4nMwPhxZu2ep0e0yHUGz6dPWoe51zfxDy7U43Pi11WwepI9EdyQAyTP6cXTz2tN7aDQLFkpSH5AXHURysYY9Z1JPdZzg2Fp0ExzQkwuCzc6qxA14foOuRg6yqxEe4EUqf2lIfz0c4dWkVZsEL-WqQMsMqf9MwEb0m5o6wkRHxnnQydUs-9JFFUa3xVB3MlIsPGtMHedPA~bWoYkf5k0AOn28iFiOw__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "05f435e9-ef59-4732-8432-3126df8bb53a",
+      "name": "GGB - Panam on Overwatch",
+      "slug": "ggb-panam-on-overwatch",
+      "credit": "brappi",
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:30:00.496Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "6ab84bd0-4185-40c6-845c-91e390125e73",
+        "display_name": "brappi"
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Blue"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 19,
+          "Unit": 15,
+          "Gear": 6
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "Pepe Najarro \u2014 Working Doubles",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/0de81196-f1d3-4fd0-ae6a-062dae3f3f2c/render-mpvm610y.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=rMORckQTRGHSY~x-VGEO6ud4HSsNm~--Oq7dyt5JYrJo7AN94HC5AqUDaO0svjNRmTaPN5vYOKOw6QuNrcUDPDRFk8y6ibeurvPk1gjSmrOWkxWHS76XJr2F87UREvVmq0fX38JNUX8jl6e89fMBwleBnTH7rDagdwbMBgFMoUrjlS2x96zipkvirj0iod05GHF~1cqeAy4iPEywrAkEonX5x9Dn591nZpvcWBMy3DVwIvSBfhC49rIwqgjDKM3KAZBdxd3sGaeXIEj7vJ~oXpGNl3JU3scu3le43vuCi5SKDPQMW4x0OoeFRezlH670iRBcRgHh3gMooCfDQMlLdA__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "54e4378e-f1f3-4261-a04d-c9267e655adc",
+      "name": "Ew, a meta deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:17:26.214Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "f711d438-3ef2-489a-ab27-e732588424ec",
+        "display_name": "Bulawa"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 26,
+          "Unit": 14
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e2a9fa93-aecc-4bf1-a938-24019774442e",
+      "name": "Arasaka",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T04:13:21.265Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "55fe30a0-71ab-441e-be59-33f676789fc9",
+        "display_name": "Choom"
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 14,
+          "Legend": 3,
+          "Program": 7,
+          "Unit": 19
+        },
+        "featured_cards": [
+          {
+            "name": "Goro Takemura \u2014 Vengeful Bodyguard",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/0f6e52f0-511f-4ae9-a380-5e718b26e58a/render-mpvmmf2e.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QdgwP80LoyApgHnvBGUcPFyBQryvZevsIrF3oUFcUDf3Nu9CXjHVfXD9grto4eKjCZ1G6xl~dT~hFT81vzl~9ONzk30-F~UchCDhO0avyUOkC1PuTcLG0V5hP29avpGOwpFf51i7~Mj9UgYvn6QuP3NqIu1Y5CI9lAZsd3DaMDT3wXqd1NaVZG41Q~fX-GqG91meUF6Pax9bsyQCoDUhZ-ZYalVzbnHgSUieVwR3ygohIohYSAE5VW5OjVFIvtrkAqHdR~efm6JMFJWzbs4Pya7nF07i-0J5jrtO7SiKCpPH7p04~ma4Xhfp2vEU9KTQqnEbmLsmDgPnyylPlUsA~Q__"
+          },
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Adam Smasher \u2014 Ender of Legends",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a9c1137e-2e33-4293-9dcc-9351c9a0bbee/render-mpvmot9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=WAGHj5j4iTrt7YA5NhqfFZHrgIUcM39EoUTqdgfaW7OtvDP8QNh-rTnOHNgZHNaHZ1ztjajiu4ESiEF4S5dBVokvhRckaobBdy7CvBhl5rDudy4aC34qEohC-ghfn7InFW6sW49yOKx0t7cFuVEVL3dStH6JH9fB3sOC1kYTW1ckxLV2RXTBdCXkBNz46If~wvMPkvPGGEPa1KvJbqM9pqttPL88BOiiGF81TjulwyUmTih9X~QjGRKWmswpZH7EyCMUnhYiFPCoOhlc6yB3dQDtph2vPXkf4yBn7yB8SsD~~oc0RgyiZhriHahhQlmq1VSuaS~KaOqVRyqdlrXM7Q__"
+          },
+          {
+            "name": "Corpo Security",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/80dcc139-d31d-4b89-86ff-cdbdd2664953/render-mpvlxrn4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bI1JfDJMYpKVxWsk--pOJqK2Uw2mk6wykYDM5ttr9tpP6fH8TlH-s6rWl75wmKf1fFe7tL5f0Ti-8Hadx6wwUvXeRZOAxmrCX7fIsP40OGsTqxeryTiHk3-8Y2ZjHJsfayeVKphCEgvYBWHJkJ-Dt4NDyie5s0LXG5JLa6fE1ASiZ4kK5V85ZfcMBaZ2W44-M94GWy8lmfHz6qZwOnuUA~k2ygbdghCGTYsIFHd5iiYMtaVeNd4~sjTmSLKx98dLGW5VT1Is7vDo1sIYknZvGosZLqvcy3rrjL69TQVir3dyhtAlOXA-6dHoMVe3h-sbddTWicxPqKMCR27aIofEew__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5fc6e443-9894-437c-b0b2-8768fc6d3a1a",
+      "name": "YYY Attrition",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T03:57:17.158Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "5a73faa4-ccb3-4295-ae02-1f763f9d087e",
+        "display_name": "ShawnTM"
+      },
+      "preview": {
+        "colors": [
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 12,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8bea5c49-843c-457d-bbe8-18722ad087d2",
+      "name": "YELLOW SMASH",
+      "slug": "yellow-smash",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T03:56:31.755Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "14606618-ce37-4cce-9894-3dae9fc8919a",
+        "display_name": "Snapquester Mage"
+      },
+      "preview": {
+        "colors": [
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 19
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Rogue Amendiares \u2014 Preem Solo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2dd7547d-5098-4082-a98b-f39a583a222f/render-mpvmmwyz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=KqW3TkUHCMOz3cgIZt9uDDMl-MVQsv9oEKJnTJHe9dPR-0j3UpJMKojaH2LuVijdfBzovb7cRnK6HjmTE7-XacOrWxPxstP9oV2Z-svuKAA0NOtOVX11qnS4Z57HoOrEh0xZ9RIdaFndunaLAIlOQ0mH63hN2o-IAoqe0d4~aoqbRYpAMRoBvQA0mUOU71VyIDXUmp8kWNa3SDoKR4TCLi9DLjK71e8Rj-rx0MqMT1eVOnwXn0H-1KyqHcmPm4dNQUj4Laps5HWU64r-Rs2ADsU-NF7yhkvfJXAmAqD7-vDGhEgKcfIAIGvyN0BALOAfBaflA-L5mOeKEqVPNWBl9A__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "753118d8-911e-435d-9391-f06f748f56d1",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T03:51:40.788Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "04b94193-0dae-46c4-837e-30e89d37c381",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 11,
+          "Legend": 3,
+          "Program": 13,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 You Might Feel a Little Pinch",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4eca7fcd-85c1-43d0-8a07-4227312ab0db/render-mpvm2a9i.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bD34X10Wq7tXFIdXHD3X6Nvp2go~mSwlWOp6ACDD1taV68msCfbgNx9sAwcOdVHIJJ-W2r85NCIHk4NA2danvO5nP4NqM0-F2O7waqEvTWcTrMXWmCbd54PRgayBTqUCmroJH6p3HpSI131JuGg51g87VIGqK2N9WtBunYfFRHvKgyJExCww0jdCA6paoXkouxTlZ~TV9hgjo6S4i9mIrlV72VMO1G3RWTJWTr2kL9h5hGojeSzENvPL~nwt33sBnoTedev8KEc6HQAqPW9qfCy5NY0jZb~1cxQqV1PxjFzeBLgBBbQ1euTEXAv-20Vnom6fn~~Ej43Uy~1j0VbLkA__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ebe52fa5-576d-45d6-8719-4f59ed307f8f",
+      "name": "R/Y/G Bin",
+      "slug": "ryg-trash",
+      "credit": null,
+      "card_count": 53,
+      "is_valid": true,
+      "updated_at": "2026-09-13T03:33:02.337Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "2ad9b66f-27c9-4e25-8bd0-761b93f7d477",
+        "display_name": "uglypoodle"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 12,
+          "Unit": 26,
+          "Gear": 12
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "284be5c2-35ed-44bb-955c-5458d6e853e4",
+      "name": "YYR Gear",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T02:48:42.658Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "65752da4-b289-468b-9211-55c017c28609",
+        "display_name": "Vizix"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 18,
+          "Legend": 3,
+          "Unit": 17,
+          "Program": 5
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fd833b41-794a-41ee-a255-ca99632682d7",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": "toothey",
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T02:36:28.059Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "1f76c299-f460-4518-8240-c8690cc35779",
+        "display_name": "Toothey"
+      },
+      "preview": {
+        "colors": [
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 11,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ac1cffaa-27e9-479f-9bdb-5d31d0d2f4db",
+      "name": "Piece of Meat",
+      "slug": "fuckable-piece-of-meat",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T01:26:19.329Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "479c4ca7-6713-457e-b1eb-5bfbf6960b9e",
+        "display_name": "wOPtimusPrime"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 17,
+          "Legend": 3,
+          "Program": 5,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Dum Dum \u2014 Maelstrom Triggerman",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/aaac486c-dbfd-4137-b373-24a2df29522c/render-mpvmkj5v.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HvvhGSrEmeofmyRRZ25WzPebOhUdwGYtHy-cJt4qyqIePzUCww8n0ixmFha3NgpHNKePckQcz-oMSty-WNjqI45qRyvoTdgIykhcTs-ETkTewL8i0ID0uwCyM56Sc~cKdtmTGOr5sqgBeIingS9M0~qo2QOGJY9evRQOHZGx9Fr2LcBuWaYQGzIvtfVtFygpUDiWGhCRVRhkJOLY9H8yvJH9WoI0BEEe9g7z6G51haJ71lDAgy-SC-U2G~CAV2wJpHZFMBsGGH0Gw8i-mQdMhZB1STy1Ib-FMCyxkhdo3pqZhP8dStVeWfP6~jmoBU3AOKZwAGVYTxUBJKjruWt9Zg__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Adam Smasher \u2014 Ender of Legends",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a9c1137e-2e33-4293-9dcc-9351c9a0bbee/render-mpvmot9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=WAGHj5j4iTrt7YA5NhqfFZHrgIUcM39EoUTqdgfaW7OtvDP8QNh-rTnOHNgZHNaHZ1ztjajiu4ESiEF4S5dBVokvhRckaobBdy7CvBhl5rDudy4aC34qEohC-ghfn7InFW6sW49yOKx0t7cFuVEVL3dStH6JH9fB3sOC1kYTW1ckxLV2RXTBdCXkBNz46If~wvMPkvPGGEPa1KvJbqM9pqttPL88BOiiGF81TjulwyUmTih9X~QjGRKWmswpZH7EyCMUnhYiFPCoOhlc6yB3dQDtph2vPXkf4yBn7yB8SsD~~oc0RgyiZhriHahhQlmq1VSuaS~KaOqVRyqdlrXM7Q__"
+          },
+          {
+            "name": "Maelstrom Goons",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e14bdd12-1214-4104-bfdd-ae023c21527c/render-mpvls0aa.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=lwqwcSRn-FpNa2EQ0JXIugIWdtjzVXvL0CNrruvGwuZ-iEhjyfNX~AXO~kJKxtrPuL6pmc5TO4PPwiyfMySvswL6QKjwxjDxh4swRM3KThPKDjNpjhFbjmJYZb4F3SD2QgfeyGKIo5Ez3TLPceWek19m~IIKUdH3MkYg7OmocOtL-WhbXY9gTk08tSpYuKsTy~yexeRVfWLGJ0etNXPAu-1RaRyJAXH6tJimmTc7ZvtYGysnH4RmkTlQ1YETb9a2CKMZQKKoA2sib12jm2Om8ApQJ1KB0ljrmoDpALCCRTO4d~-0fbTrmWnhCEAQOY~nYMGw~G6oRd6VZqJvyRBUBw__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ef121b39-1ae4-4188-b908-efa4814668a0",
+      "name": "Flesh is for the weak",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T00:44:48.662Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "a86689c7-7f37-4604-bf11-c19fd9e67380",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 15,
+          "Legend": 3,
+          "Program": 8,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "Muamar Reyes \u2014 El Capit\u00e1n",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/dbbf4a6c-340d-4356-81ad-776940a7ee32/render-mpvmoclb.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=VxiIgPrqKVLlR9zZm6zWjQsi6YQqwI3Shic8dt0UpqqZCEm2lbi9gTVxP9IZlflFc1KjNwGEmfOxqwFE38Ygd0mzgmm1vq7NVlB4MNyscY0i5tty8olusEFuCdy6V2ZUZS6Y3ahSJPfnp-1EG0YuD9DZa-H2eqgcpSFdAtk3LUaeaIiW1f9mfKJWrEgGt4V5Y4WzFpLl1ivH4mSvWm-Z7OT2Y9iNQcbeXlvBKWE-LFABiwYYJ4JezK-gdknjXYFcrc8yYMuMVZoGCKRTesjRtNtAJjCdFHlBKfC5EgE73LBe41AGzd1KP7hl3uBkjlvjQUFklDSrdxEA8Yu8H7H1wQ__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d9658f58-fdcb-45d7-8ef8-5dc6d35f59a0",
+      "name": "V and his two boyfriends",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T00:42:30.768Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "8455578a-7f8a-48cb-b58e-b64f45298b2a",
+        "display_name": "Kysera"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 11,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Johnny Silverhand \u2014 Rocking Renegade",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/1159e69c-614f-4a8e-be76-d69ee734bd22/render-mpvkhkg3.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=p6DIkgyAfnMuf5SxNu06L1FG6mtFbDuCo7vJ6vc7AtwjFNQ34m8K78vETxlUlxS-sic4k9eVBgcWR6w5NxCtoiUlDftjy4ULX4bpANJyfPAgd9m2fj-6MWkVzxJFxDNMNaq5U9jTPh-SGjNS2LL4iAoXQWSK6PzRIa-msA2QmidWYM6yHTBtBqDQ8yy-jS5OxzfZQzg1dOsBcymuGW9~ogZ3KbuZnxH~rrv7QVhqf93d5olDbs9Wf3uv43dJeilBEkjh4mfK40cn2Qc6INCW7TRkK9WqQuaIXFhwEZ6J9RaxBSubZd4nqs7ZBT~GmgnXotn~~R9S8vYMl~L6Ra9DSA__"
+          },
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/5ade304e-8e0e-4484-944a-18d8d08caf9f/render-mpu6okrf.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=M0bOQpQDB0rXkTpixY4-GVqB82O5xHKbLADtf7utqymZJ0cHUALq00qkcirAa5sp4GgZbFWOOUiL2zun6-LcHTcSgkhUy1sECj6cuJ13obdHjo4MpN58xKl6kELCDecGvohkllqd2tvfC94iZxbw23Uig1jMwbwa6QeTsCX7ZEazLd9Q0aCLaFBXy6h9~F0~X4przGWLyOC0zVap2SaX0STsfae50CQqgyUUH-rWxQpfZw02NAESDB0myfEnsQcRoGO5SVqH9F081TFVMnu1nh3Q0IZGTWHvmIqxAepon~zWJ~Xo-RUijqnha9vtIqqXfAH2xr0AaZkheBZiwXRpBw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/20debd66-ff1c-42c3-9869-928cba33ccb5/render-mpxm5mbr.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=PlhxuJpkw9-LyvvD5jDoz0utBCT5FoRadbrpbIuRXzmKY5S4A49COw9IzNuJQr5FlKubCHl21825svtNTDAl4Uy~B6ppNwkoNKZppUsTnzbOd4EDPflusN6yloaF~FLDiMA5kV0HBP-mbou9m73~aEfTPpuPp4y8fXTu5T5rTsiy8UnKP~lNr7n5pEw-cpEXhGIm286CuNFLwFwkAEMs0-g5iOaxY1YATn3Zj5i29D5-wuFnBkhiBOEuDiNGzFSItSMcF7GyYKI9ppNAsKjmfiIPVVumfsaEJcCwAwDgb2TeHyrGYDwHnrBSfbroZK-oNmsLEQOfiAi0jv~ONcWFtw__"
+          },
+          {
+            "name": "Augmented Negotiators",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a195323a-e29e-4c05-8e6c-7f1638c8264c/render-mpvm290s.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=tNDykVHlAWVIpvjG3gZkigDBiVZyyNs21ieWJpOCoPybh82ySPTLGnfB-2202j6dCevyYthymtn8m84-TN4wkRZAbbVLJRuS~qt4YE7fsnQd61lcz11ouhBPAU~PpsnPV2~8M-q3oaNwMA1UycW15E8LTzm0I~XCtJ7SkvUJ8w0Qh3lC~B8waKS0kq3BQwSJG6ocbzOlViudMGWQ2wNWu0UNJ12mD3DVyekFnmK57CyCbGNUTZHfsHDsUvtvnpQqO~AbD9o5KCb~kUa1VsVgtt9j--5H4bT8utzmAtviXvnQvKlbA~cnz-QQNOQbeC7nVfD5SqaNpcoAfrdY4tIULQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a830f277-2762-459b-87eb-b0062c618261",
+      "name": "RYB Rocker",
+      "slug": "new-deck-2",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T00:40:44.364Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "81b8f792-dad7-4401-9c54-ff1ef5e1ed72",
+        "display_name": "Reed"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Blue",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 10,
+          "Legend": 3,
+          "Program": 14,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Johnny Silverhand \u2014 Rocking Renegade",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a8a7d286-0c66-4f01-aca7-45570474d9e4/render-mpvmpqtq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kComspmE-gBfH74oTS9tmK5L~E9-UrKmYUnHU-Er6dHwyGEHOS8Z2PogvEsdCkbPz6AKrNmnOoXUFoBNn0vWtWjUvneIDBwCSkkvtWcAo0dRh896qPfYJPASgxqFlkCFKtnttck3DeAArXChQJtrArP-Sl0kbLC8PRGD7NHuzcFP1bekJ1SmNZMvbk8OnKlH~jBU0PDCaoIprDesKqacHIwDEyjQyc6arPz1yjGWxE36vU0zm2tg0W2IvvdpVVYu7mJdjo1dKy6WAGRHZj-Odwo-D~p0XDxWBM5ahdggR1sSEt3flSYfr8-UiqXHsZX1hsZ5AjMOu0j7AyoiFfrgug__"
+          },
+          {
+            "name": "Kerry Eurodyne \u2014 Axe, Attitude, Audience",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e54e06c0-3f9c-412a-8dea-942eebecd687/render-mpvmls9g.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=gXwEzpYV2NdIED~lA69VnDoqSUnNTJsLBrdLpuH7U14Wxida6Luzy1N~sNSQhprE6akHrYLHkx5U3BtLFV1jYZxBvVDhjpNsWzr4sVNW9fAvyVI04VMnp2kCBET7Ej5DT12ESSWYrLBK82MnzgthcqTfa69aa-J60AFTVWbBXtQFDEd1Zaqa8tSc3bqNosSe56p8kCQAn2Bvprlfk~j2FOgidk5y4Hbxp-m8PviD8~1cXFRtL3nUPpnVY9onmEDHD81VmTtxC25ktISNHV4GUcU~rqfPwfXTURooPbwF79pmqjtBr~jjpeqAuI3WVCWgd~UgZxpGzEDsOWzXZ8kelA__"
+          },
+          {
+            "name": "V \u2014 Corporate Exile",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4a5591f9-743e-4186-8deb-560971bb3f82/render-mpwcmh92.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EwfsDZN4x2QAvrQ6G6~GEwywsiOao-NF0hDyPIKnSfykvIIBMmWQTk7-3ggxkHhpaSYqH4tBzc1SI1hpQdb2UFXqGAiL94q04zPmDX7G9S7mii7eXKXDpQgKdQdTzqesmm1NsWJpWpceTuR7ctDJT1jqiAUPtU4G86tZu~fkF8p2mnL90dactU3A3LO72MabzPM5TswUfcHgKoc0dO3nULnwefpbYLG3VChcYx0XRiOpCDFdjeawYyz3-pXPfMyiLJKtu2aFnEsUFg4csXQE4OjYEOj7cvgxdZoHzcEv0iAU6zuumT5gz90rGLfle5hAttJ-aDooGXSlzx4fNR-3zQ__"
+          },
+          {
+            "name": "La Llorona \u2014 Ghost of the Past",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e3d1d8a0-1d53-4c85-84ca-66439fd3639a/render-mpvm2yt3.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=FEHW19aWsdKfQQ7AT~~m11tCSPnI4nTL7hRg1dOWVkkZqnFELiTwEnd6UlQV696Jdo~KENtZfsY2dId0gcIlyrrEgTsOmK5Fx3sSxBd6DtiAZACYtmV~EOH5kNOlqv5AWfrx14i0FQQmaAshyic-03U0PAWzh2f9VBHIHOlbQHlp3iB5cTcPub~jFQ6Le1aI3pykdAsxXrqDGzfdgJA4r4matJY3ZjcvJYsybtEOcXqNXYissqImg~WZ1ay0SrJTXFeEYDA1jQBVvIhbypiRFGOMrtcowUalkr0Kh8YLbG1q45bwKb6AoJkqafD5HSQcDdHVzR1vaLypYXCAzM-EuA__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a19bfe21-e340-40d7-8633-f17a34e8b108",
+      "name": "Christmas Aggro",
+      "slug": "cheistmas-aggro",
+      "credit": null,
+      "card_count": 45,
+      "is_valid": true,
+      "updated_at": "2026-09-13T00:24:53.848Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "edae42a9-089f-4714-99ea-9871ad485276",
+        "display_name": "Chronocoretcg"
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 13,
+          "Legend": 3,
+          "Program": 12,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Dexter DeShawn \u2014 Off the Grid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9a298f42-3a9f-4510-b2fd-9cf1b34ade27/render-mpvml9cl.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Smc3gpqnx2-x2TAdsnz2o9nfhn~3b4p4tWyWBkfoC~m0sxqDxUa2bm0S~7e2FxLvxgniQ~BJ2VP-q9JhGWnfrmujfqlMAW32wvVAFAC9qxJk9zQSu8Innh~tcTVJnzL8nG6~QqV3TkM42ULjIyn89AGSrsMfGt45VGZqJEbJ6BACmmybN1HwXY-OIA48ni-52ozRhaPBApufkuuZjRb-lllsP2Wx5CC-Ku9jEqax4yLSkkhpN2mmLHEIq~KmSZln6FP72z8uIJFhE83E7ifa3-sCJ~9tVjH2OlV4vRVOzRJ91lW2pjysq83D8UPCfozRq5CSOSMsNSBNWCqqLfpeXA__"
+          },
+          {
+            "name": "Saburo Arasaka \u2014 Stubborn Patriarch",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6ac7adce-01af-4b5b-956b-698eda0bed14/render-mpwbxd5h.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Eh7X~NlbrJD61gp7kGkCVRwrDK-a8eAn0YD2MPbee5s7N3GA64KSAZXU1lcHGjEDpFjPToCrdv1d6aGXaiMtylGsBsaM57ER~9yBka5UUr0RBGgFr28esG~mnhPcqiMVyepv7EQhz6NTyRWRElr~NOgvLRTFcJhxBIURI6vNWHVB7nFuQEQGt8tS-HVF8lJJU954LbwHSK4j5eVB3ahBQtJwm167tUeGgi-Qprql9zBHQ1oHpkKsz5CQKkGcY0pkjO3dybO5gaXmdXReYWKQcfp3f-i2IrXObDay3UtxNM3lV01l8csdXYaAaF4fc1CFdCGdH94Xmf3BxMTtS46olw__"
+          },
+          {
+            "name": "Goro Takemura \u2014 Hands Unclean",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2ba68619-7050-44c5-b0ce-b32d48b8f40f/render-mpwbuq0n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Vy-eQ5V-wFoKTsR8Ia2vgWJV8rDu~AJRrmfy-TA1LT8BTkSUn0F4yAZ-ALDPrCFooq2gSl6J6zpH~aPVfKYtJxkHpsZoNiFvKutZdW8P3c4upiWnynLhrKpUC7QWXf~P~Ax7~NEFjMa8VOig7TOcUqwU9fhupxIhu7yg3glZmrPjvI21xO~wNGNwVbtCBoYO9ucs0S~~OcqYNU4vTbGNnxWphAoVLB4aF9YOX7lkprJ9fy~d48831vI-19Cj5C9grxNH8gcW3uQO0K5r~PJIWb6fBvo8FDl5psPUGsnuxzqJq~LISJi5BEUEa6dHrkeM4i9c7hy8wtvtX81L394N1w__"
+          },
+          {
+            "name": "Corpo Security",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/80dcc139-d31d-4b89-86ff-cdbdd2664953/render-mpvlxrn4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bI1JfDJMYpKVxWsk--pOJqK2Uw2mk6wykYDM5ttr9tpP6fH8TlH-s6rWl75wmKf1fFe7tL5f0Ti-8Hadx6wwUvXeRZOAxmrCX7fIsP40OGsTqxeryTiHk3-8Y2ZjHJsfayeVKphCEgvYBWHJkJ-Dt4NDyie5s0LXG5JLa6fE1ASiZ4kK5V85ZfcMBaZ2W44-M94GWy8lmfHz6qZwOnuUA~k2ygbdghCGTYsIFHd5iiYMtaVeNd4~sjTmSLKx98dLGW5VT1Is7vDo1sIYknZvGosZLqvcy3rrjL69TQVir3dyhtAlOXA-6dHoMVe3h-sbddTWicxPqKMCR27aIofEew__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1558e8e-1bd1-42f8-9763-625f6c1edaa6",
+      "name": "Arasaka Control",
+      "slug": "arasaka-control",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-13T00:19:36.097Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "8eb41a99-bdc7-4cec-a8da-4fea6a78b911",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 9,
+          "Legend": 3,
+          "Program": 11,
+          "Unit": 20
+        },
+        "featured_cards": [
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Saburo Arasaka \u2014 Stubborn Patriarch",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6ac7adce-01af-4b5b-956b-698eda0bed14/render-mpwbxd5h.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Eh7X~NlbrJD61gp7kGkCVRwrDK-a8eAn0YD2MPbee5s7N3GA64KSAZXU1lcHGjEDpFjPToCrdv1d6aGXaiMtylGsBsaM57ER~9yBka5UUr0RBGgFr28esG~mnhPcqiMVyepv7EQhz6NTyRWRElr~NOgvLRTFcJhxBIURI6vNWHVB7nFuQEQGt8tS-HVF8lJJU954LbwHSK4j5eVB3ahBQtJwm167tUeGgi-Qprql9zBHQ1oHpkKsz5CQKkGcY0pkjO3dybO5gaXmdXReYWKQcfp3f-i2IrXObDay3UtxNM3lV01l8csdXYaAaF4fc1CFdCGdH94Xmf3BxMTtS46olw__"
+          },
+          {
+            "name": "Yorinobu Arasaka \u2014 Embracing Destruction",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/f70b75b5-aa2f-4c2d-b8c3-01fcb2a670ec/render-mpwbzegh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=aCFuwVCP7MrdqPJu7alK8rrxovVaYr5KXkrWrHLD0ifOS5XfSb0gnZtDleB4awCWNh51g6CzcxCSp06jt1xfq7xAxrb05tAkyqntdpgVHqtGqaVTmxGkGlCxjM0vZZbTCkoJbPUgUXIXv180fqt0PlHkta0zqmAd7uiHeM8pL6SoYqqpDwWxpIc~EO8Geo2kz9-PPCeyeJOfqwpPDfudf-fOHR5LCrHuUrZ7GfAUUOAwScqcHscPbukUulKYBiKKUJBKFPFAP6~asZtyDirohXtTSAXtaIbgJJs2DR7fbJEpOnjop3t48T0qdm4~22HBJsqWdeNtF0I5annkBbtoVg__"
+          },
+          {
+            "name": "Field Operator",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/876dfa5c-6df4-4930-b284-f2c466e6b90c/render-mpvlzp1w.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NT5-ARvB2loYcTVS47ASpX-nbgUhDlMuNHs~cry7a21WJtLu5wd5CeywfhGnHxCyHrSUltZfCkVSm8yvqW3mLoDhXuq5TjJCzoGPmkmRRL~FWtHwFzVEjOEEwZn48NXDG2BXBoC4J5eWSBc4s57gaovmMV~2EkpDI07ijgJ60dKn5ysScBMe7TA46sgfsm7ixdLaIQmZTWh7I8ZjjhsRuwHx9AjqsAfpTu-dJUXeJMKsEM-g~HbcAQYAoRGNwZblgdrXVkIi5c82Ed1fEaXWQdPpJuvfNw6p1xsl6E3SFY3cIQvo0o2-jYKJflxbP4~s8BIUxzY0acP3YbJCTbxO4A__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1e01a5a5-32d6-4f36-96b9-ed94f6a09218",
+      "name": "Ghost in the Machine",
+      "slug": "ghost-in-the-machine",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T23:40:57.643Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "e402e1ca-8b1a-4762-8616-028386af638d",
+        "display_name": "JoKari"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Green"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 23,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Hanako Arasaka \u2014 Daughter of the Emperor",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3/render-mpvmk5xh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=NSpWmCuOt0Rv3BVQMLJjxOonq8-4OeUn7vYZFj2z9NCMZxhfAijIBhk80tQ~vem9nTO9ZXIlIFWV32VZnwdQhMgAKKZmIm2w7WRcTOXu9CSt3gp0BK9wOTp85LMo2r6402akdZg7O7GMKORhAy6iRFqeS2knynq58JnFdBvIqWAf6w4l5-FJsXJGgno-3tcLun8oF2zGYwi0aZI427XU60uXOIpTG8Lo-78SgkW8ggRoGUpadjyJR~lVQwf8avG6v4tccgUkELZyuN-Rq6ZiyIDV4C~sORouXM05XP-WtR7xfg1FNDc1u767t32fJ3yXd4M5CLIkIRUxWMr0dTx-yA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Delamain \u2014 Rideshare AI",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7eba3a0-63cb-4311-988e-d487a7c0841a/render-mpvm49le.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Z66bCJ4yg-eY5iuRHOelbd1dVexhJq6U5WE32XDvv2ThcE15Xa2vdhTYZ3aTIjd41FhiswlqmCI5Bk5HychBWAqomQQZfkZYU9rC-alxj6PmEXs7OQybEcQZANObcxcmDQfJiQUPT5Nna3UR8ODkfU-8smGmvaN1OHCdJYjNvVcQLRzQh6R1K1xmAikB7y~9Vpx6YmrQyHGdSzfbYaPpRGXAanCma1MzyILCP5MKP-uehhxx0jS6fwWNH7C-MWpM5S7hMOCc3XrwQyfKqckIEWkUdPjThr~LrfPpNpvMd0jKnhvaZ~j4U5~geL5DqWi086FNbP8vRlFNaTdVoSlm~Q__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bfdff63c-c639-4846-83ee-9404a667bcc0",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 53,
+      "is_valid": true,
+      "updated_at": "2026-09-12T23:00:40.205Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "fe387530-d51d-4225-ae31-60cb28cb4a43",
+        "display_name": "OldManGankins"
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 7,
+          "Legend": 3,
+          "Program": 26,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Wakako Okada \u2014 Peace and Harmony",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8f7a7d0b-5935-4732-a9ba-76b19467d5a0/render-mpvmnkvw.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=R9gnCPvyeeLbSc8Aijm1bt6oj99h2Y9D3D8b~JW8RAcPGcBwUQdw79dHqVPM4grzC4-sTJtGZd7V~Fch2xgo7nbveyEP~QM7pFAlPXfr7IJ5srTJAc-KrNG0HWGULnMYT~EcLeisiLHJ7r~703BHc9GJF5u6efsf5pQItTvKBzV67MU~FtJdBpH3RHVWu5FNuKRcR4qLc3aAmqu2u0jzH7Ae-HsKmJu5gxHJb0dAGR9aVbEKJYvml1Gkc9T7Qk33Q3MSTPy5Uc7JXxwV~jjUafKZ78UkteKbbUOlWqOkAPHJtIa3b-EzbGZf9OtaY7B0MWHrlT6fxDdJkeskZNu6EA__"
+          },
+          {
+            "name": "Delamain \u2014 Rideshare AI",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7eba3a0-63cb-4311-988e-d487a7c0841a/render-mpvm49le.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Z66bCJ4yg-eY5iuRHOelbd1dVexhJq6U5WE32XDvv2ThcE15Xa2vdhTYZ3aTIjd41FhiswlqmCI5Bk5HychBWAqomQQZfkZYU9rC-alxj6PmEXs7OQybEcQZANObcxcmDQfJiQUPT5Nna3UR8ODkfU-8smGmvaN1OHCdJYjNvVcQLRzQh6R1K1xmAikB7y~9Vpx6YmrQyHGdSzfbYaPpRGXAanCma1MzyILCP5MKP-uehhxx0jS6fwWNH7C-MWpM5S7hMOCc3XrwQyfKqckIEWkUdPjThr~LrfPpNpvMd0jKnhvaZ~j4U5~geL5DqWi086FNbP8vRlFNaTdVoSlm~Q__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e17e4229-19b1-47fb-8c20-4145526d4871",
+      "name": "Automatic Love BBR",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T22:58:43.456Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "70fe7f48-c62d-4829-a903-b6a449581705",
+        "display_name": "Viserion"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Red"
+        ],
+        "type_counts": {
+          "Legend": 3,
+          "Program": 24,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/e6dbfd52-85c5-4fd4-a77c-ca829e827d8a/render-mpu5v3ef.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=iBcDNIRd5InlxvWdLD3dEH7aK2Rx-oMWyh49qGVqMgndeg4h3kgOG0ezYN5DhEjx1nEQaUpE5saL4Y9gOrvDQTOmnlxx-ETi87~~y-7T4bMxLWztAHa2R6p0u8gkYSDeLzQVEatfJV61VRLTcGEZG6RbZLVJz5Ff4G8XLVGWWjvYZAe0z-P2nWGf6xsQdw3oM~rOOpSURcAVUYlSgn9dBwBvkGUul3-0sB1BIGwWLlCQEcDsLytkC85rKe1VZ2ArofHnptwIYD6W2kPhlUvSrYFjQJZfqju6oG6LWgWEW9N1zNvJVElJIMkg77X0nFWf8kWSSzcs9-6x4sLyapkrBA__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "53194ee9-a59f-435c-8f68-80659752a452",
+      "name": "The Sun GGY",
+      "slug": "overwatch-ggy",
+      "credit": null,
+      "card_count": 44,
+      "is_valid": true,
+      "updated_at": "2026-09-12T22:49:16.741Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "70fe7f48-c62d-4829-a903-b6a449581705",
+        "display_name": "Viserion"
+      },
+      "preview": {
+        "colors": [
+          "Green",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 11,
+          "Legend": 3,
+          "Program": 12,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/20c0d91e-76d5-4904-82e8-53907537aee3/render-mpxm0zs9.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Wd6mMaL9s6JWlm5Ue1np6xw8xFzxyNiY33UIc6L50B-VJG3P04MGwNIEIkbMy1LdzGCeR6C7IRESqGVZdTqA4XXLsv3AaBZJMhaWgcJ-9tykpcYlHoIt28~BaXUM3OXHAzAEtZLw2CzhS8LgvrD2Lcrw8Ezw4G5AbrMW5D0AqTkTFy4ivU-SLhmLeaL4NVpnZEd20u~KPlsxmrfTtRp0cTImN68JZsyxQ6UGO7xb2uQB6dbOZbWLuf4Hvr-zOvC5MVxclByNyjEmJuDoJODKmXVoKteMHNE9qN0ri6R9z4s7FJam6rFGohwHxQ~Can6wldApnZJv-O54TOUqUSJTWQ__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Mama's Favorite",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/9f61ebda-53fd-4b23-8383-d0e0bd32b847/render-mpvmloq3.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=OVGksmyfsndZ3TrxdnEcVHe-C32z3XDhL0l4kk4LwZBHXBSRLYEtFIqpDsZiAFdshZbgDsUQfaOKEWQrEqAtCqVWV1kR9kOrLfTeCun4W74JtXOLWe90r3qKhKKrIVL1SDeT1vhhZYFcE3jMrDaxmYKXL1SrAhEx6FCcddle8Jt3Q12PfEraGiuF2yHASO42r9UFD6vS2lTs9JBPy~Ugm9rCGQowky32qUSNeK0NtbS0akH6Ee839C~T39aeBSkxacUKIWqBusNebcDQyBugCjNCs1eSQzuai2I86zarCvH0ANXiRY78-ERkL5EdrosNp68asENEFUcB~SLd1E1PLw__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "776e9e20-2c93-41aa-adf0-01130b73e016",
+      "name": "V Alt and judy team",
+      "slug": "new-deck",
+      "credit": "Nebres",
+      "card_count": 44,
+      "is_valid": true,
+      "updated_at": "2026-09-12T22:01:28.828Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "066872d9-9840-476e-8a2b-8998b717f2d1",
+        "display_name": "Nebres"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 2,
+          "Legend": 3,
+          "Program": 23,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2baf505a-bc61-498a-b522-8038214ac9b7",
+      "name": "Program Control",
+      "slug": "program-control",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T21:11:05.952Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "8eb41a99-bdc7-4cec-a8da-4fea6a78b911",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 4,
+          "Legend": 3,
+          "Program": 18,
+          "Unit": 18
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Delamain \u2014 Rideshare AI",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/c7eba3a0-63cb-4311-988e-d487a7c0841a/render-mpvm49le.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Z66bCJ4yg-eY5iuRHOelbd1dVexhJq6U5WE32XDvv2ThcE15Xa2vdhTYZ3aTIjd41FhiswlqmCI5Bk5HychBWAqomQQZfkZYU9rC-alxj6PmEXs7OQybEcQZANObcxcmDQfJiQUPT5Nna3UR8ODkfU-8smGmvaN1OHCdJYjNvVcQLRzQh6R1K1xmAikB7y~9Vpx6YmrQyHGdSzfbYaPpRGXAanCma1MzyILCP5MKP-uehhxx0jS6fwWNH7C-MWpM5S7hMOCc3XrwQyfKqckIEWkUdPjThr~LrfPpNpvMd0jKnhvaZ~j4U5~geL5DqWi086FNbP8vRlFNaTdVoSlm~Q__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "23c4c6cf-c0a1-4af9-bdf7-b8c7a590b39d",
+      "name": "YellowYellowPanam",
+      "slug": "yellowyellowpanam",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T21:00:46.000Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "da432c8a-3213-443e-aaec-8f3030a3c70c",
+        "display_name": "WilliamTrainor"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 13,
+          "Unit": 15
+        },
+        "featured_cards": [
+          {
+            "name": "Panam Palmer \u2014 Nomad Cavalry",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6e4ee31b-82d1-421c-b658-ba3f79520365/render-mpvmowoc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=QBIvJfy9h14fjLTZjcEySgBp-sOPHqL29iE3DKL65K2BIaj5jLG6KtfJkcXGcECDb2V5QFIObfwdRug1wur2QzopXxLloWFwNZVTr04k~DXQIl4E10VCBD4ngnmH0ZG0OrwxcjCOhXOlyiQjUuO-t~h2vcurwCckXT5eJYvcOuPqOe9zST8o982AdhHIxmM5yawwJr~3f2GmsrNGVh~DtctFEPPJE8SA-bzWhkvF8hcHKN4qdZSYr58WyJ0Uli5mRGl0oGfO3f~0dtvreLgDifxs0Xsy9VWXFkR4UXDOKcoq2c0emW1UCrN5eID~wO9XPjhVZKMc4XNfo5vp7PWPnw__"
+          },
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Rogue Amendiares \u2014 Preem Solo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2dd7547d-5098-4082-a98b-f39a583a222f/render-mpvmmwyz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=KqW3TkUHCMOz3cgIZt9uDDMl-MVQsv9oEKJnTJHe9dPR-0j3UpJMKojaH2LuVijdfBzovb7cRnK6HjmTE7-XacOrWxPxstP9oV2Z-svuKAA0NOtOVX11qnS4Z57HoOrEh0xZ9RIdaFndunaLAIlOQ0mH63hN2o-IAoqe0d4~aoqbRYpAMRoBvQA0mUOU71VyIDXUmp8kWNa3SDoKR4TCLi9DLjK71e8Rj-rx0MqMT1eVOnwXn0H-1KyqHcmPm4dNQUj4Laps5HWU64r-Rs2ADsU-NF7yhkvfJXAmAqD7-vDGhEgKcfIAIGvyN0BALOAfBaflA-L5mOeKEqVPNWBl9A__"
+          },
+          {
+            "name": "Augmented Negotiators",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a195323a-e29e-4c05-8e6c-7f1638c8264c/render-mpvm290s.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=tNDykVHlAWVIpvjG3gZkigDBiVZyyNs21ieWJpOCoPybh82ySPTLGnfB-2202j6dCevyYthymtn8m84-TN4wkRZAbbVLJRuS~qt4YE7fsnQd61lcz11ouhBPAU~PpsnPV2~8M-q3oaNwMA1UycW15E8LTzm0I~XCtJ7SkvUJ8w0Qh3lC~B8waKS0kq3BQwSJG6ocbzOlViudMGWQ2wNWu0UNJ12mD3DVyekFnmK57CyCbGNUTZHfsHDsUvtvnpQqO~AbD9o5KCb~kUa1VsVgtt9j--5H4bT8utzmAtviXvnQvKlbA~cnz-QQNOQbeC7nVfD5SqaNpcoAfrdY4tIULQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ceadf9ec-82dd-444a-aa7e-291272e5298d",
+      "name": "Going Rogue",
+      "slug": "going-rogue",
+      "credit": "@Seraph017",
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:46:33.209Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "4db7ed87-bdce-424f-826b-eccf27072b3d",
+        "display_name": "Seraph017"
+      },
+      "preview": {
+        "colors": [
+          "Blue",
+          "Yellow"
+        ],
+        "type_counts": {
+          "Gear": 12,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 19
+        },
+        "featured_cards": [
+          {
+            "name": "Sasha Yakovleva \u2014 Won't Let You Down",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2647f881-5a7e-4ffb-b231-6574dc531f43/render-mpvmpbjg.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=HECpsw8LY56KB3uyC9gv4QFZpOvqWMdKHA86kP3fqQ9jow4v5mxw2FSWcDTI0R4gATgJweA4g1-QhaSAAMH3q6Jr8I2FWYD7gUOFXcj4JPcKVSDLCOUJfAt4DO9nIK1JiivkLtOSJrGhWSterB1KmpT4CY8jjGuDvYte1e2FapzAa7GPbEOOXBEmtFdFZt0al8wrbJ-~hK6sXKeX~zqSp4tZ2YKjzEWIvVYvnbKDOdjUqMg76cjvfgHZ7Y1gRxVAXJML76Uxl6pvo6ovYqJMgXjCwNahwCYJt-pq8i8ZduybfwD3GlVKm1aJ8tvPcVmty8qIvPcYdmiVpy5mGHEouQ__"
+          },
+          {
+            "name": "V \u2014 Corporate Exile",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4a5591f9-743e-4186-8deb-560971bb3f82/render-mpwcmh92.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EwfsDZN4x2QAvrQ6G6~GEwywsiOao-NF0hDyPIKnSfykvIIBMmWQTk7-3ggxkHhpaSYqH4tBzc1SI1hpQdb2UFXqGAiL94q04zPmDX7G9S7mii7eXKXDpQgKdQdTzqesmm1NsWJpWpceTuR7ctDJT1jqiAUPtU4G86tZu~fkF8p2mnL90dactU3A3LO72MabzPM5TswUfcHgKoc0dO3nULnwefpbYLG3VChcYx0XRiOpCDFdjeawYyz3-pXPfMyiLJKtu2aFnEsUFg4csXQE4OjYEOj7cvgxdZoHzcEv0iAU6zuumT5gz90rGLfle5hAttJ-aDooGXSlzx4fNR-3zQ__"
+          },
+          {
+            "name": "Rogue Amendiares \u2014 Preem Solo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2dd7547d-5098-4082-a98b-f39a583a222f/render-mpvmmwyz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=KqW3TkUHCMOz3cgIZt9uDDMl-MVQsv9oEKJnTJHe9dPR-0j3UpJMKojaH2LuVijdfBzovb7cRnK6HjmTE7-XacOrWxPxstP9oV2Z-svuKAA0NOtOVX11qnS4Z57HoOrEh0xZ9RIdaFndunaLAIlOQ0mH63hN2o-IAoqe0d4~aoqbRYpAMRoBvQA0mUOU71VyIDXUmp8kWNa3SDoKR4TCLi9DLjK71e8Rj-rx0MqMT1eVOnwXn0H-1KyqHcmPm4dNQUj4Laps5HWU64r-Rs2ADsU-NF7yhkvfJXAmAqD7-vDGhEgKcfIAIGvyN0BALOAfBaflA-L5mOeKEqVPNWBl9A__"
+          },
+          {
+            "name": "Secondhand Bombus",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/fcbb6d58-6666-4bd3-8ff0-64930fb0f422/render-mpvlyg97.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jUEmPoGk8rdnZ86fk~j7SqRN8mtm5~oNov-sogtiLfV5Cz693-BaRVwj2sdvc6qDO~eTVTLvAgyNlpH9Tg3WNMwSQ7DfoyxhmSONfREWWLz2ZZlphMHsgtkHpmes7NM5WfBH434ZCDDbQu5RWIsrzGhAJB6h~zu8IVdw83k~OeeBZW2P4ox4V~uuMD46VN0iqlNIutLYVklFMusxTs4cLoo8P3aBdsFAnoG1hadcjrpjdPSOlrrnY-8FZRz7xZ7uuICp4qZScjy0rEte5CEeBU~tdkhZQqG4OO6JpaHmoewjfprHJzczzqujjWbbVZO665MfUyV-rzZZWx3yPV5ZEQ__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ce3fff88-941a-4884-91f7-ac1fb2f8955c",
+      "name": "BLUE rogue",
+      "slug": "new-deck-1",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:10:43.340Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "bfc23551-d843-489b-bc3d-9776e29d5467",
+        "display_name": "Trashpanda"
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 7,
+          "Legend": 3,
+          "Program": 16,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "V \u2014 Corporate Exile",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4a5591f9-743e-4186-8deb-560971bb3f82/render-mpwcmh92.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EwfsDZN4x2QAvrQ6G6~GEwywsiOao-NF0hDyPIKnSfykvIIBMmWQTk7-3ggxkHhpaSYqH4tBzc1SI1hpQdb2UFXqGAiL94q04zPmDX7G9S7mii7eXKXDpQgKdQdTzqesmm1NsWJpWpceTuR7ctDJT1jqiAUPtU4G86tZu~fkF8p2mnL90dactU3A3LO72MabzPM5TswUfcHgKoc0dO3nULnwefpbYLG3VChcYx0XRiOpCDFdjeawYyz3-pXPfMyiLJKtu2aFnEsUFg4csXQE4OjYEOj7cvgxdZoHzcEv0iAU6zuumT5gz90rGLfle5hAttJ-aDooGXSlzx4fNR-3zQ__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d651b9cf-6bfc-48e3-9c40-b606b80d511c",
+      "name": "mono blue",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:09:43.579Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "bfc23551-d843-489b-bc3d-9776e29d5467",
+        "display_name": "Trashpanda"
+      },
+      "preview": {
+        "colors": [
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 6,
+          "Legend": 3,
+          "Program": 17,
+          "Unit": 17
+        },
+        "featured_cards": [
+          {
+            "name": "Alt Cunningham \u2014 Soulkiller Architect",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/cb23a651-dd1d-48f8-aca3-8d33fef79fdd/render-mpvmnn4t.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IAl0qR-28vcMWcmVOcq-Aq9DCAFfuMIprlbAeqwKjXzXRlBbU6kkpqxJt36fVcLvwtGgq6Xqo7XLu4HAb2csj1bgP7y88S89xl1w8zTe2Dn1fI5xRcys8-pYlRbNOKWsZL5GP-3sXJ2VNvKAxf~nuKSfTw1vEGSI7IZMVXZKl8qT4dx5BUS35ieEZmDUzRbciX06Q4MNquKt2wUgMmlyuPjc7eci0bk-yBApPUZcXLH6-mWm7SKrRdjwd2Dh~Dx0s1BPb6eSL84y0f11eny79JwzmwdWB67ZNXmpR2hsS0Gh2pkGD8p71XMBq-1unfYdNnr9BtE4vSx9ETDZLbubnA__"
+          },
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "Jacked-In Voodoo Boy",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8e2f2d0c-0e92-4744-a510-a9c7ac371d81/render-mpvluy4x.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=acZQ5br0nDyE8DKbSgPzGhvIZ1qSEPFODh2G~INDx~tWsKRMqVEKLVqYUJQATn~auu1ZHAzqtK4KgFtTnQuJsLORNwx9Ffn18URE52GSqgd0gnavfgUeboFlDJxz7wwu~wmHqAdi7OUQwccWe3-pXxvtBlvxqfojduygpmlRoIomaq0EXFVIjT1jDFkxBBkQK9Er4tUm2K0ntacWwV~dFdbVubboimessQuEe6e-QRZLr7Ak1GCawYlSmN7eMPq6mqK9yr8S0acgloBf2E3~-12YMLgLiUCenzULU-NgSKsMl2pqm5ZUtWwfJabVfPxJM2Az~H47t29pJVjFdnsQFg__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c421c95b-fb9c-454f-8494-4b777f645cc1",
+      "name": "Starter Deck: The Heist",
+      "slug": "starter-deck-the-heist",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:06:55.254Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "8eb41a99-bdc7-4cec-a8da-4fea6a78b911",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 13,
+          "Legend": 3,
+          "Program": 7,
+          "Unit": 20
+        },
+        "featured_cards": [
+          {
+            "name": "Jackie Welles \u2014 Pour One Out For Me",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a33d3324-fe48-4a9f-80a8-8545a0a4727f/render-mpwcl76z.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=jpy1Txk~Zd1QqAxSPnYmLSd4rMpJoi2OCsGAK6jOg1E2uz9HkoqzGIjRacsUcr21drbEBZBW8bhn825-f4V4uPVxnlnmxX-xbVlShZNTEi1RNYEndwtYT9t1i2IIDoFevp4F~0ZrVfKKN0fmKO3KG22HHuFuqaFnTPM22DM4V5oXbWvnW6GEcn3vwjn2crXuRp0QeFV6mGmasrgMK3tt1KDUN9nF2ttTOYy5SxHRKesqrbV8OvTuFvpOC8GIVEzncsH2Xvfy86DJH1OuvgcTN0TI647v45dlws28w3b2Gku6UrmNKAA8L9LhfuXA5Llkg-zv1AnsIq67tNBsDntWfw__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 Sit Down and Relax",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d539173-4022-402e-a9f4-100338935fd2/render-mpwcnsje.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EPAZFAx2og21uJLr0ZF-RDSgReEvnacPqDn0044fUIOj~-R0rz3OpIH8jTMEFHgNehzH3aZA6rIcsAll6IDr9wgPxIuQoDEebETvRc3UVu9K0~CBc0sgKwgGlu6SiB3kQSzHndbvegnqBbpOt5r8buCnJDLJvko2B6FkE~imgd6PJTE7w~Gd5~ZG2WuoGwAmBytohrPPbP32mONYLzxrnSCdYwU4ch35eg8plND0aWog7qDRR0hwGB53JnclkFB22FEXaJVB75dvLxuGxP~l2k6KLXvOZBgfZEdmvysKtnJYCchT2D-x7iUcTbDXH10MqPwcKt1SGzeqTN04GD1GIw__"
+          },
+          {
+            "name": "V \u2014 Corporate Exile",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/4a5591f9-743e-4186-8deb-560971bb3f82/render-mpwcmh92.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EwfsDZN4x2QAvrQ6G6~GEwywsiOao-NF0hDyPIKnSfykvIIBMmWQTk7-3ggxkHhpaSYqH4tBzc1SI1hpQdb2UFXqGAiL94q04zPmDX7G9S7mii7eXKXDpQgKdQdTzqesmm1NsWJpWpceTuR7ctDJT1jqiAUPtU4G86tZu~fkF8p2mnL90dactU3A3LO72MabzPM5TswUfcHgKoc0dO3nULnwefpbYLG3VChcYx0XRiOpCDFdjeawYyz3-pXPfMyiLJKtu2aFnEsUFg4csXQE4OjYEOj7cvgxdZoHzcEv0iAU6zuumT5gz90rGLfle5hAttJ-aDooGXSlzx4fNR-3zQ__"
+          },
+          {
+            "name": "Evelyn Parker \u2014 Scheming Siren",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d174619-2183-4058-a89a-082c6b7b5a5c/render-mpvm5enr.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=XaxtHwNcU0n7hwNEpADVsuWccvZqSj1g2cgTup5t0YNhXmLr0wxVfokQRUXa2vEv6evgZUrXX3M1O~NhzU410zC0Bb6i156XBzr4Kt4jthHDFY8WNEvlxoyvNPIUgPbZsrSOnOb3k9ADG2ybXgLumhGy56y1ipuJFrQoPfcMfj4sHHchn9f~Odq-7MLsqXZUNyiGoIzmYiwOVEYgBikH8pqHdtFkP0BvFYfE5i5aaNkM5HLqN-7lgEMaxNoGxO3aadkqRdV4Z-sMFSxVgEOgjZSeXj-173cEuI2OIdgAHdTPK6k9oPkC1pQQg29Sg5icaWYkex6jQ6Ui7lbyxIZYbA__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d3ee99b1-92ad-4ac6-9e07-ff357d115e40",
+      "name": "Royce Build",
+      "slug": "royce-build",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:04:14.128Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "7573acf2-3fe4-49d6-bf94-f5682cb304c5",
+        "display_name": "ajvito03"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 10,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 21
+        },
+        "featured_cards": [
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Viktor Vektor \u2014 Sit Down and Relax",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/7d539173-4022-402e-a9f4-100338935fd2/render-mpwcnsje.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=EPAZFAx2og21uJLr0ZF-RDSgReEvnacPqDn0044fUIOj~-R0rz3OpIH8jTMEFHgNehzH3aZA6rIcsAll6IDr9wgPxIuQoDEebETvRc3UVu9K0~CBc0sgKwgGlu6SiB3kQSzHndbvegnqBbpOt5r8buCnJDLJvko2B6FkE~imgd6PJTE7w~Gd5~ZG2WuoGwAmBytohrPPbP32mONYLzxrnSCdYwU4ch35eg8plND0aWog7qDRR0hwGB53JnclkFB22FEXaJVB75dvLxuGxP~l2k6KLXvOZBgfZEdmvysKtnJYCchT2D-x7iUcTbDXH10MqPwcKt1SGzeqTN04GD1GIw__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Sketchy Ripper",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/12f0398c-bcc3-4944-af72-ac2ae9f36761/render-mpvm0clc.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=kmD-K7tXEor5bwvPNuP0swO9tKx~XzHUfreZz4YAVfxvepJMsCNJt-M~4NZUsmbkTmDeJqUI8KBKPW-0cJs7-UNm53Zsvd3g7zbcc~mrSXRu4ZHBSKR70sAugwzoCNqxp3YP9ErQBiL4gPhCefdcKF7W15jrTJhUyoyKlJ8ZAJqX5enEcX531xeGYjmP4N-oTosU3yMy8faHIGNoZ1neo4jwzyzDoVBFUa6x3itN--Ckk5BGFbGrVsxvAWFMTkDRzUBgOrXGUCBn3~87W2ahkinCcfxYbPY5KNam0umtNr-kSgT4RE00twssu4BwRrDAGOIwl36XMw-j5Ku~kRxJ1g__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "32c4d558-471b-436a-9538-fd7f1b669139",
+      "name": "Starter Deck: Embracing Power",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T20:03:35.300Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "8eb41a99-bdc7-4cec-a8da-4fea6a78b911",
+        "display_name": null
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Green"
+        ],
+        "type_counts": {
+          "Gear": 11,
+          "Legend": 3,
+          "Program": 9,
+          "Unit": 20
+        },
+        "featured_cards": [
+          {
+            "name": "Saburo Arasaka \u2014 Stubborn Patriarch",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/6ac7adce-01af-4b5b-956b-698eda0bed14/render-mpwbxd5h.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Eh7X~NlbrJD61gp7kGkCVRwrDK-a8eAn0YD2MPbee5s7N3GA64KSAZXU1lcHGjEDpFjPToCrdv1d6aGXaiMtylGsBsaM57ER~9yBka5UUr0RBGgFr28esG~mnhPcqiMVyepv7EQhz6NTyRWRElr~NOgvLRTFcJhxBIURI6vNWHVB7nFuQEQGt8tS-HVF8lJJU954LbwHSK4j5eVB3ahBQtJwm167tUeGgi-Qprql9zBHQ1oHpkKsz5CQKkGcY0pkjO3dybO5gaXmdXReYWKQcfp3f-i2IrXObDay3UtxNM3lV01l8csdXYaAaF4fc1CFdCGdH94Xmf3BxMTtS46olw__"
+          },
+          {
+            "name": "Yorinobu Arasaka \u2014 Embracing Destruction",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/f70b75b5-aa2f-4c2d-b8c3-01fcb2a670ec/render-mpwbzegh.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=aCFuwVCP7MrdqPJu7alK8rrxovVaYr5KXkrWrHLD0ifOS5XfSb0gnZtDleB4awCWNh51g6CzcxCSp06jt1xfq7xAxrb05tAkyqntdpgVHqtGqaVTmxGkGlCxjM0vZZbTCkoJbPUgUXIXv180fqt0PlHkta0zqmAd7uiHeM8pL6SoYqqpDwWxpIc~EO8Geo2kz9-PPCeyeJOfqwpPDfudf-fOHR5LCrHuUrZ7GfAUUOAwScqcHscPbukUulKYBiKKUJBKFPFAP6~asZtyDirohXtTSAXtaIbgJJs2DR7fbJEpOnjop3t48T0qdm4~22HBJsqWdeNtF0I5annkBbtoVg__"
+          },
+          {
+            "name": "Goro Takemura \u2014 Hands Unclean",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2ba68619-7050-44c5-b0ce-b32d48b8f40f/render-mpwbuq0n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Vy-eQ5V-wFoKTsR8Ia2vgWJV8rDu~AJRrmfy-TA1LT8BTkSUn0F4yAZ-ALDPrCFooq2gSl6J6zpH~aPVfKYtJxkHpsZoNiFvKutZdW8P3c4upiWnynLhrKpUC7QWXf~P~Ax7~NEFjMa8VOig7TOcUqwU9fhupxIhu7yg3glZmrPjvI21xO~wNGNwVbtCBoYO9ucs0S~~OcqYNU4vTbGNnxWphAoVLB4aF9YOX7lkprJ9fy~d48831vI-19Cj5C9grxNH8gcW3uQO0K5r~PJIWb6fBvo8FDl5psPUGsnuxzqJq~LISJi5BEUEa6dHrkeM4i9c7hy8wtvtX81L394N1w__"
+          },
+          {
+            "name": "Corpo Security",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/80dcc139-d31d-4b89-86ff-cdbdd2664953/render-mpvlxrn4.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=bI1JfDJMYpKVxWsk--pOJqK2Uw2mk6wykYDM5ttr9tpP6fH8TlH-s6rWl75wmKf1fFe7tL5f0Ti-8Hadx6wwUvXeRZOAxmrCX7fIsP40OGsTqxeryTiHk3-8Y2ZjHJsfayeVKphCEgvYBWHJkJ-Dt4NDyie5s0LXG5JLa6fE1ASiZ4kK5V85ZfcMBaZ2W44-M94GWy8lmfHz6qZwOnuUA~k2ygbdghCGTYsIFHd5iiYMtaVeNd4~sjTmSLKx98dLGW5VT1Is7vDo1sIYknZvGosZLqvcy3rrjL69TQVir3dyhtAlOXA-6dHoMVe3h-sbddTWicxPqKMCR27aIofEew__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4bfa4585-4ed4-4116-a1cd-b62056b5789a",
+      "name": "New Deck",
+      "slug": "new-deck",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T19:59:55.875Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "4cd9c11d-0e04-4e39-9c8f-b7b9cf0d469c",
+        "display_name": "CiMaK"
+      },
+      "preview": {
+        "colors": [
+          "Red",
+          "Blue"
+        ],
+        "type_counts": {
+          "Gear": 8,
+          "Legend": 3,
+          "Program": 16,
+          "Unit": 16
+        },
+        "featured_cards": [
+          {
+            "name": "Judy \u00c1lvarez \u2014 Braindance Maestro",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/8d0ad645-ac9a-4ecb-93d0-4c2061a4c477/render-mpvmp40n.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=IKo3sH1NMJQpYTSxM15j6wzwNlNws~CbbW9hICvufxkzxqpxeLgLoZEZKKyBHF72sOVD8zHvWDFCVF4KQxbFrR1Wcvknmj2Aia0ZQ21JGGvZiLc0PmdHR9QVegfYte~oyZ6qGE7~BX07fREBXOls59kuwj5t-PJtcJhYG~E~L-Rm3ekT9AQBlzVWc9wCXSchSrfg-pAffza0xwCfYLuc2gpF1nWtIImThGXfu46f41KZE4mpo5oN21-FN4JfSCSu2LISlPLWgKc5VXe3-24SkKWAuvWVJwCSUQpEBDivuh7pwjB2jxhaeQ0M3m3jN1pTJccGda-b4KRKZreB9R9rHw__"
+          },
+          {
+            "name": "V \u2014 Streetkid",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3fc63c58-5954-4744-a5af-047bfc5cb159/render-mq9zzfnq.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=nMYIvfGY6gOAI4ptxa~v9pGO1u-q1RFM0kYQLeoEF5h4MlaJ~WgD7-CJdsG0EYbtWdgRsyzUMWqWEs8eBENxVvHoxebrPg6qZL8H9SC75XqLOxWr6Sc2isYrM-V-ssrArEEtrJdcU5YD-54CUL2cmqtEYyMXv0zSr~wJONEEuKcLv8GkgKothE4tXh3HG0aq~4665eQWSYma0uEXvu9iVtvtMnHZv2ycgJHgCXWKXAJZjPIv2IHWqG6DGCp1u2to6H-S--NTG7noQ3obRKb~M4JsSUcetH32uTxNMHU5NadJb0q9xjDsBeIjnqks7mH3~ygpY0FghxI1uGrO9EJmQg__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Japantown Jonin",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/30619097-d9d7-42fe-bf4c-cd4ae822792d/render-mpvlsow6.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cF0zlBnvq3y-~luxry7Ui1y0~cHVlkjNSPGw~eZis9i~GSuDXqKlJ~6cmCZwDVajteHrywXXVWgXtrVYv~mgdq3Uq1XCPOnhMFwcLdCgl4gczWrg0J74FLhTuczJh2NoiL5jwd2zTrZQ11wlDCYvRnwH0mJUiL4zUxisjnBwsmuw4-vd2G1wBDH9CwELEKOWQN5a6PP3rJ9syScqS98PznSncHDYwBLY7TxZMEFYI7tBdieaLBu9lsbbpeimbiZseajXt5TPI5YmgGW0e9zHdoEWxaIjFVFncvqluRxgD9A2pM4Nt4n8gu23CCtW0nK8O20S7BIxWGMQpMQik4bw~w__"
+          }
+        ]
+      }
+    },
+    {
+      "id": "429d7eb1-8c3a-4e84-aefe-45ae239d6d49",
+      "name": "Counter Deck",
+      "slug": "one-box-wonder",
+      "credit": null,
+      "card_count": 43,
+      "is_valid": true,
+      "updated_at": "2026-09-12T19:22:10.056Z",
+      "game": {
+        "id": "81678d6f-c874-4da3-98cf-9b88ceee66a9",
+        "code": "cyberpunk",
+        "name": "Cyberpunk TCG"
+      },
+      "format": {
+        "id": "2597b437-684e-46a6-bc1d-5c54d1a58ea1",
+        "code": "standard",
+        "name": "Standard"
+      },
+      "owner": {
+        "user_id": "32990b14-42e2-4c76-b6f6-afb571af3310",
+        "display_name": "TCG_TALK"
+      },
+      "preview": {
+        "colors": [
+          "Yellow",
+          "Red"
+        ],
+        "type_counts": {
+          "Gear": 15,
+          "Legend": 3,
+          "Unit": 19,
+          "Program": 6
+        },
+        "featured_cards": [
+          {
+            "name": "River Ward \u2014 Detective on the Hunt",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/b3895f75-e147-49b0-a6d8-6fb35b356b2e/render-mpvmn1j1.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=Jv1aDTAwAokXbfpnsHuB2pt7xZAdVZqwBfHTYtGKC7Ttlza7yWMWaqvua1nLiblH6lPuBCOwCFkouoHR9jM5BHwoRQQxfnpcDPRuI9C6bA9gSWFAIS7UgBBGKQOq4cs3f1n0AjntSg4qCyKtieGaQeG2A7BPlMmjl98wETusm37bsWtIEjzQEa-4r01GZVcIdRBF0c~K0dchUrQ4qywpQEKBYJhAcF9Z-BidlplR9iLRV8MIAp5pkLCR0xrJx5JQHkWjrlgn89wZqy8xr5~4TG60cO2qtx7FrvG5j4U5t7DEZ6gjGFn9WRDIFGyw7yuIKAMzPResr595cuwIrigJyA__"
+          },
+          {
+            "name": "Royce \u2014 Psycho on the Edge",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/3e2e228b-dbfb-484b-b82d-6972ff184aab/render-mpvml5uz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=cBXxRiJYX3AX77H3BsfxPA2Xc1mCyW3oa8CmjFXk0gNE2RW8EqlnJ3xLAY0lZazyJa598Sqb2pL5oqRV0ud8-oyLFqoyVQ3fcf1iomf8dIgdnhqntWkEGb5wjSc3cbrrkuFuJ5o14EZiblIxAL6t1fbzEq37yT-Rg4rDU-Kaw4vc5tOVGdf-Iq8HYl1Um7w2izEo1yQjj64uVu0451JCKCRv4GUNEEVVMyDJZqzjXKckzVwExwxIUToMOIILkVeEblKwDO8doY4yaSy5t1KNGFAVIQ9Z-S9A9WxoR7L8fau1gBcTLUwUfR1QITQsm7-ShCmErCT-eriAHkNsB1HucA__"
+          },
+          {
+            "name": "Rogue Amendiares \u2014 Preem Solo",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/2dd7547d-5098-4082-a98b-f39a583a222f/render-mpvmmwyz.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=KqW3TkUHCMOz3cgIZt9uDDMl-MVQsv9oEKJnTJHe9dPR-0j3UpJMKojaH2LuVijdfBzovb7cRnK6HjmTE7-XacOrWxPxstP9oV2Z-svuKAA0NOtOVX11qnS4Z57HoOrEh0xZ9RIdaFndunaLAIlOQ0mH63hN2o-IAoqe0d4~aoqbRYpAMRoBvQA0mUOU71VyIDXUmp8kWNa3SDoKR4TCLi9DLjK71e8Rj-rx0MqMT1eVOnwXn0H-1KyqHcmPm4dNQUj4Laps5HWU64r-Rs2ADsU-NF7yhkvfJXAmAqD7-vDGhEgKcfIAIGvyN0BALOAfBaflA-L5mOeKEqVPNWBl9A__"
+          },
+          {
+            "name": "Augmented Negotiators",
+            "image_url": "https://dstcynss47vun.cloudfront.net/prod/cyberpunk/portal/a195323a-e29e-4c05-8e6c-7f1638c8264c/render-mpvm290s.webp?Expires=1789286981&Key-Pair-Id=K3SGRHESIHQPEW&Signature=tNDykVHlAWVIpvjG3gZkigDBiVZyyNs21ieWJpOCoPybh82ySPTLGnfB-2202j6dCevyYthymtn8m84-TN4wkRZAbbVLJRuS~qt4YE7fsnQd61lcz11ouhBPAU~PpsnPV2~8M-q3oaNwMA1UycW15E8LTzm0I~XCtJ7SkvUJ8w0Qh3lC~B8waKS0kq3BQwSJG6ocbzOlViudMGWQ2wNWu0UNJ12mD3DVyekFnmK57CyCbGNUTZHfsHDsUvtvnpQqO~AbD9o5KCb~kUa1VsVgtt9j--5H4bT8utzmAtviXvnQvKlbA~cnz-QQNOQbeC7nVfD5SqaNpcoAfrdY4tIULQ__"
+          }
+        ]
+      }
+    }
+  ],
+  "total": 553,
+  "limit": 50,
+  "offset": 0
+}

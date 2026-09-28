@@ -1,0 +1,13 @@
+{
+  "appId": "com.weirdco.cyberpunktcg",
+  "appName": "Cyberpunk TCG",
+  "webDir": "dist/android_build",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#07080d",
+    "allowMixedContent": true
+  }
+}
