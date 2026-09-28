@@ -189,7 +189,7 @@ body::before {
 .app-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9990;
   background: linear-gradient(180deg, #10121d 0%, #0a0b12 100%);
   border-bottom: 2px solid var(--border-bright);
   box-shadow: 0 4px 25px rgba(0, 240, 255, 0.15);
@@ -310,6 +310,9 @@ body::before {
   font-size: 0.78rem;
   padding: 6px 12px;
   white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  z-index: 9996;
 }
 
 .header-actions {
@@ -325,7 +328,7 @@ body::before {
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
-  z-index: 9970;
+  z-index: 9998;
   min-width: 200px;
   opacity: 0;
   pointer-events: none;
@@ -474,10 +477,20 @@ body::before {
   pointer-events: none;
 }
 
-.mobile-drawer-backdrop.active {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
+@media (max-width: 768px) {
+  .mobile-drawer-backdrop.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-drawer-backdrop,
+  .mobile-drawer-backdrop.active {
+    display: none !important;
+    pointer-events: none !important;
+  }
 }
 
 /* Mobile Bottom Navigation Bar (Phone Screens) */
@@ -663,7 +676,7 @@ body::before {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-    z-index: 9970;
+    z-index: 9998;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px);

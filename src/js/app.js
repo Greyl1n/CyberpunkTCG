@@ -79,8 +79,13 @@ class App {
         e.stopPropagation();
         window.cyberAudio.click();
         const isOpen = headerActionsMenu.classList.toggle('open');
+        // Only activate drawer backdrop on mobile viewports (<= 768px)
         if (mobileBackdrop) {
-          mobileBackdrop.classList.toggle('active', isOpen);
+          if (window.innerWidth <= 768) {
+            mobileBackdrop.classList.toggle('active', isOpen);
+          } else {
+            mobileBackdrop.classList.remove('active');
+          }
         }
       });
     }
@@ -109,10 +114,21 @@ class App {
       });
     }
 
+    // Dismiss Actions menu on outside click (desktop & mobile)
+    document.addEventListener('click', (e) => {
+      if (headerActionsMenu && headerActionsMenu.classList.contains('open')) {
+        if (!headerActionsMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          closeAllDrawers();
+        }
+      }
+    });
+
     if (headerActionsMenu) {
       headerActionsMenu.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
-          closeAllDrawers();
+          if (btn.id !== 'audio-toggle-btn') {
+            closeAllDrawers();
+          }
         });
       });
     }
