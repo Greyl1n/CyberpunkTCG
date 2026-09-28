@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  cyberpunk-tcg:
+    build:
+      context: ../..
+      dockerfile: scripts/container/Dockerfile
+    container_name: cyberpunk_tcg_server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
