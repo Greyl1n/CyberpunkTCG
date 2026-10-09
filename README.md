@@ -1,24 +1,27 @@
-# Cyberpunk TCG // Official WeirdCo Edition
+# Cyberpunk TCG // Fan Companion & Deck Builder
 
-An interactive companion, card inventory manager, and tournament deck builder for the **Official WeirdCo Cyberpunk Trading Card Game** (*Welcome to Night City* set).
+An interactive companion, card inventory manager, and deck builder for the **Cyberpunk Trading Card Game** (*Welcome to Night City* set).
+
+> [!NOTE]
+> **Disclaimer & Non-Affiliation:** This is an independent fan-made companion tool. This project is not affiliated with, endorsed by, or supported by WeirdCo Games, CD PROJEKT RED, R. Talsorian Games, or any related entity. All card names, game mechanics, and artwork remain the property of their respective owners.
 
 ---
 
 ## ⚡ Key Features
 
 - **🖥️ Standalone Windows Desktop App (`dist/Cyberpunk_TCG.exe`):**
-  - Completely self-contained `.exe` bundling Python runtime, native desktop GUI window, all 151 official card images, and audio engine.
+  - Completely self-contained `.exe` bundling Python runtime, native desktop GUI window, all 151 card images, and audio engine.
   - Zero dependencies or installation required.
 
 - **🌐 Zero-Dependency Monolith HTML (`dist/cyberpunk_tcg_monolith.html`):**
   - Standalone single-file application with all HTML, CSS, JavaScript, datasets, and starter decks inlined.
   - Runs in any modern browser (Chrome, Edge, Firefox) completely offline.
 
-- **🗃️ 151 Official WeirdCo Cards & Artwork:**
-  - Complete database loaded directly from the official NetDeck / WeirdCo repository.
-  - **151 high-resolution official card artwork renders** stored locally in `assets/cards/` for 100% offline access.
+- **🗃️ 151 Indexed Cards & Artwork:**
+  - Complete database covering the *Welcome to Night City* release and expansion pack.
+  - **151 high-resolution card artwork renders** stored locally in `assets/cards/` for 100% offline access.
   - Authentic characters: **V (Streetkid), Adam Smasher (Ender of Legends), Johnny Silverhand (Rocking Renegade), Yorinobu Arasaka, Rogue Amendiares, Dexter DeShawn, Rebecca**, and more.
-  - Official stats and anatomy:
+  - Complete card anatomy and stats:
     - **Card Types:** `Legend`, `Unit`, `Program`, `Gear`.
     - **Factions / Colors:** `Red`, `Yellow`, `Green`, `Blue`.
     - **Cost in Eddies (€$)**, **RAM**, **Power**, and **Sell Tags (€$)**.
@@ -38,7 +41,7 @@ An interactive companion, card inventory manager, and tournament deck builder fo
   - Dismissible with close button, backdrop click, or `Escape` key.
 
 - **🛠️ Tournament Deck Builder:**
-  - Enforces official tournament rules:
+  - Enforces tournament rules:
     - **Exactly 3 Legends** required.
     - **40 to 50 Cards** in main deck.
     - **Max 3 copies** of any non-Legend card.
@@ -46,8 +49,8 @@ An interactive companion, card inventory manager, and tournament deck builder fo
   - Dedicated **3-Legend Identity Zone** with full thumbnail visibility, RAM telemetry, and click-to-inspect.
   - Real-time **Eddie Cost (€$) Curve** and cumulative RAM telemetry.
 
-- **⚡ 59 Official & CyberpunkTCG.com Community Decks:**
-  - **4 Official WeirdCo Starter Decks** (*Arasaka Embracing Destruction*, *The Heist*, *Afterlife Syndicate*, *Arasaka Corporate Dynasty*).
+- **⚡ 59 Core & Community Decks:**
+  - **4 Core Starter Decks** (*Arasaka Embracing Destruction*, *The Heist*, *Afterlife Syndicate*, *Arasaka Corporate Dynasty*).
   - **55 Community Decks** curated directly from [cyberpunktcg.com/decks?tab=community](https://cyberpunktcg.com/decks?tab=community).
   - Searchable by name, author, archetype, or color.
   - Faction-themed **"⚡ Load into Deck Builder"** buttons matching each deck's primary color.
@@ -149,6 +152,25 @@ python -m unittest discover tests
 
 ---
 
+## 🧠 CyberVision AI Neural Scanner (v2.0)
+
+The v2.0 scanner replaces legacy rigid OCR with an edge computer vision and vector embedding pipeline:
+1. **Real-Time Auto-Framing & Deskewing**: An edge contour quadrilateral detector locates cards anywhere in the camera feed at any tilt or angle, applying a 4-point homography transform to flatten it automatically.
+2. **256-D Perceptual Visual Embeddings**: Generates multi-scale spatial and frequency-domain embeddings and matches against pre-indexed card fingerprints in `< 10ms` with high confidence.
+3. **Updatability Pipeline**: To add new cards or update the AI model without retraining from scratch:
+```powershell
+# Check index status:
+python scripts/ai/update_cards_ai.py --status
+
+# Incremental update (indexes any new or modified cards in data/cards.json):
+python scripts/ai/update_cards_ai.py
+
+# Force full re-index:
+python scripts/ai/update_cards_ai.py --force
+```
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -166,29 +188,36 @@ Cyberpunk_TCG/
 │   ├── css/                    # Modular styles (base, cards, components, scanner)
 │   └── js/                     # Modular controllers (state, audio, deck_builder, scanner, etc.)
 │
-├── data/                       # Official card datasets and rules
-│   ├── cards.json              # 151 official WeirdCo cards with complete stats & rules
-│   ├── starter_decks.json      # 59 official and community tournament legal decks
+├── data/                       # Card datasets and rules
+│   ├── cards.json              # 151 cards with complete stats & rules
+│   ├── starter_decks.json      # 59 starter and community tournament legal decks
 │   ├── cardmarket_prices.json  # Live pricing data from Cardmarket
 │   ├── sets.json               # Expansion sets manifest
 │   └── rules_manifest.json     # Deck building constraints & tournament rules
 │
-├── assets/                     # 151 high-resolution official card artwork renders (.webp)
+├── assets/                     # 151 high-resolution card artwork renders (.webp)
 │   ├── cards/                  # Offline card artwork library
 │   ├── background.webp         # Cyberpunk theme background
-│   ├── logo.png                # Official branding
+│   ├── logo.png                # Application branding logo
 │   └── icon.ico / icon.png     # Application icons
+│
+├── models/                     # AI Vision model weights & manifest
+│   └── manifest.json           # Active neural engine metadata & configuration
 │
 ├── android/                    # Native Android Studio / Gradle project (Capacitor)
 ├── dist/                       # Output distribution packages (APK, EXE, Monolith HTML)
-├── tests/                      # Automated unit test suite (test_tcg_logic.py)
+├── tests/                      # Automated unit test suite (tcg logic & AI vision)
 │
 └── scripts/                    # ALL HELPER, BUILD, AND MAINTENANCE SCRIPTS
     ├── build_monolith.py       # Monolith single-file HTML bundle compiler
     ├── build_exe.py            # Windows standalone .exe PyInstaller builder
     ├── build_android.py        # Android Capacitor sync & Gradle APK builder
-    ├── server.py               # Local development server
+    ├── server.py               # Local development server with /api/ai endpoints
     ├── launcher.py             # Desktop app GUI launcher (PyQt5 / WebKit)
+    │
+    ├── ai/                     # CyberVision AI feature indexers & update tools
+    │   ├── build_card_features.py # Precomputes 256-d visual vector database
+    │   └── update_cards_ai.py  # Incremental card & model updater CLI
     │
     ├── linux/                  # Standalone Linux desktop packaging
     │   ├── build.sh            # Native Linux desktop compiler (Fedora / Ubuntu)
