@@ -41,9 +41,9 @@ Precompiled, zero-dependency standalone binaries are ready in the `dist/` direct
 
 ---
 
-## 🧠 CyberVision AI Neural Scanner (v2.0)
+## 🧠 CyberVision AI Neural Scanner (v3.0)
 
-The v2.0 scanner uses on-device computer vision and vector embeddings to identify physical cards instantly:
+The v3.0 scanner uses on-device computer vision and vector embeddings to identify physical cards instantly and reliably:
 
 ```
                   ┌───────────────────────────────┐
@@ -51,32 +51,34 @@ The v2.0 scanner uses on-device computer vision and vector embeddings to identif
                   └───────────────┬───────────────┘
                                   │
                   ┌───────────────▼───────────────┐
-                  │ 1. REAL-TIME AUTO-FRAMING     │
-                  │ - Detects card at any angle   │
-                  │ - 4-Point Homography deskew   │
-                  │ - Glowing tracking polygon    │
+                  │ 1. ADAPTIVE VISION PIPELINE   │
+                  │ - Auto-quad detector & deskew │
+                  │ - Multi-scale candidate crops │
+                  │ - Glowing HUD tracking overlay│
                   └───────────────┬───────────────┘
                                   │
                   ┌───────────────▼───────────────┐
-                  │ 2. NEURAL FEATURE MATCHING    │
-                  │ - 256-D Perceptual Embedding  │
-                  │ - Cosine similarity < 10ms    │
-                  │ - Real-time target lock (97%) │
+                  │ 2. ILLUMINATION-INVARIANT AI  │
+                  │ - Gray-world color balance    │
+                  │ - 616-D Perceptual Embedding  │
+                  │ - Dataset mean-centering      │
+                  │ - Temporal multi-frame voting │
                   └───────────────┬───────────────┘
                                   │
                   ┌───────────────▼───────────────┐
                   │ 3. TARGET LOCK & INVENTORY    │
                   │ - Card stats & Cardmarket €$  │
                   │ - 1-Click / Auto-Add (+1)     │
+                  │ - Duplicate re-add protection │
                   └───────────────────────────────┘
 ```
 
 ### How to Scan Cards:
-1. Click the **📷 SCAN** button in the top navigation bar (or mobile bottom bar).
+1. Click the **📷 SCAN** button in the top navigation bar (or mobile toolbar).
 2. Point your camera at any Cyberpunk TCG card.
-3. The AI automatically detects the card's 4 corners and outlines it with a glowing neon cyber-tracker.
-4. **Target Lock:** Once identified, the scanner displays the card's name, set number, stats, Cardmarket market value, and an **Add +1** button.
-5. **AUTO-ADD Mode:** Toggle the `AUTO-ADD` switch to automatically increment your inventory on sight—perfect for cataloging full booster boxes or binders rapidly!
+3. The AI evaluates both deskewed card boundaries and multi-scale crops, outlining the card with a glowing neon cyber-tracker.
+4. **Target Lock:** Once identified, the scanner displays the card's name, collector number, stats, Cardmarket market value, and an **Add +1** button.
+5. **AUTO-ADD Mode:** Toggle the `AUTO-ADD` switch to automatically increment your inventory on sight—built-in duplicate prevention ensures the same card isn't re-added until it physically leaves the frame!
 
 ### Updating Cards & AI Models:
 As new sets and expansions release:
@@ -103,9 +105,10 @@ As new sets and expansions release:
 
 ## 📦 Collection & Inventory Management
 
+- **🔢 Card Number Sorting (Default):** Sort your inventory by collector number (`# Ascending`), `# Descending`, `Name (A–Z)`, `Cost (€$ Low → High)`, or `Copies Owned (High → Low)`. Your sort preference is remembered automatically.
 - **Playset Tracking:** Track which cards you have 1x, 2x, or a complete 3x playset.
 - **Cardmarket Live Pricing:** Real-time secondary market prices for every card.
-- **Full Backup:** Export and import your collection anytime in JSON or CSV.
+- **Full Backup:** Export and import your collection anytime in JSON, CSV, or Text format.
 
 ---
 
@@ -118,13 +121,12 @@ python scripts/build_monolith.py
 # Recompile Windows Executable (.exe)
 python scripts/build_exe.py
 
-# Recompile Android APK (.apk)
+# Recompile Android APK (.apk - full automated build)
 python scripts/build_android.py
-.\android\gradlew.bat -p android assembleDebug
 
 # Recompile Linux Standalone Executable (via WSL / Linux)
 python3 scripts/linux/build_standalone.py
 
-# Run Unit Tests
+# Run Full Test Suite (11/11 tests)
 python -m unittest discover tests
 ```

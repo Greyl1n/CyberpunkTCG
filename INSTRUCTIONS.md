@@ -2,6 +2,8 @@
 
 Complete step-by-step instructions for running and compiling **Cyberpunk TCG** on **Windows, Android, Linux (Fedora/Ubuntu/Debian)**, and **cloud servers**.
 
+> **Disclaimer & Non-Affiliation:** This is an independent fan-made companion tool. This project is not affiliated with, endorsed by, or supported by WeirdCo Games, CD PROJEKT RED, R. Talsorian Games, or any related entity. All card names, game mechanics, and artwork remain the property of their respective owners.
+
 ---
 
 ## ⚡ Precompiled Binaries Summary (`dist/`)
@@ -237,13 +239,93 @@ docker logs -f cptcg-web
 
 ---
 
+# 🪟 Part 3: Windows Desktop Build (`scripts/build_exe.py`)
+
+Builds the standalone zero-dependency Windows desktop application (`dist/Cyberpunk_TCG.exe`).
+
+### Prerequisites
+- Python 3.10+ on Windows 10/11
+- Install PyInstaller:
+  ```powershell
+  pip install pyinstaller pywebview
+  ```
+
+### Build Command
+From the project root:
+```powershell
+python scripts/build_exe.py
+```
+This automatically:
+1. Rebuilds `dist/cyberpunk_tcg_monolith.html` to bundle the latest web assets, v3 AI vision models, and card artwork.
+2. Injects custom Windows icon `assets/icons/icon.ico`.
+3. Runs PyInstaller in hermetic `--onefile --windowed` mode.
+4. Generates `dist/Cyberpunk_TCG.exe` ready for distribution.
+
+---
+
+# 📱 Part 4: Android Mobile APK Compilation (`scripts/build_android.py`)
+
+Builds the native offline Android application package (`dist/Cyberpunk_TCG.apk`).
+
+### Prerequisites
+- Java Development Kit (JDK 17 or JDK 21)
+- Android SDK (API 34+ recommended) with `ANDROID_HOME` or `android/local.properties` configured
+- Node.js (v18+) with npm
+
+### 1-Command Automated Build
+From the project root, simply run:
+```powershell
+python scripts/build_android.py
+```
+
+This 4-step pipeline executes automatically:
+1. **Web Asset Packaging:** Compiles web bundles and copies them into `android/app/src/main/assets/public/`.
+2. **Capacitor Synchronization:** Runs `npx cap sync android` to refresh plugins and camera permissions.
+3. **Gradle Compilation:** Invokes `gradlew assembleDebug` with parallel execution and offline daemon support.
+4. **Binary Verification:** Verifies the generated `.apk` and copies it directly to `dist/Cyberpunk_TCG.apk`.
+
+### Installing to Android Device
+Via USB / ADB:
+```bash
+adb install -r dist/Cyberpunk_TCG.apk
+```
+Or simply copy `dist/Cyberpunk_TCG.apk` to phone storage and tap to install.
+
+---
+
+# 🧠 Part 5: AI Vision Engine & Fingerprint Generation (`scripts/ai/`)
+
+Regenerates the 616-dimensional perceptual fingerprint database when adding new cards or modifying visual features.
+
+### Feature Pipeline Architecture
+1. **Luminance Spatial Grid (16×22 = 352-D):** Downsampled illumination structure.
+2. **Gradient Energy Map (8×11 = 88-D):** Sobel edge magnitudes capturing card artwork silhouettes.
+3. **Opponent-Chroma Histograms (8×11 × 2 = 176-D):** Color-opponent channels ($R - G$ and $B - (R+G)/2$) invariant to global brightness shifts.
+4. **Gray-World Normalization:** Removes camera white-balance color casts.
+5. **Dataset Mean-Centering:** Maximizes inter-card separation distance (margin `> 0.40`).
+
+### Build Command
+```powershell
+python scripts/ai/build_card_features.py
+```
+This updates:
+- `data/card_embeddings.json` (Perceptual vector database)
+- `models/manifest.json` (Dataset versioning and metadata)
+
+---
+
 ## 🛠️ Summary of Scripts
 
 | Script | Purpose |
 | :--- | :--- |
-| `scripts/linux/build.sh` | Builds native Linux desktop executable on Ubuntu/Fedora. |
-| `scripts/linux/build_with_container.sh` | Compiles executable inside an isolated Ubuntu 22.04 container. |
+| `scripts/build_monolith.py` | Bundles all HTML, CSS, JS, audio, and card embeddings into a single offline `.html`. |
+| `scripts/build_exe.py` | Compiles standalone Windows executable (`dist/Cyberpunk_TCG.exe`). |
+| `scripts/build_android.py` | 1-command complete compilation for Android (`dist/Cyberpunk_TCG.apk`). |
+| `scripts/ai/build_card_features.py` | Generates 616-D perceptual fingerprint database from 151 card artwork files. |
+| `scripts/linux/build.sh` | Builds native Linux desktop executable on Ubuntu/Fedora (`dist/Cyberpunk_TCG_Linux`). |
+| `scripts/linux/build_with_container.sh` | Compiles Linux executable inside an isolated Ubuntu 22.04 container. |
 | `scripts/linux/install_desktop_shortcut.sh` | Installs launcher icon into GNOME/KDE application menus. |
 | `scripts/container/run_podman.sh` | Launches production container server with Podman (Fedora default). |
 | `scripts/container/run_docker.sh` | Launches production container server with Docker (Ubuntu default). |
 | `scripts/container/docker-compose.yml` | 1-command Docker Compose orchestration. |
+

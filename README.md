@@ -28,6 +28,7 @@ An interactive companion, card inventory manager, and deck builder for the **Cyb
 
 - **📦 Personal Inventory & Playset Tracker:**
   - Starts empty by default (`0` cards owned).
+  - **🔢 Card Number Sorting (Default):** Natural collector order (`001`, `002`... `005`, `005a`, `006`... `140`), grouped cleanly by set (Main Set, Starter Decks, Promos). Additional sort options include `Card # (Descending)`, `Name (A–Z)`, `Cost (Low → High)`, `Copies Owned (High → Low)`, and `Database Order`. Settings persist in `localStorage`.
   - Direct numerical input on every card: click into the box and type your owned count, or use `+` / `-`.
   - Live collection dashboard: **Total Cards Owned**, **Unique Cards Collected**, **Full Playsets (3+ copies)**, and **Completion %**.
   - Quick filters: `In Inventory (>0)`, `Missing (0)`, `Need Playset (<3)`.
@@ -104,16 +105,17 @@ python scripts/server.py
 ### Option 6: Android APK (Phone & Tablet)
 Build and run on any Android device with offline database and responsive phone/tablet scaling:
 ```powershell
-# Sync assets & build Android project:
+# Automated 1-command build (syncs web assets, runs Gradle assembleDebug & copies APK):
 python scripts/build_android.py
-
-# Compile debug APK:
-.\android\gradlew.bat -p android assembleDebug
 
 # Or open in Android Studio:
 npx cap open android
 ```
 Output APK location: `dist/Cyberpunk_TCG.apk` (and `android/app/build/outputs/apk/debug/app-debug.apk`)
+Install directly onto your connected device via ADB:
+```bash
+adb install -r dist/Cyberpunk_TCG.apk
+```
 
 ---
 
@@ -126,7 +128,7 @@ All build, helper, packaging, and scraping scripts are neatly organized in the `
 python scripts/build_monolith.py
 ```
 
-### Build & Sync Android APK Project
+### Build Android APK (.apk)
 ```powershell
 python scripts/build_android.py
 ```
@@ -152,21 +154,23 @@ python -m unittest discover tests
 
 ---
 
-## 🧠 CyberVision AI Neural Scanner (v2.0)
+## 🧠 CyberVision AI Neural Scanner (v3.0)
 
-The v2.0 scanner replaces legacy rigid OCR with an edge computer vision and vector embedding pipeline:
-1. **Real-Time Auto-Framing & Deskewing**: An edge contour quadrilateral detector locates cards anywhere in the camera feed at any tilt or angle, applying a 4-point homography transform to flatten it automatically.
-2. **256-D Perceptual Visual Embeddings**: Generates multi-scale spatial and frequency-domain embeddings and matches against pre-indexed card fingerprints in `< 10ms` with high confidence.
-3. **Updatability Pipeline**: To add new cards or update the AI model without retraining from scratch:
+The v3.0 scanner delivers rapid, highly reliable on-device recognition using an illumination-invariant visual vector pipeline:
+1. **Real-Time Auto-Framing & Deskewing**: An edge contour quadrilateral detector locates cards in the camera feed at any angle, applying a 4-point homography transform with bilinear sampling to flatten it into canonical perspective.
+2. **Illumination-Invariant 616-D Embeddings**:
+   - **Gray-World Normalization:** Removes lighting color casts and exposure swings.
+   - **Multi-Group Perceptual Features:** 16×22 luminance thumbnail (352), 8×11 gradient energy (88), and 8×11 opponent-chroma grids (176).
+   - **Dataset Mean-Centering:** Subtraction of common card base features expands discriminative separation (separation margin `0.403`, max cross-card similarity `< 0.60`).
+3. **Multi-Scale Candidate Sampling**: Every scan tick evaluates multiple regions (deskewed quad + multi-scale 100%, 90%, 80%, 110% reticle crops) to recognize cards at variable distances.
+4. **Temporal Multi-Frame Voting**: Smooths recognition jitter across consecutive frames and prevents duplicate re-adds until a card leaves the frame.
+5. **Updatability Pipeline**: To add new cards or update the AI model without retraining from scratch:
 ```powershell
 # Check index status:
 python scripts/ai/update_cards_ai.py --status
 
 # Incremental update (indexes any new or modified cards in data/cards.json):
 python scripts/ai/update_cards_ai.py
-
-# Force full re-index:
-python scripts/ai/update_cards_ai.py --force
 ```
 
 ---
@@ -216,7 +220,7 @@ Cyberpunk_TCG/
     ├── launcher.py             # Desktop app GUI launcher (PyQt5 / WebKit)
     │
     ├── ai/                     # CyberVision AI feature indexers & update tools
-    │   ├── build_card_features.py # Precomputes 256-d visual vector database
+    │   ├── build_card_features.py # Precomputes 616-d visual vector database
     │   └── update_cards_ai.py  # Incremental card & model updater CLI
     │
     ├── linux/                  # Standalone Linux desktop packaging
