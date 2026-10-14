@@ -65,8 +65,8 @@ cd /opt/cyberpunk-tcg
 
 ### 2. Launch the container
 ```bash
-docker compose -f server_container/docker-compose.yml up -d
-# or: bash server_container/run_podman.sh
+docker compose -f scripts/container/docker-compose.yml up -d
+# or: bash scripts/container/run_podman.sh
 ```
 
 ### 3. (Optional) Nginx Reverse Proxy with Free HTTPS (Let's Encrypt)

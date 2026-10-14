@@ -19,11 +19,137 @@ class ExportImportController {
     setTimeout(() => URL.revokeObjectURL(url), 100);
   }
 
+  async exportFile(filename, content, mimeType = 'text/plain;charset=utf-8') {
+    // 1. PyWebView Desktop Native Bridge (Windows .exe & Linux Standalone)
+    // Opens OS Save As file dialog asking the user where to export!
+    if (window.pywebview && window.pywebview.api && typeof window.pywebview.api.save_file_dialog === 'function') {
+      try {
+        const res = await window.pywebview.api.save_file_dialog(filename, content, mimeType);
+        if (res && res.success) {
+          window.cyberAudio.success();
+          window.app.showToast(`Saved to: ${res.path || res.filename}`);
+          return true;
+        } else if (res && res.cancelled) {
+          window.app.showToast('Export cancelled');
+          return false;
+        } else if (res && res.error) {
+          console.warn('pywebview save error:', res.error);
+        }
+      } catch (err) {
+        console.warn('pywebview save exception:', err);
+      }
+    }
+
+    // 2. Android Native Bridge (Capacitor Android APK)
+    // Opens Android Storage Access Framework (SAF) document creator asking WHERE to save!
+    if (window.AndroidExportBridge && typeof window.AndroidExportBridge.saveDocument === 'function') {
+      try {
+        return new Promise((resolve) => {
+          window.onAndroidSaveResult = (success, savedName, error) => {
+            window.onAndroidSaveResult = null;
+            if (success) {
+              window.cyberAudio.success();
+              window.app.showToast(`Saved to device: ${savedName || filename}`);
+              resolve(true);
+            } else if (error === 'cancelled') {
+              window.app.showToast('Export cancelled');
+              resolve(false);
+            } else {
+              window.app.showToast(`Save error: ${error || 'Unknown'}`, 'error');
+              resolve(false);
+            }
+          };
+          window.AndroidExportBridge.saveDocument(filename, content, mimeType.split(';')[0]);
+        });
+      } catch (err) {
+        console.warn('AndroidBridge save exception:', err);
+      }
+    }
+
+    // 3. Modern File System Access API (Desktop Chrome, Edge, Opera, Brave)
+    // Explicitly pops up the browser OS Save As file picker asking WHERE to save!
+    if (typeof window.showSaveFilePicker === 'function') {
+      try {
+        const ext = '.' + filename.split('.').pop();
+        const cleanMime = mimeType.split(';')[0];
+        const acceptObj = {};
+        acceptObj[cleanMime] = [ext];
+
+        const fileHandle = await window.showSaveFilePicker({
+          suggestedName: filename,
+          types: [{
+            description: `Cyberpunk TCG File (*${ext})`,
+            accept: acceptObj
+          }]
+        });
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(content);
+        await writable.close();
+
+        window.cyberAudio.success();
+        window.app.showToast(`Saved "${fileHandle.name}"`);
+        return true;
+      } catch (err) {
+        if (err.name === 'AbortError') {
+          window.app.showToast('Export cancelled');
+          return false;
+        }
+        console.warn('showSaveFilePicker error, falling back:', err);
+      }
+    }
+
+    // 4. Web Share API with File (Mobile browsers & Android WebView)
+    // Opens system share sheet with "Save to files", "Google Drive", etc.
+    if (navigator.canShare && typeof File === 'function') {
+      try {
+        const cleanMime = mimeType.split(';')[0];
+        const file = new File([content], filename, { type: cleanMime });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: filename,
+            text: `Cyberpunk TCG Export: ${filename}`
+          });
+          window.cyberAudio.success();
+          window.app.showToast(`Exported "${filename}"`);
+          return true;
+        }
+      } catch (err) {
+        if (err.name === 'AbortError') {
+          window.app.showToast('Export cancelled');
+          return false;
+        }
+        console.warn('Web Share API error, falling back:', err);
+      }
+    }
+
+    // 5. Universal Fallback: Download link
+    try {
+      this.downloadFile(filename, content, mimeType);
+      window.cyberAudio.success();
+      window.app.showToast(`Downloaded "${filename}" to your Downloads folder`);
+      return true;
+    } catch (err) {
+      window.app.showToast(`Export failed: ${err.message}`, 'error');
+      return false;
+    }
+  }
+
   setupModals() {
     // 1. Export Deck Button (Header)
     const exportDeckBtn = document.getElementById('export-deck-btn');
     if (exportDeckBtn) {
       exportDeckBtn.addEventListener('click', () => {
+        window.cyberAudio.click();
+        this.openExportModal();
+      });
+    }
+
+    // 1b. Export Deck Button (Active Deck Panel in Deck Builder)
+    const panelExportDeckBtn = document.getElementById('panel-export-deck-btn');
+    if (panelExportDeckBtn) {
+      panelExportDeckBtn.addEventListener('click', () => {
         window.cyberAudio.click();
         this.openExportModal();
       });
@@ -105,8 +231,46 @@ class ExportImportController {
     const fileNameDisplay = document.getElementById('import-file-name');
 
     if (browseFileBtn && fileInput) {
-      browseFileBtn.addEventListener('click', () => {
+      browseFileBtn.addEventListener('click', async () => {
         window.cyberAudio.click();
+
+        // Native PyWebView desktop open file dialog
+        if (window.pywebview && window.pywebview.api && typeof window.pywebview.api.open_file_dialog === 'function') {
+          try {
+            const res = await window.pywebview.api.open_file_dialog();
+            if (res && res.success && res.content) {
+              if (fileNameDisplay) fileNameDisplay.textContent = res.filename || 'Loaded File';
+              const textEl = document.getElementById('import-textarea');
+              if (textEl) textEl.value = res.content;
+              const ok = this.importDataString(res.content);
+              if (ok) this.closeModal('import-modal');
+              return;
+            } else if (res && res.cancelled) {
+              return;
+            }
+          } catch (e) {
+            console.warn('pywebview open_file_dialog error:', e);
+          }
+        }
+
+        // Native Android open file document picker
+        if (window.AndroidExportBridge && typeof window.AndroidExportBridge.openDocument === 'function') {
+          window.onAndroidOpenResult = (success, filename, content, error) => {
+            window.onAndroidOpenResult = null;
+            if (success && content) {
+              if (fileNameDisplay) fileNameDisplay.textContent = filename || 'Loaded File';
+              const textEl = document.getElementById('import-textarea');
+              if (textEl) textEl.value = content;
+              const ok = this.importDataString(content);
+              if (ok) this.closeModal('import-modal');
+            } else if (error && error !== 'cancelled') {
+              window.app.showToast('Error opening file: ' + error, 'error');
+            }
+          };
+          window.AndroidExportBridge.openDocument('*/*');
+          return;
+        }
+
         fileInput.click();
       });
 
@@ -292,7 +456,7 @@ class ExportImportController {
     modal.classList.add('active');
   }
 
-  saveDeckToFile() {
+  async saveDeckToFile() {
     const deck = window.stateStore.activeDeck;
     const textEl = document.getElementById('export-textarea');
     if (!deck || !textEl) return;
@@ -311,9 +475,7 @@ class ExportImportController {
       mimeType = 'text/plain;charset=utf-8';
     }
 
-    this.downloadFile(filename, textEl.value, mimeType);
-    window.cyberAudio.success();
-    window.app.showToast(`Saved deck to "${filename}"`);
+    await this.exportFile(filename, textEl.value, mimeType);
   }
 
   // ===========================================================================
@@ -463,7 +625,7 @@ class ExportImportController {
     modal.classList.add('active');
   }
 
-  saveInventoryToFile() {
+  async saveInventoryToFile() {
     const textEl = document.getElementById('inv-export-textarea');
     if (!textEl) return;
 
@@ -481,9 +643,7 @@ class ExportImportController {
       mimeType = 'text/plain;charset=utf-8';
     }
 
-    this.downloadFile(filename, textEl.value, mimeType);
-    window.cyberAudio.success();
-    window.app.showToast(`Saved inventory to "${filename}"`);
+    await this.exportFile(filename, textEl.value, mimeType);
   }
 
   // ===========================================================================
