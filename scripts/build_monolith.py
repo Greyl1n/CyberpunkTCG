@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Cyberpunk TCG - Monolith HTML Compiler (WeirdCo Edition)
-Compiles modular HTML, CSS, JavaScript, 151 official card datasets, and starter decks
+Cyberpunk TCG - Monolith HTML Compiler
+Compiles modular HTML, CSS, JavaScript, 151 card datasets, and starter decks
 into a single zero-dependency standalone HTML file: dist/cyberpunk_tcg_monolith.html.
 """
 
@@ -20,7 +20,7 @@ def build_monolith():
     out_file = dist_dir / "cyberpunk_tcg_monolith.html"
     
     print("=" * 60)
-    print("WEIRDCO CYBERPUNK TCG // COMPILING MONOLITH HTML BUNDLE")
+    print("CYBERPUNK TCG // COMPILING MONOLITH HTML BUNDLE")
     print("=" * 60)
     
     # 1. Load data
@@ -42,10 +42,17 @@ def build_monolith():
     if prices_path.exists():
         with open(prices_path, "r", encoding="utf-8") as f:
             prices_data = json.load(f)
+
+    embeddings_path = data_dir / "card_embeddings.json"
+    embeddings_data = {}
+    if embeddings_path.exists():
+        with open(embeddings_path, "r", encoding="utf-8") as f:
+            embeddings_data = json.load(f)
         
-    print(f"[*] Loaded {len(cards_data)} official cards from {cards_path.name}")
+    print(f"[*] Loaded {len(cards_data)} cards from {cards_path.name}")
     print(f"[*] Loaded {len(starters_data)} starter decks from {starters_path.name}")
     print(f"[*] Loaded {len(prices_data)} Cardmarket prices from {prices_path.name}")
+    print(f"[*] Loaded {len(embeddings_data.get('embeddings', {}))} AI card embeddings from {embeddings_path.name}")
     
     # 2. Read template HTML
     index_html_path = src_dir / "index.html"
@@ -77,10 +84,11 @@ def build_monolith():
     # 4. Inject Embedded Datasets into HTML
     embedded_data_script = f"""
   <script>
-    /* Embedded Master Card Repository, Starter Decks & Cardmarket Prices */
-    window.__CYBERPUNK_CARDS__ = {json.dumps(cards_data, indent=2)};
-    window.__CYBERPUNK_STARTER_DECKS__ = {json.dumps(starters_data, indent=2)};
-    window.__CYBERPUNK_CARDMARKET_PRICES__ = {json.dumps(prices_data, indent=2)};
+    /* Embedded Master Card Repository, Starter Decks, Cardmarket Prices & AI Embeddings */
+    window.__CYBERPUNK_CARDS__ = {json.dumps(cards_data, separators=(',', ':'))};
+    window.__CYBERPUNK_STARTER_DECKS__ = {json.dumps(starters_data, separators=(',', ':'))};
+    window.__CYBERPUNK_CARDMARKET_PRICES__ = {json.dumps(prices_data, separators=(',', ':'))};
+    window.__CYBERPUNK_CARD_EMBEDDINGS__ = {json.dumps(embeddings_data, separators=(',', ':'))};
   </script>
 """
     # Insert safely before first script tag using find & splice (avoids regex backslash escape issues)
@@ -146,7 +154,7 @@ def build_monolith():
     print("=" * 60)
     print(f"[SUCCESS] Monolith HTML created: {out_file}")
     print(f"[SUCCESS] GitHub Pages root created: {root_index_file}")
-    print(f"[SIZE]    {size_kb:.2f} KB (Contains 151 official cards)")
+    print(f"[SIZE]    {size_kb:.2f} KB (Contains 151 cards)")
     print("[RUN]     Open index.html directly in any web browser (Chrome, Edge, Firefox)")
     print("=" * 60)
     return out_file

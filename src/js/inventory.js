@@ -36,6 +36,18 @@ class InventoryController {
       });
     }
 
+    // Sort dropdown (Card #, Name, Cost, Owned...)
+    const sortSelect = document.getElementById('inventory-sort');
+    if (sortSelect) {
+      sortSelect.value = window.stateStore.filters.sortBy || 'number';
+      sortSelect.addEventListener('change', (e) => {
+        window.stateStore.filters.sortBy = e.target.value;
+        try { localStorage.setItem('cyber_tcg_inventory_sort', e.target.value); } catch (err) {}
+        if (window.cyberAudio) window.cyberAudio.click();
+        this.render();
+      });
+    }
+
     // Collection Status Pills (All, In Inventory, Missing, Incomplete)
     const collectionPills = document.querySelectorAll('.filter-pill[data-collection]');
     collectionPills.forEach(pill => {
@@ -123,7 +135,7 @@ class InventoryController {
     const playsetBtn = document.getElementById('bulk-playset-btn');
     if (playsetBtn) {
       playsetBtn.addEventListener('click', () => {
-        if (confirm('Set personal inventory of ALL official cards to 3 copies (Full Playset)?')) {
+        if (confirm('Set personal inventory of ALL cards to 3 copies (Full Playset)?')) {
           window.stateStore.bulkSetInventory(3);
           window.cyberAudio.success();
           if (window.app && window.app.showToast) {
@@ -136,7 +148,7 @@ class InventoryController {
     const singletonBtn = document.getElementById('bulk-singleton-btn');
     if (singletonBtn) {
       singletonBtn.addEventListener('click', () => {
-        if (confirm('Set personal inventory of ALL official cards to 1 copy?')) {
+        if (confirm('Set personal inventory of ALL cards to 1 copy?')) {
           window.stateStore.bulkSetInventory(1);
           window.cyberAudio.success();
           if (window.app && window.app.showToast) {
@@ -237,23 +249,84 @@ class InventoryController {
     });
   }
 
+  /**
+   * Rank a set so the main retail set comes first, starter decks next, promos last.
+   */
+  static setRank(card) {
+    const code = (card.set_code || '').toLowerCase();
+    if (!code) return 1;
+    if (code.startsWith('prm') || code.includes('promo')) return 3;
+    if (code.includes('starter')) return 2;
+    return 0;
+  }
+
+  /**
+   * Parse a collector print number such as "005a" into { num: 5, suffix: "a" }.
+   */
+  static parsePrintNumber(pn) {
+    const m = String(pn || '').trim().match(/^(\d+)\s*([a-z]*)/i);
+    if (!m) return { num: Number.MAX_SAFE_INTEGER, suffix: String(pn || '') };
+    return { num: parseInt(m[1], 10), suffix: m[2].toLowerCase() };
+  }
+
+  static compareByNumber(a, b) {
+    const ra = InventoryController.setRank(a);
+    const rb = InventoryController.setRank(b);
+    if (ra !== rb) return ra - rb;
+    const sa = (a.set_code || '');
+    const sb = (b.set_code || '');
+    if (sa !== sb) return sa.localeCompare(sb);
+    const pa = InventoryController.parsePrintNumber(a.print_number);
+    const pb = InventoryController.parsePrintNumber(b.print_number);
+    if (pa.num !== pb.num) return pa.num - pb.num;
+    if (pa.suffix !== pb.suffix) return pa.suffix.localeCompare(pb.suffix);
+    return (a.name || '').localeCompare(b.name || '');
+  }
+
+  sortCards(cards) {
+    const mode = window.stateStore.filters.sortBy || 'number';
+    const inv = window.stateStore.inventory || {};
+    const list = cards.slice();
+    const byNum = InventoryController.compareByNumber;
+    switch (mode) {
+      case 'number':
+        list.sort(byNum);
+        break;
+      case 'number-desc':
+        list.sort((a, b) => byNum(b, a));
+        break;
+      case 'name':
+        list.sort((a, b) => (a.name || '').localeCompare(b.name || '') || byNum(a, b));
+        break;
+      case 'cost':
+        list.sort((a, b) => ((Number(a.cost) || 0) - (Number(b.cost) || 0)) || byNum(a, b));
+        break;
+      case 'owned':
+        list.sort((a, b) => ((inv[b.id] || 0) - (inv[a.id] || 0)) || byNum(a, b));
+        break;
+      default:
+        break; // database order
+    }
+    return list;
+  }
+
   render() {
     this.updateDashboardStats();
 
     if (!this.container) return;
     this.container.innerHTML = '';
 
-    const filtered = this.getFilteredCards();
+    const filtered = this.sortCards(this.getFilteredCards());
     const countEl = document.getElementById('inventory-count-display');
     if (countEl) {
-      countEl.textContent = `Showing ${filtered.length} of ${window.stateStore.cards.length} Official Cards`;
+      countEl.textContent = `Showing ${filtered.length} of ${window.stateStore.cards.length} Cards`;
     }
 
     if (filtered.length === 0) {
       this.container.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 60px; color: var(--text-dim); font-family: var(--font-mono);">
           <div style="font-size: 2.5rem; margin-bottom: 10px;">⚠️</div>
-          <div style="font-size: 1.1rem; color: var(--neon-cyan);">NO OFFICIAL CARDS MATCHING FILTER CRITERIA</div>
+          <div style="font-size: 1.1rem; color: var(--neon-cyan);">NO CARDS MATCHING FILTER CRITERIA</div>
           <p style="margin-top: 8px;">Try clearing filters or switching Collection view.</p>
         </div>
       `;

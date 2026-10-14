@@ -399,7 +399,7 @@ class ExportImportController {
     const totalCopies = window.stateStore.getTotalInventoryCount ? window.stateStore.getTotalInventoryCount() : 0;
     const uniqueOwned = window.stateStore.getUniqueOwnedCount ? window.stateStore.getUniqueOwnedCount() : 0;
 
-    let out = `// CYBERPUNK TCG // OFFICIAL WEIRDCO CARD INVENTORY\n`;
+    let out = `// CYBERPUNK TCG // CARD INVENTORY\n`;
     out += `// EXPORT DATE: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n`;
     out += `// TOTAL COPIES: ${totalCopies} | UNIQUE COLLECTED: ${uniqueOwned} / ${cards.length}\n`;
     out += `${'='.repeat(65)}\n\n`;
@@ -596,7 +596,7 @@ class ExportImportController {
       }
 
       // 3. Check if it's an Inventory Text Checklist export
-      if (trimmed.includes('OFFICIAL WEIRDCO CARD INVENTORY') || trimmed.includes('// TOTAL COPIES:')) {
+      if (trimmed.includes('CARD INVENTORY') || trimmed.includes('// TOTAL COPIES:')) {
         const lines = trimmed.split('\n');
         let importedCount = 0;
         lines.forEach(line => {

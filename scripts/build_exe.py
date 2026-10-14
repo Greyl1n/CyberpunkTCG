@@ -45,6 +45,7 @@ def build_executable():
         f"--icon={ROOT_DIR / 'assets' / 'icon.ico'}",
         f"--add-data={ROOT_DIR / 'assets'}{sep}assets",
         f"--add-data={ROOT_DIR / 'data'}{sep}data",
+        f"--add-data={ROOT_DIR / 'models'}{sep}models",
         f"--add-data={ROOT_DIR / 'dist' / 'cyberpunk_tcg_monolith.html'}{sep}dist",
         f"--add-data={ROOT_DIR / 'dist' / 'assets'}{sep}dist/assets",
         f"--add-data={ROOT_DIR / 'index.html'}{sep}.",
@@ -66,7 +67,7 @@ def build_executable():
             print(f"[SUCCESS] Standalone Executable created:")
             print(f"  Path: {exe_path}")
             print(f"  Size: {size_mb:.2f} MB")
-            print("  Includes: 151 official card images, data, audio, and native GUI")
+            print("  Includes: 151 card images, data, audio, and native GUI")
             print("=" * 60)
             return exe_path
         else:

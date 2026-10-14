@@ -36,6 +36,23 @@ class CyberpunkHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_error(404, 'Prices dataset not found')
                 return
 
+        # Route API for AI Model Manifest & Status
+        if self.path.startswith('/api/ai/status'):
+            manifest_file = ROOT_DIR / 'models' / 'manifest.json'
+            if manifest_file.exists():
+                with open(manifest_file, 'rb') as f:
+                    content = f.read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.send_header('Content-Length', str(len(content)))
+                self.end_headers()
+                self.wfile.write(content)
+                return
+            else:
+                self.send_error(404, 'AI Manifest not found')
+                return
+
         # Route root '/' to the modular src/index.html
         if self.path in ('/', '/index.html'):
             self.path = '/src/index.html'

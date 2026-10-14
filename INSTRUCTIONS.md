@@ -1,18 +1,30 @@
-# 📖 Cyberpunk TCG // Linux & Container Deployment Guide
+# 📖 Cyberpunk TCG // Deployment & Installation Manual
 
-Complete step-by-step instructions for building and running **Cyberpunk TCG** on **Fedora, Ubuntu, Debian**, and **cloud servers**.
+Complete step-by-step instructions for running and compiling **Cyberpunk TCG** on **Windows, Android, Linux (Fedora/Ubuntu/Debian)**, and **cloud servers**.
 
 ---
 
-## ⚡ Quick Comparison
+## ⚡ Precompiled Binaries Summary (`dist/`)
 
-| Feature | Option 1: Standalone Linux Desktop | Option 2: Production Web Container |
+Ready-to-run compiled binaries are stored in the `dist/` directory:
+
+| Operating System | Output File | How to Run |
 | :--- | :--- | :--- |
-| **Location** | `scripts/linux/` | `scripts/container/` |
-| **Output** | Single native executable (`Cyberpunk_TCG_Linux`) | Docker / Podman container image |
-| **Target Use Case** | Personal desktop gameplay without containers | Local container or hosting online on a VPS |
-| **Host Distros** | Fedora, Ubuntu, Debian, Arch Linux | Any system with Docker or Podman installed |
-| **Dependencies** | Python 3 + WebKit (or default browser fallback) | Docker or Podman engine |
+| **Windows** | `dist/Cyberpunk_TCG.exe` | Double click to run native desktop app. Zero install. |
+| **Android** | `dist/Cyberpunk_TCG.apk` | Sideload or `adb install -r dist/Cyberpunk_TCG.apk`. |
+| **Linux** | `dist/Cyberpunk_TCG_Linux` | Run `chmod +x dist/Cyberpunk_TCG_Linux && ./dist/Cyberpunk_TCG_Linux`. |
+| **Universal Web** | `dist/cyberpunk_tcg_monolith.html` | Open directly in any web browser. 100% offline. |
+
+---
+
+## ⚡ Platform Architecture Comparison
+
+| Feature | Option 1: Standalone Linux Desktop | Option 2: Production Web Container | Option 3: Android APK | Option 4: Windows Standalone (.exe) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Location** | `scripts/linux/` | `scripts/container/` | `android/` | `scripts/build_exe.py` |
+| **Output** | `dist/Cyberpunk_TCG_Linux` | Docker / Podman container | `dist/Cyberpunk_TCG.apk` | `dist/Cyberpunk_TCG.exe` |
+| **Target Use Case** | Linux desktop without containers | Cloud VPS hosting / Docker | Mobile phones and tablets | Windows 10/11 desktop app |
+| **Dependencies** | Python 3 + WebKit (or browser fallback) | Docker or Podman engine | Android 8.0+ | None (bundled standalone) |
 
 ---
 

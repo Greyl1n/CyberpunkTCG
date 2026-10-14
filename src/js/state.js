@@ -1,6 +1,6 @@
 /**
- * Cyberpunk TCG - Central Reactive State & Persistence (WeirdCo Official)
- * Strictly enforces official rules: Exactly 3 unique Legends, 40-50 main deck cards, RAM limits.
+ * Cyberpunk TCG - Central Reactive State & Persistence
+ * Strictly enforces rules: Exactly 3 unique Legends, 40-50 main deck cards, RAM limits.
  */
 class StateStore {
   constructor() {
@@ -27,7 +27,8 @@ class StateStore {
       rarities: new Set(),
       maxCost: null,
       ownedOnly: false,
-      collectionFilter: 'all' // 'all', 'owned', 'missing', 'incomplete'
+      collectionFilter: 'all', // 'all', 'owned', 'missing', 'incomplete'
+      sortBy: localStorage.getItem('cyber_tcg_inventory_sort') || 'number' // 'number', 'number-desc', 'name', 'cost', 'owned', 'default'
     };
     this.cardScale = localStorage.getItem('cyber_tcg_card_scale') || 'auto'; // 'auto', 'compact', 'large'
     this.listeners = {};

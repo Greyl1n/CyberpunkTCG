@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>CYBERPUNK TCG // WEIRDCO OFFICIAL ARCHIVE & BUILDER</title>
+  <title>CYBERPUNK TCG // DECK BUILDER & COMPANION</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -27,7 +27,7 @@
   <header class="app-header">
     <div class="brand-section">
       <img src="assets/logo.png" alt="Cyberpunk TCG" class="brand-logo-img">
-      <span class="brand-badge">WEIRDCO OFFICIAL • 151 CARDS</span>
+      <span class="brand-badge">FAN COMPANION • 151 CARDS</span>
     </div>
 
     <!-- Navigation Tabs (Desktop & Tablet) -->
@@ -82,7 +82,7 @@
   <!-- Main Content Panels -->
   <main class="app-container">
 
-    <!-- TAB 1: INVENTORY & OFFICIAL CARD DATABASE -->
+    <!-- TAB 1: INVENTORY & CARD DATABASE -->
     <section class="tab-panel active" id="tab-inventory">
       <!-- Collection Stats Dashboard -->
       <div class="inventory-dashboard-banner">
@@ -138,16 +138,27 @@
         <div class="filter-row-primary">
           <div class="search-box-wrap">
             <span class="search-icon">🔎</span>
-            <input type="text" id="inventory-search" class="search-input" placeholder="Search official cards by name (V, Smasher...), ability, traits, or #...">
+            <input type="text" id="inventory-search" class="search-input" placeholder="Search cards by name (V, Smasher...), ability, traits, or #...">
           </div>
           <button class="cyber-btn" id="reset-filters-btn">CLEAR FILTERS</button>
+          <label class="inventory-sort-wrap" title="Sort inventory">
+            <span class="filter-label">SORT:</span>
+            <select id="inventory-sort" class="search-input inventory-sort-select">
+              <option value="number">Card # (Ascending)</option>
+              <option value="number-desc">Card # (Descending)</option>
+              <option value="name">Name (A–Z)</option>
+              <option value="cost">Cost (Low → High)</option>
+              <option value="owned">Copies Owned (High → Low)</option>
+              <option value="default">Database Order</option>
+            </select>
+          </label>
           <div class="scale-toggle-group" data-scale-group="inventory" title="Card Scale / Grid Density">
             <button type="button" class="scale-btn active" data-scale="auto">AUTO</button>
             <button type="button" class="scale-btn" data-scale="compact">2-COL</button>
             <button type="button" class="scale-btn" data-scale="large">1-COL</button>
           </div>
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);" id="inventory-count-display">
-            Loading official card database...
+            Loading card database...
           </div>
         </div>
 
@@ -202,7 +213,7 @@
         <div class="deck-pool-section">
           <!-- Subtab Navigation Bar -->
           <div class="deck-subtabs-nav" id="deck-subtabs-nav">
-            <button class="deck-subtab-btn active" id="subtab-btn-pool" data-subtab="pool" title="Browse official 151 card database to add to deck">
+            <button class="deck-subtab-btn active" id="subtab-btn-pool" data-subtab="pool" title="Browse card database to add to deck">
               <span class="subtab-icon">🗃️</span>
               <span class="subtab-label">CARD POOL</span>
               <span class="subtab-badge" id="pool-tab-counter">151</span>
@@ -219,7 +230,7 @@
             <div class="deck-pool-toolbar">
               <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                 <div style="font-family: var(--font-mono); font-weight: bold; color: var(--neon-cyan); font-size: 0.9rem;">
-                  OFFICIAL WEIRDCO CARD POOL
+                  CARD POOL ARCHIVE
                 </div>
                 <div class="scale-toggle-group" data-scale-group="pool" title="Card Scale / Grid Density">
                   <button type="button" class="scale-btn active" data-scale="auto">AUTO</button>
@@ -322,7 +333,7 @@
         <div class="stat-card">
           <div class="stat-card-title">Total Deck Cards</div>
           <div class="stat-card-value" id="stat-total-cards">0</div>
-          <div class="stat-card-sub">Official limit: 40–50 cards</div>
+          <div class="stat-card-sub">Standard limit: 40–50 cards</div>
         </div>
 
         <div class="stat-card">
@@ -357,7 +368,7 @@
             <input type="text" id="preset-search" class="search-input" placeholder="Search decks by name, legend, archetype, or color...">
           </div>
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);" id="preset-count-display">
-            16 Decks Available (4 Official Starters + 12 NetDeck.gg Community)
+            16 Decks Available (4 Core Starters + 12 NetDeck.gg Community)
           </div>
         </div>
 
@@ -365,7 +376,7 @@
         <div class="filter-pills-row">
           <span class="filter-label">CATEGORY:</span>
           <button class="filter-pill active" data-preset-cat="all">All Decks (59)</button>
-          <button class="filter-pill" data-preset-cat="official">⭐ Official Starters (4)</button>
+          <button class="filter-pill" data-preset-cat="official">⭐ Core Starters (4)</button>
           <button class="filter-pill" data-preset-cat="community">🌐 CyberpunkTCG.com Community (55)</button>
         </div>
 
@@ -393,12 +404,12 @@
               <span>⚖️</span> ABOUT & LEGAL INFORMATION
             </div>
             <div class="about-hero-subtitle">
-              WEIRDCO CYBERPUNK TRADING CARD GAME COMPANION & DECK ARCHIVE
+              CYBERPUNK TRADING CARD GAME // FAN COMPANION & DECK ARCHIVE
             </div>
             <div class="about-badge-row">
               <span class="about-pill-badge cyan">CC BY-NC 4.0 INTERNATIONAL</span>
               <span class="about-pill-badge green">100% OFFLINE-CAPABLE</span>
-              <span class="about-pill-badge yellow">151 OFFICIAL CARDS</span>
+              <span class="about-pill-badge yellow">151 INDEXED CARDS</span>
               <span class="about-pill-badge cyan">VERSION 1.4.0</span>
             </div>
           </div>
@@ -407,11 +418,11 @@
         <!-- Grid of Information Cards -->
         <div class="about-grid-cards">
 
-          <!-- Card 1: Official License (Highlighted) -->
+          <!-- Card 1: Software License (Highlighted) -->
           <div class="about-card highlight">
             <div class="about-card-header">
               <span class="about-card-icon">📜</span>
-              <span class="about-card-title">OFFICIAL LICENSE</span>
+              <span class="about-card-title">SOFTWARE LICENSE</span>
             </div>
             <div class="about-card-body">
               <p>This project, card archive, deck builder, rules engine, and associated software are released under the terms of the:</p>
@@ -444,7 +455,7 @@
             </div>
             <div class="about-card-body">
               <p>
-                <strong>WeirdCo Cyberpunk TCG:</strong> This app is an independent fan-made companion and archival application created for the WeirdCo Cyberpunk Trading Card Game community.
+                <strong>Disclaimer & Non-Affiliation:</strong> This application is an independent, fan-made deck building and collection tracking tool. It is not affiliated with, endorsed by, or supported by WeirdCo Games, CD PROJEKT RED, R. Talsorian Games, or any related entity. All trademarks, character names, and card artwork remain the property of their respective owners.
               </p>
               <p>
                 <strong>Cyberpunk Universe:</strong> Any references to the Cyberpunk genre, Night City, lore names, or fictional aesthetics are non-commercial tributes and artistic homages created under fair use principles and the CC BY-NC 4.0 non-commercial license. All respective copyrights and trademarks remain the property of their respective owners.
@@ -489,7 +500,7 @@
                   </tr>
                   <tr>
                     <td>Card Database</td>
-                    <td>151 Official WeirdCo Cards</td>
+                    <td>151 Indexed Cards</td>
                   </tr>
                   <tr>
                     <td>Net Decks</td>
@@ -497,7 +508,7 @@
                   </tr>
                   <tr>
                     <td>Rule Engine</td>
-                    <td>Official 40–50 Cards, Max 3 Copies, 1 Legend</td>
+                    <td>Standard 40–50 Cards, Max 3 Copies, 1 Legend</td>
                   </tr>
                   <tr>
                     <td>Camera Scanner</td>
@@ -531,9 +542,9 @@
   <footer class="app-footer">
     <div class="footer-status-pill">
       <div class="status-dot"></div>
-      <span>SYSTEM STATUS: CONNECTED • 151 OFFICIAL WEIRDCO CARDS</span>
+      <span>SYSTEM STATUS: CONNECTED • 151 CARDS INDEXED</span>
     </div>
-    <div>WEIRDCO CYBERPUNK TRADING CARD GAME • WELCOME TO NIGHT CITY</div>
+    <div>CYBERPUNK TRADING CARD GAME // NETRUNNER COMPANION</div>
   </footer>
 
   <!-- Large Card Inspection Modal -->
@@ -567,6 +578,7 @@
       <!-- Fullscreen Viewport Camera Feed -->
       <div class="scanner-viewport-pane" id="scanner-viewport">
         <video id="scanner-video" autoplay playsinline muted></video>
+        <canvas id="scanner-tracking-canvas"></canvas>
         <canvas id="scanner-canvas"></canvas>
 
         <!-- Tap-To-Focus Indicator Ring -->
@@ -579,6 +591,9 @@
             <span class="scanner-status-chip" id="scanner-status-chip">INITIALIZING...</span>
           </div>
           <div class="scanner-header-controls">
+            <button class="scanner-icon-btn ai-badge-btn" id="scanner-ai-model-btn" title="AI Vision Engine & Database Status">
+              🧠 <span class="btn-text">AI v2.0</span>
+            </button>
             <button class="scanner-icon-btn" id="scanner-torch-btn" style="display: none;" title="Toggle Flashlight / Torch">
               ⚡ <span class="btn-text">TORCH</span>
             </button>
@@ -599,7 +614,7 @@
           <div class="reticle-corner bl"></div>
           <div class="reticle-corner br"></div>
           <div class="scanner-laser-line"></div>
-          <div class="scanner-reticle-guide">TAP SCREEN TO FOCUS // ALIGN CARD</div>
+          <div class="scanner-reticle-guide">AUTO-TRACKING ACTIVE // POINT CAMERA AT CARD</div>
         </div>
 
         <!-- Floating Viewport Controls (Snap & Manual Search) -->
@@ -615,6 +630,58 @@
         <!-- Floating Card Detected Indication Sheet -->
         <div class="scanner-card-indicator" id="scanner-card-indicator">
           <!-- Populated dynamically when card is recognized -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Model & Card Database Manager Modal -->
+  <div class="cyber-modal-backdrop" id="ai-model-modal" style="display: none;">
+    <div class="cyber-modal-content" style="max-width: 580px;">
+      <div class="modal-header">
+        <div class="modal-title">🧠 CYBERVISION AI // MODEL & CARD STORE</div>
+        <button class="modal-close-btn" id="ai-model-modal-close-btn">&times;</button>
+      </div>
+
+      <div class="cyber-modal-body" style="padding: 16px;">
+        <div class="ai-status-card">
+          <div class="ai-status-row">
+            <span class="ai-label">ACTIVE ENGINE:</span>
+            <span class="ai-value highlight-cyan" id="ai-engine-name">CyberVision Edge AI (v2.0)</span>
+          </div>
+          <div class="ai-status-row">
+            <span class="ai-label">INDEXED CARDS:</span>
+            <span class="ai-value highlight-yellow" id="ai-card-count">151 Cards Loaded</span>
+          </div>
+          <div class="ai-status-row">
+            <span class="ai-label">EMBEDDING DIMENSION:</span>
+            <span class="ai-value" id="ai-emb-dim">256-D Perceptual Multi-Scale</span>
+          </div>
+          <div class="ai-status-row">
+            <span class="ai-label">INFERENCE SPEED:</span>
+            <span class="ai-value highlight-green" id="ai-inference-speed">~5ms (Sub-frame Latency)</span>
+          </div>
+          <div class="ai-status-row">
+            <span class="ai-label">AUTO-DESKEW / QUAD:</span>
+            <span class="ai-value highlight-green">Enabled (4-Point Homography)</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px;">
+          <div style="font-size: 0.82rem; color: var(--neon-cyan); font-weight: 700; margin-bottom: 8px;">
+            UPDATE CARDS & AI ENGINE
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-dim); margin-bottom: 12px; line-height: 1.4;">
+            To add new expansion cards or custom sets, drop card images into <code>assets/cards/</code> and run <code>python scripts/ai/update_cards_ai.py</code>. The AI features are dynamically synced and hot-reloaded.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="cyber-btn cyber-btn-accent" id="ai-resync-btn" style="flex: 1;">
+              🔄 RELOAD EMBEDDINGS
+            </button>
+            <button type="button" class="cyber-btn" id="ai-close-btn" style="flex: 1;">
+              CLOSE
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -751,6 +818,8 @@
   <script src="js/deck_builder.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/export_import.js"></script>
+  <script src="js/card_vision.js"></script>
+  <script src="js/ai_card_matcher.js"></script>
   <script src="js/scanner.js"></script>
   <script src="js/app.js"></script>
 </body>

@@ -5,7 +5,7 @@ a = Analysis(
     ['C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\scripts\\launcher.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\assets', 'assets'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\data', 'data'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\dist\\cyberpunk_tcg_monolith.html', 'dist'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\dist\\assets', 'dist/assets'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\index.html', '.'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\src', 'src')],
+    datas=[('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\assets', 'assets'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\data', 'data'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\models', 'models'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\dist\\cyberpunk_tcg_monolith.html', 'dist'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\dist\\assets', 'dist/assets'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\index.html', '.'), ('C:\\Users\\marku\\Python_codes_trusted\\Cyberpunk_TCG\\src', 'src')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

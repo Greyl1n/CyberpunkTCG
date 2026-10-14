@@ -39,12 +39,12 @@ Version=1.0
 Type=Application
 Name=Cyberpunk TCG
 GenericName=Trading Card Game Companion
-Comment=Official WeirdCo Cyberpunk Trading Card Game Companion & Tournament Deck Builder
+Comment=Cyberpunk Trading Card Game Companion & Tournament Deck Builder
 Exec=${BIN_DEST}/Cyberpunk_TCG_Linux
 Icon=applications-games
 Terminal=false
 Categories=Game;CardGame;Utility;
-Keywords=cyberpunk;tcg;cards;deckbuilder;weirdco;
+Keywords=cyberpunk;tcg;cards;deckbuilder;
 StartupNotify=true
 EOF
 

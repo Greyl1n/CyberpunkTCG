@@ -1,5 +1,5 @@
 /**
- * Cyberpunk TCG - Unified Local Offline Database (WeirdCo Official)
+ * Cyberpunk TCG - Unified Local Offline Database
  * Provides robust on-device persistence via IndexedDB (backed by SQLite on Android)
  * with transparent fallbacks and automatic data migration from localStorage.
  */

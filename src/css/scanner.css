@@ -615,3 +615,80 @@
   color: #000;
   box-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
 }
+
+/* ==========================================================================
+   CyberVision AI Model & Tracking Overlay Styles (v2.0)
+   ========================================================================== */
+
+#scanner-tracking-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.scanner-icon-btn.ai-badge-btn {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.scanner-icon-btn.ai-badge-btn:hover {
+  background: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.ai-status-card {
+  background: rgba(15, 17, 26, 0.9);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mono);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+.ai-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 6px;
+}
+
+.ai-status-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ai-label {
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.ai-value {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.ai-value.highlight-cyan {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.ai-value.highlight-yellow {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 8px rgba(252, 238, 10, 0.4);
+}
+
+.ai-value.highlight-green {
+  color: var(--neon-green);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+}
+

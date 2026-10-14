@@ -24,7 +24,7 @@ ANDROID_DIR = ROOT_DIR / "android"
 
 def print_header(title):
     print("=" * 65)
-    print(f"[*] WEIRDCO CYBERPUNK TCG // {title}")
+    print(f"[*] CYBERPUNK TCG // {title}")
     print("=" * 65)
 
 def run_cmd(cmd, cwd=None):
@@ -56,7 +56,13 @@ def prepare_web_bundle():
     shutil.copytree(DATA_DIR, ANDROID_BUILD_DIR / "data")
     print("  [+] Copied data/ directory (151 cards & starter decks)")
 
-    # 5. Copy Assets & Card Art
+    # 5. Copy Models & Manifest
+    models_dir = ROOT_DIR / "models"
+    if models_dir.exists():
+        shutil.copytree(models_dir, ANDROID_BUILD_DIR / "models")
+        print("  [+] Copied models/ directory (AI vision manifest)")
+
+    # 6. Copy Assets & Card Art
     if ASSETS_DIR.exists():
         shutil.copytree(ASSETS_DIR, ANDROID_BUILD_DIR / "assets")
         card_count = len(list((ASSETS_DIR / "cards").glob("*.webp"))) if (ASSETS_DIR / "cards").exists() else 0
@@ -147,8 +153,37 @@ def show_instructions():
     print(f"   python scripts/build_android.py")
     print("=" * 65)
 
+def compile_apk():
+    print("\n[4/4] Compiling native Android APK (assembleDebug)...")
+    gradlew = ANDROID_DIR / ("gradlew.bat" if sys.platform == 'win32' else "gradlew")
+    if not gradlew.exists():
+        print("  [!] Gradle wrapper not found in android/ directory.")
+        return False
+
+    cmd = f'"{gradlew}" -p android assembleDebug'
+    success = run_cmd(cmd)
+    if not success:
+        print("  [!] Gradle compilation failed.")
+        return False
+
+    built_apk = ANDROID_DIR / "app" / "build" / "outputs" / "apk" / "debug" / "app-debug.apk"
+    target_apk = DIST_DIR / "Cyberpunk_TCG.apk"
+    if built_apk.exists():
+        DIST_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(built_apk, target_apk)
+        size_mb = target_apk.stat().st_size / (1024 * 1024)
+        print_header("ANDROID APK BUILD SUCCESSFUL")
+        print(f"  [+] Output APK: {target_apk}")
+        print(f"  [+] Size:       {size_mb:.2f} MB")
+        print(f"  [+] Install:    adb install -r dist/Cyberpunk_TCG.apk")
+        print("=" * 65)
+        return True
+    else:
+        print(f"  [!] Built APK not found at {built_apk}")
+        return False
+
 def main():
-    print_header("ANDROID APK BUNDLER & CAPACITOR SYNC")
+    print_header("ANDROID APK BUNDLER & COMPILER")
     prepare_web_bundle()
     
     npx_cmd = check_capacitor()
@@ -157,7 +192,7 @@ def main():
         sys.exit(1)
 
     if sync_android_project(npx_cmd):
-        show_instructions()
+        compile_apk()
     else:
         print("\n[!] Android sync could not be completed.")
         sys.exit(1)

@@ -1,5 +1,5 @@
 /**
- * Cyberpunk TCG - Main Application Controller (Official WeirdCo Edition)
+ * Cyberpunk TCG - Main Application Controller
  */
 class App {
   constructor() {
@@ -8,7 +8,7 @@ class App {
   }
 
   async init() {
-    console.log('%c[WEIRDCO CYBERPUNK TCG] Booting Neural Link UI...', 'color: #00f0ff; font-weight: bold;');
+    console.log('%c[CYBERPUNK TCG] Booting Neural Link UI...', 'color: #00f0ff; font-weight: bold;');
 
     this.setupToastContainer();
     this.setupNavigation();
@@ -57,7 +57,7 @@ class App {
 
     this.populateStarterDecksList();
 
-    this.showToast('WeirdCo Cyberpunk TCG Database online. 151 official cards loaded.');
+    this.showToast('Cyberpunk TCG Database online. 151 cards loaded.');
   }
 
   setupMobileControls() {
@@ -364,7 +364,7 @@ class App {
 
       const isOfficial = preset.category === 'Official Starter';
       const badgeHtml = isOfficial
-        ? `<span class="badge-official">⭐ OFFICIAL WEIRDCO</span>`
+        ? `<span class="badge-official">⭐ CORE STARTER</span>`
         : `<span class="badge-community">🌐 CYBERPUNKTCG.COM</span>`;
 
       const legendsHtml = (preset.legends || []).map(id => {
@@ -507,7 +507,7 @@ class App {
       const uniqueCandidates = [...new Set(candidates.filter(Boolean))];
 
       let candidateIdx = 0;
-      imgEl.alt = `${card.name} - Official WeirdCo Card Artwork`;
+      imgEl.alt = `${card.name} - Card Artwork`;
 
       // Set thematic border & glow based on card color
       const colorGlow = card.color === 'Red' ? 'var(--neon-magenta)'
@@ -546,7 +546,7 @@ class App {
     }
 
     if (artistEl) {
-      artistEl.textContent = `Illustrated by ${card.artist || 'WeirdCo'} • Set: ${card.set_name || 'Welcome to Night City'}`;
+      artistEl.textContent = `Illustrated by ${card.artist || 'Night City Archives'} • Set: ${card.set_name || 'Welcome to Night City'}`;
     }
 
     const cmEl = document.getElementById('inspect-modal-cardmarket');

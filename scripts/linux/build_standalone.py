@@ -64,6 +64,7 @@ def build_standalone():
         f"--icon={ROOT_DIR / 'assets' / 'icon.png'}",
         f"--add-data={ROOT_DIR / 'assets'}{sep}assets",
         f"--add-data={ROOT_DIR / 'data'}{sep}data",
+        f"--add-data={ROOT_DIR / 'models'}{sep}models",
         f"--add-data={ROOT_DIR / 'dist' / 'cyberpunk_tcg_monolith.html'}{sep}dist",
         f"--add-data={ROOT_DIR / 'dist' / 'assets'}{sep}dist/assets",
         f"--add-data={ROOT_DIR / 'index.html'}{sep}.",

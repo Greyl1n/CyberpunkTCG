@@ -75,7 +75,7 @@ def main():
         
         # Configure native window
         window = webview.create_window(
-            title="CYBERPUNK TCG // NEURAL LINK (WEIRDCO OFFICIAL)",
+            title="CYBERPUNK TCG // NEURAL LINK",
             url=url,
             width=1400,
             height=900,

@@ -1,6 +1,6 @@
 /**
- * Cyberpunk TCG - Official Card Renderer
- * Renders high-resolution official WeirdCo card artwork, HUD chips, 3D tilt, and holographic foil.
+ * Cyberpunk TCG - Card Renderer
+ * Renders high-resolution card artwork, HUD chips, 3D tilt, and holographic foil.
  */
 class CardRenderer {
   renderCard(card, options = {}) {
