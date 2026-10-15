@@ -154,7 +154,7 @@ def build_monolith():
     print("=" * 60)
     print(f"[SUCCESS] Monolith HTML created: {out_file}")
     print(f"[SUCCESS] GitHub Pages root created: {root_index_file}")
-    print(f"[SIZE]    {size_kb:.2f} KB (Contains 151 cards)")
+    print(f"[SIZE]    {size_kb:.2f} KB (Contains {len(cards_data)} cards)")
     print("[RUN]     Open index.html directly in any web browser (Chrome, Edge, Firefox)")
     print("=" * 60)
     return out_file

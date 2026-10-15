@@ -193,12 +193,13 @@ class InventoryController {
     const totalCards = window.stateStore.getTotalInventoryCount();
     const uniqueCount = window.stateStore.getUniqueOwnedCount();
     const playsetCount = window.stateStore.getPlaysetCount();
-    const totalOfficial = window.stateStore.cards.length || 151;
-    const pct = totalOfficial > 0 ? Math.round((uniqueCount / totalOfficial) * 100) : 0;
+    const totalAllCards = window.stateStore.cards.length || 189;
+    const totalBaseCards = (window.stateStore.getBaseCards ? window.stateStore.getBaseCards().length : 0) || 151;
+    const pct = totalAllCards > 0 ? Math.round((uniqueCount / totalAllCards) * 100) : 0;
 
     if (totalEl) totalEl.textContent = `${totalCards.toLocaleString()} Cards`;
-    if (uniqueEl) uniqueEl.textContent = `${uniqueCount} / ${totalOfficial}`;
-    if (playsetEl) playsetEl.textContent = `${playsetCount} / ${totalOfficial}`;
+    if (uniqueEl) uniqueEl.textContent = `${uniqueCount} / ${totalAllCards}`;
+    if (playsetEl) playsetEl.textContent = `${playsetCount} / ${totalBaseCards}`;
     if (pctEl) pctEl.textContent = `${pct}%`;
   }
 
@@ -241,8 +242,16 @@ class InventoryController {
       }
 
       // Rarity filter
-      if (filters.rarities.size > 0 && !filters.rarities.has(card.rarity)) {
-        return false;
+      if (filters.rarities.size > 0) {
+        const matchesRarity = Array.from(filters.rarities).some(r => {
+          if (r === 'Iconic') {
+            return card.is_alt_art || (card.rarity && card.rarity.includes('Iconic')) || card.rarity === 'Box Topper';
+          }
+          return card.rarity === r;
+        });
+        if (!matchesRarity) {
+          return false;
+        }
       }
 
       return true;
@@ -250,22 +259,32 @@ class InventoryController {
   }
 
   /**
-   * Rank a set so the main retail set comes first, starter decks next, promos last.
+   * Rank a set so the main retail set comes first, iconic chase cards next, starter decks next, promos/box toppers last.
    */
   static setRank(card) {
     const code = (card.set_code || '').toLowerCase();
     if (!code) return 1;
-    if (code.startsWith('prm') || code.includes('promo')) return 3;
-    if (code.includes('starter')) return 2;
+    if (code.includes('iconic')) return 1;
+    if (code.includes('boxtopper') || code.startsWith('prm') || code.includes('promo')) return 4;
+    if (code.includes('starter')) return 3;
     return 0;
   }
 
   /**
-   * Parse a collector print number such as "005a" into { num: 5, suffix: "a" }.
+   * Parse a collector print number such as "005a", "β141", or "BT1" into { num, suffix }.
    */
   static parsePrintNumber(pn) {
-    const m = String(pn || '').trim().match(/^(\d+)\s*([a-z]*)/i);
-    if (!m) return { num: Number.MAX_SAFE_INTEGER, suffix: String(pn || '') };
+    const s = String(pn || '').trim();
+    const betaMatch = s.match(/^[βb](\d+)([a-z]*)/i);
+    if (betaMatch) {
+      return { num: 1000 + parseInt(betaMatch[1], 10), suffix: betaMatch[2].toLowerCase() };
+    }
+    const btMatch = s.match(/^bt(\d+)([a-z]*)/i);
+    if (btMatch) {
+      return { num: 2000 + parseInt(btMatch[1], 10), suffix: btMatch[2].toLowerCase() };
+    }
+    const m = s.match(/^(\d+)\s*([a-z]*)/i);
+    if (!m) return { num: Number.MAX_SAFE_INTEGER, suffix: s };
     return { num: parseInt(m[1], 10), suffix: m[2].toLowerCase() };
   }
 

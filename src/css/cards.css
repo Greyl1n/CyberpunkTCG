@@ -72,12 +72,39 @@
 .cyber-card:hover .holo-glare,
 .cyber-card.rarity-legendary .holo-glare,
 .cyber-card.rarity-secret .holo-glare,
+.cyber-card.rarity-iconic-secret .holo-glare,
+.cyber-card.rarity-iconic-legend .holo-glare,
+.cyber-card.rarity-iconic-other .holo-glare,
+.cyber-card.rarity-iconic-rare .holo-glare,
+.cyber-card.rarity-box-topper .holo-glare,
 .cyber-card.rarity-nova-rare .holo-glare,
 .cyber-card.rarity-epic .holo-glare {
   opacity: 0.85;
 }
 
 /* Card Rarity Accents */
+.cyber-card.rarity-iconic-secret {
+  border-color: #ffd700;
+  box-shadow: 0 0 24px rgba(255, 215, 0, 0.55), inset 0 0 10px rgba(255, 215, 0, 0.25);
+}
+.cyber-card.rarity-iconic-secret:hover {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.9), inset 0 0 16px rgba(255, 215, 0, 0.4);
+}
+
+.cyber-card.rarity-iconic-legend,
+.cyber-card.rarity-iconic-other,
+.cyber-card.rarity-iconic-rare,
+.cyber-card.rarity-box-topper {
+  border-color: #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.45);
+}
+.cyber-card.rarity-iconic-legend:hover,
+.cyber-card.rarity-iconic-other:hover,
+.cyber-card.rarity-iconic-rare:hover,
+.cyber-card.rarity-box-topper:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
+}
+
 .cyber-card.rarity-legendary,
 .cyber-card.rarity-nova-rare,
 .cyber-card.rarity-secret {

@@ -1,6 +1,6 @@
 {
   "name": "cyberpunk-tcg",
-  "version": "1.0.0",
+  "version": "3.2.0",
   "description": "Cyberpunk TCG Companion, Inventory Manager & Tournament Deck Builder",
   "private": true,
   "scripts": {

@@ -1,0 +1,53 @@
+{
+  "model_name": "CyberVision Neural Core",
+  "version": "3.0.0",
+  "engine": "edge-perceptual-v3",
+  "algorithm": "CyberVision-PerceptualEmbedding-v3",
+  "dimension": 616,
+  "cards_indexed": 189,
+  "target_resolution": [
+    64,
+    88
+  ],
+  "params": {
+    "work_size": [
+      64,
+      88
+    ],
+    "inset": [
+      2,
+      2
+    ],
+    "thumb": [
+      16,
+      22
+    ],
+    "grid": [
+      8,
+      11
+    ],
+    "weights": [
+      1.0,
+      0.5,
+      1.0
+    ]
+  },
+  "thresholds": {
+    "min_score": 0.5,
+    "min_margin": 0.1,
+    "vote_min_score": 0.36,
+    "vote_min_margin": 0.04,
+    "confirm_frames": 2,
+    "vote_window": 4
+  },
+  "supported_sets": [
+    "Box Toppers",
+    "Embracing Power — Retail Starter Deck",
+    "Set 1 Promos",
+    "The Heist — Retail Starter Deck",
+    "Welcome to Night City — Iconic",
+    "Welcome to Night City — Retail"
+  ],
+  "embeddings_file": "data/card_embeddings.json",
+  "updated_at": "2026-10-15T08:15:24Z"
+}

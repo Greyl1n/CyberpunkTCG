@@ -27,7 +27,10 @@
   <header class="app-header">
     <div class="brand-section">
       <img src="assets/logo.png" alt="Cyberpunk TCG" class="brand-logo-img">
-      <span class="brand-badge">FAN COMPANION • 151 CARDS</span>
+      <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+        <span class="brand-badge" id="app-card-count-badge">COMPANION • 189 CARDS</span>
+        <span class="brand-badge version-badge" style="background: rgba(0, 240, 255, 0.15); border-color: var(--neon-cyan); color: var(--neon-cyan); font-weight: 700;">v3.2.0</span>
+      </div>
     </div>
 
     <!-- Navigation Tabs (Desktop & Tablet) -->
@@ -74,6 +77,10 @@
           <button class="cyber-btn" id="audio-toggle-btn">
             🔊 AUDIO: ON
           </button>
+          <div class="dropdown-divider" style="height: 1px; background: rgba(255, 255, 255, 0.1); margin: 6px 0;"></div>
+          <button class="cyber-btn cyber-btn-danger" id="bulk-clear-btn" title="Set all cards in personal inventory to 0 copies" style="color: var(--neon-red); border-color: rgba(255, 0, 85, 0.4);">
+            <span>🗑️</span> RESET INVENTORY
+          </button>
         </div>
       </div>
     </div>
@@ -97,15 +104,15 @@
           <div class="inv-stat-card">
             <div class="inv-stat-icon">🗃️</div>
             <div class="inv-stat-info">
-              <div class="inv-stat-value" id="inv-unique-cards">-- / 151</div>
-              <div class="inv-stat-label">UNIQUE CARDS COLLECTED</div>
+              <div class="inv-stat-value" id="inv-unique-cards">-- / 189</div>
+              <div class="inv-stat-label" title="Physical unique card printings collected, including standard cards and 38 alternate arts">UNIQUE CARDS COLLECTED</div>
             </div>
           </div>
           <div class="inv-stat-card">
             <div class="inv-stat-icon">⚡</div>
             <div class="inv-stat-info">
               <div class="inv-stat-value" id="inv-playset-cards">-- / 151</div>
-              <div class="inv-stat-label">FULL PLAYSETS (3+ COPIES)</div>
+              <div class="inv-stat-label" title="Full 3+ copies of all 151 playable cards (combining base cards and alternate art versions)">FULL PLAYSETS (3+ COPIES)</div>
             </div>
           </div>
           <div class="inv-stat-card">
@@ -126,9 +133,8 @@
           <div class="inventory-bulk-actions">
             <button class="cyber-btn cyber-btn-sm cyber-btn-yellow" id="inv-toolbar-scan-btn" title="Open camera card scanner">📷 SCAN CARDS</button>
             <button class="cyber-btn cyber-btn-sm cyber-btn-accent" id="inv-toolbar-export-btn" title="Export card inventory to file or clipboard">📦 EXPORT INVENTORY</button>
-            <button class="cyber-btn cyber-btn-sm" id="bulk-playset-btn" title="Set all 151 cards to 3 copies">⚡ SET ALL 3x PLAYSET</button>
+            <button class="cyber-btn cyber-btn-sm" id="bulk-playset-btn" title="Set all cards to 3 copies (Full Playset)">⚡ SET ALL 3x PLAYSET</button>
             <button class="cyber-btn cyber-btn-sm" id="bulk-singleton-btn" title="Set all cards to 1 copy">🃏 SET ALL 1x</button>
-            <button class="cyber-btn cyber-btn-sm cyber-btn-danger" id="bulk-clear-btn" title="Set all cards to 0 copies">🗑️ RESET ALL TO 0</button>
           </div>
         </div>
       </div>
@@ -198,6 +204,7 @@
           <button class="filter-pill" data-rarity="Epic">Epic</button>
           <button class="filter-pill" data-rarity="Secret">Secret</button>
           <button class="filter-pill" data-rarity="Nova Rare">Nova Rare</button>
+          <button class="filter-pill" data-rarity="Iconic" title="Show Iconic Rares, Box Toppers & Alternate Art Cards" style="border-color: rgba(0, 255, 204, 0.4); color: var(--neon-cyan);">✨ Iconic / Alt Art</button>
         </div>
       </div>
 
@@ -410,8 +417,8 @@
             <div class="about-badge-row">
               <span class="about-pill-badge cyan">CC BY-NC 4.0 INTERNATIONAL</span>
               <span class="about-pill-badge green">100% OFFLINE-CAPABLE</span>
-              <span class="about-pill-badge yellow">151 INDEXED CARDS</span>
-              <span class="about-pill-badge cyan">VERSION 1.4.0</span>
+              <span class="about-pill-badge yellow">189 INDEXED CARDS (INCL. 38 ALT-ARTS)</span>
+              <span class="about-pill-badge cyan">VERSION 3.2.0</span>
             </div>
           </div>
         </div>

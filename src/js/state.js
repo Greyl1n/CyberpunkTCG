@@ -202,12 +202,25 @@ class StateStore {
     return Object.values(this.inventory).reduce((acc, v) => acc + (Number(v) || 0), 0);
   }
 
+  getBaseCards() {
+    return this.cards.filter(c => !c.is_alt_art);
+  }
+
   getUniqueOwnedCount() {
     return this.cards.filter(c => (this.inventory[c.id] || 0) > 0).length;
   }
 
   getPlaysetCount() {
-    return this.cards.filter(c => (this.inventory[c.id] || 0) >= 3).length;
+    const baseCards = this.getBaseCards();
+    return baseCards.filter(baseCard => {
+      let totalCopies = Number(this.inventory[baseCard.id]) || 0;
+      this.cards.forEach(c => {
+        if (c.is_alt_art && (c.variant_of === baseCard.id || c.variant_of === baseCard.netdeck_id)) {
+          totalCopies += (Number(this.inventory[c.id]) || 0);
+        }
+      });
+      return totalCopies >= 3;
+    }).length;
   }
 
   bulkSetInventory(count) {
@@ -347,11 +360,24 @@ class StateStore {
       return { success: false, reason: 'Main deck limit reached (Maximum 50 cards allowed).' };
     }
 
+    // Check 3-copy rule across same card titles/variants
+    const cardTitle = (card.card_title || card.name).toLowerCase();
+    const copiesAcrossArts = this.activeDeck.cards.reduce((sum, item) => {
+      const itemCard = this.getCardById(item.cardId);
+      if (!itemCard) return sum;
+      const itemTitle = (itemCard.card_title || itemCard.name).toLowerCase();
+      if (itemTitle === cardTitle || (card.variant_of && (card.variant_of === itemCard.id || card.variant_of === itemCard.variant_of))) {
+        return sum + item.count;
+      }
+      return sum;
+    }, 0);
+
+    if (copiesAcrossArts >= 3) {
+      return { success: false, reason: `Max 3 copies allowed across all printings of ${card.card_title || card.name}.` };
+    }
+
     const existing = this.activeDeck.cards.find(c => c.cardId === cardId);
     if (existing) {
-      if (existing.count >= 3) {
-        return { success: false, reason: `Max 3 copies allowed for ${card.name}.` };
-      }
       existing.count += 1;
     } else {
       this.activeDeck.cards.push({ cardId: card.id, count: 1 });
