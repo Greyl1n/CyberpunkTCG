@@ -5591,9 +5591,29 @@ class StateStore {
     // 2. Load card catalog (inlined, local DB cache, or relative JSON)
     if (window.__CYBERPUNK_CARDS__ && Array.isArray(window.__CYBERPUNK_CARDS__)) {
       this.cards = window.__CYBERPUNK_CARDS__;
+      if (window.appDB && this.cards.length > 0) {
+        window.appDB.cacheCards(this.cards);
+      }
     } else {
-      // Check cached cards in DB first for instant offline startup
-      if (window.appDB) {
+      // 1. Fetch latest bundled cards.json first
+      const candidates = [
+        'data/cards.json',
+        './data/cards.json',
+        '../data/cards.json',
+        '/data/cards.json'
+      ];
+      for (const p of candidates) {
+        try {
+          const res = await fetch(p);
+          if (res.ok) {
+            this.cards = await res.json();
+            if (Array.isArray(this.cards) && this.cards.length > 0) break;
+          }
+        } catch (e) {}
+      }
+
+      // 2. Fallback to cached cards in local DB only if fetch was unavailable/empty
+      if ((!this.cards || this.cards.length === 0) && window.appDB) {
         try {
           const cached = await window.appDB.getCachedCards();
           if (cached && cached.length > 0) {
@@ -5602,22 +5622,8 @@ class StateStore {
         } catch (e) {}
       }
 
-      if (this.cards.length === 0) {
-        try {
-          const res = await fetch('../data/cards.json');
-          this.cards = await res.json();
-        } catch (err) {
-          try {
-            const res = await fetch('/data/cards.json');
-            this.cards = await res.json();
-          } catch (e) {
-            console.error('Could not load cards.json', e);
-          }
-        }
-      }
-
-      // Cache cards into local database for future offline loads
-      if (window.appDB && this.cards.length > 0) {
+      // 3. Cache latest cards into local database for future offline loads
+      if (window.appDB && this.cards && this.cards.length > 0) {
         window.appDB.cacheCards(this.cards);
       }
     }
@@ -5626,17 +5632,22 @@ class StateStore {
     if (window.__CYBERPUNK_STARTER_DECKS__ && Array.isArray(window.__CYBERPUNK_STARTER_DECKS__)) {
       this.starterDecks = window.__CYBERPUNK_STARTER_DECKS__;
     } else {
-      try {
-        const res = await fetch('../data/starter_decks.json');
-        this.starterDecks = await res.json();
-      } catch (err) {
+      const deckCandidates = [
+        'data/starter_decks.json',
+        './data/starter_decks.json',
+        '../data/starter_decks.json',
+        '/data/starter_decks.json'
+      ];
+      for (const p of deckCandidates) {
         try {
-          const res = await fetch('/data/starter_decks.json');
-          this.starterDecks = await res.json();
-        } catch (e) {
-          this.starterDecks = [];
-        }
+          const res = await fetch(p);
+          if (res.ok) {
+            this.starterDecks = await res.json();
+            if (Array.isArray(this.starterDecks) && this.starterDecks.length > 0) break;
+          }
+        } catch (err) {}
       }
+      if (!this.starterDecks) this.starterDecks = [];
     }
 
     // 4. Load inventory and saved decks from DB / storage
