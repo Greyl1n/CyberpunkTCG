@@ -6,6 +6,7 @@ Serves the bundled application and opens a native desktop window via pywebview.
 
 import os
 import sys
+import json
 import threading
 import http.server
 import socketserver
@@ -21,13 +22,73 @@ def get_base_dir():
         # Running in standard Python environment
         return Path(__file__).resolve().parent.parent
 
+def get_user_data_dir():
+    """Get persistent user data directory across OS platforms for inventory, decks, and WebView storage."""
+    if os.name == 'nt':
+        appdata = os.environ.get('LOCALAPPDATA') or os.environ.get('APPDATA')
+        base = Path(appdata) if appdata else (Path.home() / "AppData" / "Local")
+        data_dir = base / "Cyberpunk_TCG"
+    elif sys.platform == 'darwin':
+        data_dir = Path.home() / "Library" / "Application Support" / "Cyberpunk_TCG"
+    else:
+        xdg = os.environ.get('XDG_DATA_HOME')
+        base = Path(xdg) if xdg else (Path.home() / ".local" / "share")
+        data_dir = base / "Cyberpunk_TCG"
+
+    try:
+        data_dir.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        pass
+    return data_dir
+
 BASE_DIR = get_base_dir()
+USER_DATA_DIR = get_user_data_dir()
+USER_STATE_FILE = USER_DATA_DIR / "user_state.json"
+
+def load_user_state():
+    """Load persisted user state (inventory, savedDecks, activeDeck, settings) from disk."""
+    if USER_STATE_FILE.exists():
+        try:
+            with open(USER_STATE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    return data
+        except Exception:
+            pass
+    return {}
+
+def save_user_state(updates):
+    """Merge and save user state updates to persistent disk file."""
+    if not isinstance(updates, dict):
+        return False
+    try:
+        current = load_user_state()
+        current.update(updates)
+        USER_DATA_DIR.mkdir(parents=True, exist_ok=True)
+        temp_file = USER_STATE_FILE.with_suffix(".tmp")
+        with open(temp_file, "w", encoding="utf-8") as f:
+            json.dump(current, f, ensure_ascii=False, indent=2)
+        os.replace(temp_file, USER_STATE_FILE)
+        return True
+    except Exception:
+        return False
 
 class CyberpunkServerHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(BASE_DIR), **kwargs)
 
     def do_GET(self):
+        if self.path.startswith('/api/user_state'):
+            state_data = load_user_state()
+            payload = json.dumps(state_data).encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
+            self.send_header('Content-Length', str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
         if self.path in ('/', '/index.html'):
             root_index = BASE_DIR / 'index.html'
             monolith = BASE_DIR / 'dist' / 'cyberpunk_tcg_monolith.html'
@@ -38,6 +99,30 @@ class CyberpunkServerHandler(http.server.SimpleHTTPRequestHandler):
             else:
                 self.path = '/src/index.html'
         return super().do_GET()
+
+    def do_POST(self):
+        if self.path.startswith('/api/user_state'):
+            try:
+                length = int(self.headers.get('Content-Length', 0))
+                raw_body = self.rfile.read(length).decode('utf-8') if length > 0 else '{}'
+                updates = json.loads(raw_body)
+                ok = save_user_state(updates)
+                resp = json.dumps({"success": ok}).encode('utf-8')
+                self.send_response(200 if ok else 500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp)))
+                self.end_headers()
+                self.wfile.write(resp)
+            except Exception as e:
+                resp = json.dumps({"success": False, "error": str(e)}).encode('utf-8')
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp)))
+                self.end_headers()
+                self.wfile.write(resp)
+            return
+
+        self.send_error(404, "Endpoint not found")
 
     def list_directory(self, path):
         # Disable directory listing for security
@@ -67,6 +152,14 @@ class DesktopBridge:
 
     def set_window(self, window):
         self._window = window
+
+    def load_user_state(self):
+        """Returns persisted user state from disk via native bridge."""
+        return load_user_state()
+
+    def save_user_state(self, state_dict):
+        """Persists user state updates to disk via native bridge."""
+        return {"success": save_user_state(state_dict)}
 
     def save_file_dialog(self, filename, content, mime_type="text/plain"):
         """Opens native OS Save File dialog and writes file to user's chosen location."""
@@ -192,8 +285,15 @@ def main():
             text_select=False
         )
         bridge.set_window(window)
+
+        webview_storage = USER_DATA_DIR / "webview_storage"
+        webview_storage.mkdir(parents=True, exist_ok=True)
         
-        webview.start(debug=False)
+        webview.start(
+            debug=False,
+            private_mode=False,
+            storage_path=str(webview_storage)
+        )
     except Exception as e:
         # Fallback to default browser
         webbrowser.open(url)

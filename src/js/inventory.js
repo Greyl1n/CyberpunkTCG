@@ -21,7 +21,9 @@ class InventoryController {
     window.stateStore.on('inventory_changed', () => {
       this.updateDashboardStats();
       this.updateInventoryBadges();
-      if (window.stateStore.filters.collectionFilter && window.stateStore.filters.collectionFilter !== 'all') {
+      const sortBy = window.stateStore.filters.sortBy;
+      const collFilter = window.stateStore.filters.collectionFilter;
+      if ((collFilter && collFilter !== 'all') || sortBy === 'owned') {
         this.render();
       }
     });

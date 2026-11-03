@@ -32,7 +32,7 @@ Ready-to-run compiled binaries are stored in the `dist/` directory:
 
 # 🖥️ Part 1: Standalone Linux Desktop App (`scripts/linux/`)
 
-This option compiles a self-contained portable executable file (`dist/Cyberpunk_TCG_Linux`) containing the Python runtime, desktop window interface (`pywebview`), 151 card images, and audio engine.
+This option compiles a self-contained portable executable file (`dist/Cyberpunk_TCG_Linux`) containing the Python runtime, desktop window interface (`pywebview`), 189 card images, and audio engine.
 
 ---
 

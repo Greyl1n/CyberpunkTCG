@@ -15,6 +15,11 @@ if sys.platform == 'win32' and hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from scripts.build_monolith import build_monolith
+
 SRC_DIR = ROOT_DIR / "src"
 DATA_DIR = ROOT_DIR / "data"
 ASSETS_DIR = ROOT_DIR / "assets"
@@ -36,13 +41,16 @@ def run_cmd(cmd, cwd=None):
 def prepare_web_bundle():
     print("\n[1/4] Preparing offline web application assets...")
     
+    # Compile monolith HTML to guarantee all 189 cards, starter decks, and AI embeddings are inlined
+    monolith_path = build_monolith()
+
     if ANDROID_BUILD_DIR.exists():
         shutil.rmtree(ANDROID_BUILD_DIR)
     ANDROID_BUILD_DIR.mkdir(parents=True, exist_ok=True)
 
-    # 1. Copy HTML
-    shutil.copy2(SRC_DIR / "index.html", ANDROID_BUILD_DIR / "index.html")
-    print("  [+] Copied index.html")
+    # 1. Copy Monolith HTML as index.html (inlines all 189 cards & alt-arts)
+    shutil.copy2(monolith_path, ANDROID_BUILD_DIR / "index.html")
+    print("  [+] Copied monolith HTML as index.html (all 189 cards inlined)")
 
     # 2. Copy CSS
     shutil.copytree(SRC_DIR / "css", ANDROID_BUILD_DIR / "css")
@@ -54,7 +62,7 @@ def prepare_web_bundle():
 
     # 4. Copy Data
     shutil.copytree(DATA_DIR, ANDROID_BUILD_DIR / "data")
-    print("  [+] Copied data/ directory (151 cards & starter decks)")
+    print("  [+] Copied data/ directory (189 cards & starter decks)")
 
     # 5. Copy Models & Manifest
     models_dir = ROOT_DIR / "models"

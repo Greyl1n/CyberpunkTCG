@@ -412,6 +412,18 @@ class ExportImportController {
       out += `\n`;
     }
 
+    const sideboard = deck.sideboard || [];
+    if (sideboard.length > 0) {
+      const totalSb = sideboard.reduce((sum, s) => sum + s.count, 0);
+      out += `// Sideboard (${totalSb})\n`;
+      sideboard.forEach(s => {
+        const card = window.stateStore.getCardById(s.cardId);
+        const name = card ? card.name : s.cardId;
+        out += `${s.count} ${name}\n`;
+      });
+      out += `\n`;
+    }
+
     return out.trim();
   }
 
@@ -420,7 +432,8 @@ class ExportImportController {
       n: deck.name,
       f: deck.faction,
       legs: deck.legends || (deck.leaderId ? [deck.leaderId] : []),
-      c: deck.cards.map(i => `${i.cardId}:${i.count}`)
+      c: (deck.cards || []).map(i => `${i.cardId}:${i.count}`),
+      sb: (deck.sideboard || []).map(i => `${i.cardId}:${i.count}`)
     };
     return 'CPTCG_' + btoa(JSON.stringify(compactObj));
   }
@@ -680,14 +693,14 @@ class ExportImportController {
           if (parsed && parsed.inventory && typeof parsed.inventory === 'object') {
             let importedCount = 0;
             Object.entries(parsed.inventory).forEach(([cardId, count]) => {
-              if (window.stateStore.getCardById(cardId)) {
-                window.stateStore.inventory[cardId] = Math.max(0, parseInt(count, 10) || 0);
+              const card = this.resolveCard(cardId);
+              if (card) {
+                window.stateStore.inventory[card.id] = Math.max(0, parseInt(count, 10) || 0);
                 importedCount++;
               }
             });
 
             window.stateStore.saveInventory();
-            window.stateStore.emit('inventory_changed');
             window.cyberAudio.success();
             window.app.showToast(`Successfully imported inventory for ${importedCount} cards!`);
             return true;
@@ -739,15 +752,15 @@ class ExportImportController {
             const cols = parseCsvLine(rowStr);
             const cardId = cols[idCol];
             const count = parseInt(cols[countCol], 10);
-            if (cardId && !isNaN(count) && window.stateStore.getCardById(cardId)) {
-              window.stateStore.inventory[cardId] = Math.max(0, count);
+            const card = cardId ? this.resolveCard(cardId) : null;
+            if (card && !isNaN(count)) {
+              window.stateStore.inventory[card.id] = Math.max(0, count);
               importedCount++;
             }
           }
 
           if (importedCount > 0) {
             window.stateStore.saveInventory();
-            window.stateStore.emit('inventory_changed');
             window.cyberAudio.success();
             window.app.showToast(`Successfully imported inventory from CSV for ${importedCount} cards!`);
             return true;
@@ -764,8 +777,9 @@ class ExportImportController {
           if (match) {
             const count = parseInt(match[1], 10);
             const cardId = match[2];
-            if (window.stateStore.getCardById(cardId)) {
-              window.stateStore.inventory[cardId] = Math.max(0, count);
+            const card = this.resolveCard(cardId);
+            if (card) {
+              window.stateStore.inventory[card.id] = Math.max(0, count);
               importedCount++;
             }
           }
@@ -773,7 +787,6 @@ class ExportImportController {
 
         if (importedCount > 0) {
           window.stateStore.saveInventory();
-          window.stateStore.emit('inventory_changed');
           window.cyberAudio.success();
           window.app.showToast(`Successfully imported inventory checklist for ${importedCount} cards!`);
           return true;
@@ -877,6 +890,10 @@ class ExportImportController {
         cards: (compact.c || []).map(entry => {
           const [id, count] = entry.split(':');
           return { cardId: id, count: parseInt(count, 10) || 1 };
+        }),
+        sideboard: (compact.sb || []).map(entry => {
+          const [id, count] = entry.split(':');
+          return { cardId: id, count: parseInt(count, 10) || 1 };
         })
       };
     } else if (str.trim().startsWith('{')) {
@@ -887,16 +904,18 @@ class ExportImportController {
         name: parsed.name || 'Imported Deck',
         faction: parsed.faction || 'Neutral',
         legends: parsed.legends || (parsed.leaderId ? [parsed.leaderId] : []),
-        cards: parsed.cards || []
+        cards: parsed.cards || [],
+        sideboard: parsed.sideboard || []
       };
     } else {
       // 3. Line-by-line text list (supports official cyberpunktcg.com / NetDeck.gg / raw text)
       const lines = str.split(/\r?\n/);
       const cards = [];
       const legends = [];
+      const sideboard = [];
       const unresolvedNames = [];
       let deckName = 'Imported Cyber Deck';
-      let currentSection = 'main'; // 'legends' | 'main'
+      let currentSection = 'main'; // 'legends' | 'main' | 'sideboard'
       let nameExplicitlySet = false;
 
       lines.forEach((rawLine, lineIdx) => {
@@ -934,10 +953,13 @@ class ExportImportController {
         }
 
         // Check for Section Headers:
-        // e.g. "// Legends (3)", "// Units (17)", "// Gears (10)", "// Programs (13)"
-        if (line.startsWith('//') || line.startsWith('#') || line.startsWith('[') || line.startsWith('--')) {
+        // e.g. "// Legends (3)", "// Units (17)", "// Gears (10)", "// Programs (13)", "// Sideboard (7)"
+        if (line.startsWith('//') || line.startsWith('#') || line.startsWith('[') || line.startsWith('--') || /^(?:sideboard|side\s*deck):?$/i.test(line)) {
           const secLower = line.toLowerCase();
-          if (/legend|identity|identities|leader/i.test(secLower)) {
+          if (/sideboard|side\b/i.test(secLower)) {
+            currentSection = 'sideboard';
+            return;
+          } else if (/legend|identity|identities|leader/i.test(secLower)) {
             currentSection = 'legends';
             return;
           } else if (/unit|gear|program|main|card|deck/i.test(secLower)) {
@@ -982,7 +1004,11 @@ class ExportImportController {
 
         const card = this.resolveCard(cardStr);
         if (card) {
-          if (card.type === 'Legend' || currentSection === 'legends') {
+          if (currentSection === 'sideboard') {
+            const existing = sideboard.find(c => c.cardId === card.id);
+            if (existing) existing.count += count;
+            else sideboard.push({ cardId: card.id, count });
+          } else if (card.type === 'Legend' || currentSection === 'legends') {
             if (card.type === 'Legend') {
               if (!legends.includes(card.id)) {
                 legends.push(card.id);
@@ -1005,7 +1031,8 @@ class ExportImportController {
       // Calculate dominant faction from cards and legends
       const allDeckCards = [
         ...legends.map(id => window.stateStore.getCardById(id)),
-        ...cards.map(c => window.stateStore.getCardById(c.cardId))
+        ...cards.map(c => window.stateStore.getCardById(c.cardId)),
+        ...sideboard.map(s => window.stateStore.getCardById(s.cardId))
       ].filter(Boolean);
 
       const colorCounts = {};
@@ -1029,7 +1056,8 @@ class ExportImportController {
           name: deckName,
           faction: dominantFaction,
           legends,
-          cards
+          cards,
+          sideboard
         };
       }
 
@@ -1045,6 +1073,13 @@ class ExportImportController {
     // Verify card IDs exist in database
     importedDeck.cards = importedDeck.cards.filter(item => {
       return window.stateStore.getCardById(item.cardId);
+    });
+    importedDeck.legends = (importedDeck.legends || []).filter(id => {
+      return window.stateStore.getCardById(id);
+    });
+    importedDeck.sideboard = (importedDeck.sideboard || []).filter(item => {
+      return window.stateStore.getCardById(item.cardId);
+    });
     });
     importedDeck.legends = (importedDeck.legends || []).filter(id => {
       return window.stateStore.getCardById(id);

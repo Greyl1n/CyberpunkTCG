@@ -137,14 +137,20 @@ class CardRenderer {
             <button class="qty-btn inc-btn" data-action="inc" title="Add 1 to Inventory">＋</button>
           </div>
         </div>
-        <button class="cyber-btn deck-add-btn" data-action="add-deck" title="Add 1 card to Active Deck">
-          + Deck
+        <button class="cyber-btn deck-add-btn" data-action="add-deck" title="${card.type === 'Legend' ? 'Assign Legend to Identity Zone' : 'Add 1 card to Active Deck'}">
+          ${card.type === 'Legend' ? '👑 + Legend' : '+ Deck'}
         </button>
+        ${card.type !== 'Legend' ? `
+          <button class="cyber-btn deck-add-side-btn" data-action="add-side" title="Add 1 card to Sideboard">
+            + Side
+          </button>
+        ` : ''}
       `;
 
       const decBtn = actionBar.querySelector('[data-action="dec"]');
       const incBtn = actionBar.querySelector('[data-action="inc"]');
       const addDeckBtn = actionBar.querySelector('[data-action="add-deck"]');
+      const addSideBtn = actionBar.querySelector('[data-action="add-side"]');
       const qtyInput = actionBar.querySelector('.qty-input');
 
       const applyQty = (next) => {
@@ -215,6 +221,20 @@ class CardRenderer {
           window.app.showToast(res.reason, 'warn');
         }
       });
+
+      if (addSideBtn) {
+        addSideBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const res = window.stateStore.addCardToSideboard(card.id);
+          if (res && res.success) {
+            window.cyberAudio.add();
+            window.app.showToast(`+1 ${card.name} added to sideboard`);
+          } else if (res && res.reason) {
+            window.cyberAudio.playTone(200, 'sawtooth', 0.15, 0.05);
+            window.app.showToast(res.reason, 'warn');
+          }
+        });
+      }
 
       wrapper.appendChild(actionBar);
     }

@@ -34,7 +34,7 @@ Precompiled, zero-dependency standalone binaries are ready in the `dist/` direct
 
 | Platform | Executable File | Instructions |
 | :--- | :--- | :--- |
-| **Windows** | `dist/Cyberpunk_TCG.exe` | Double-click to launch native desktop app. Includes all 151 card artworks, audio engine, and native GUI. |
+| **Windows** | `dist/Cyberpunk_TCG.exe` | Double-click to launch native desktop app. Includes all 189 card artworks, audio engine, and native GUI. |
 | **Android** | `dist/Cyberpunk_TCG.apk` | Copy to your Android phone/tablet and install, or run `adb install -r dist/Cyberpunk_TCG.apk`. |
 | **Linux** | `dist/Cyberpunk_TCG_Linux` | Run `chmod +x dist/Cyberpunk_TCG_Linux && ./dist/Cyberpunk_TCG_Linux` on Fedora, Ubuntu, Debian, or Arch. |
 | **Web Browser** | `dist/cyberpunk_tcg_monolith.html` | Open directly in Chrome, Firefox, or Edge. 100% offline, zero internet or web server required. |
@@ -99,7 +99,7 @@ As new sets and expansions release:
 4. **Export & Share:**
    - **Base64 Deck Codes:** Share compact `CPTCG_...` strings directly with opponents or tournament judges.
    - **File Download:** Save your deck as `.cptcg`, `.json`, or text checklist.
-5. **Starter & NetDeck Library:** Explore 59 pre-loaded tournament and starter decks, including *Arasaka Embracing Destruction* and *The Heist*.
+5. **Starter & NetDeck Library:** Explore 146 pre-loaded tournament and starter decks, including *Arasaka Embracing Destruction* and *The Heist*.
 
 ---
 
@@ -127,6 +127,6 @@ python scripts/build_android.py
 # Recompile Linux Standalone Executable (via WSL / Linux)
 python3 scripts/linux/build_standalone.py
 
-# Run Full Test Suite (11/11 tests)
+# Run Full Test Suite (15/15 tests)
 python -m unittest discover tests
 ```

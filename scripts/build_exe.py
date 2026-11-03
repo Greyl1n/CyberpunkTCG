@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Cyberpunk TCG - Windows Executable Builder (.exe)
-Compiles the application, all 151 official card images, and data into a standalone Windows .exe.
+Compiles the application, all 189 official card images (incl. alt-arts), and data into a standalone Windows .exe.
 """
 
 import os
@@ -67,7 +67,7 @@ def build_executable():
             print(f"[SUCCESS] Standalone Executable created:")
             print(f"  Path: {exe_path}")
             print(f"  Size: {size_mb:.2f} MB")
-            print("  Includes: 151 card images, data, audio, and native GUI")
+            print("  Includes: 189 card images (151 core + 38 alt-arts), data, audio, and native GUI")
             print("=" * 60)
             return exe_path
         else:

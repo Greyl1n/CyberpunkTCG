@@ -8,17 +8,35 @@ import http.server
 import socketserver
 import os
 import sys
+import json
 import webbrowser
 from pathlib import Path
 
 PORT = 8080
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from scripts.launcher import load_user_state, save_user_state
+
 class CyberpunkHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT_DIR), **kwargs)
 
     def do_GET(self):
+        # Route API for persistent user state (inventory & decks)
+        if self.path.startswith('/api/user_state'):
+            state_data = load_user_state()
+            payload = json.dumps(state_data).encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
+            self.send_header('Content-Length', str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
         # Route API for Cardmarket prices
         if self.path.startswith('/api/cardmarket/prices'):
             prices_file = ROOT_DIR / 'data' / 'cardmarket_prices.json'
@@ -59,6 +77,30 @@ class CyberpunkHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         elif self.path == '/monolith':
             self.path = '/dist/cyberpunk_tcg_monolith.html'
         return super().do_GET()
+
+    def do_POST(self):
+        if self.path.startswith('/api/user_state'):
+            try:
+                length = int(self.headers.get('Content-Length', 0))
+                raw_body = self.rfile.read(length).decode('utf-8') if length > 0 else '{}'
+                updates = json.loads(raw_body)
+                ok = save_user_state(updates)
+                resp = json.dumps({"success": ok}).encode('utf-8')
+                self.send_response(200 if ok else 500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp)))
+                self.end_headers()
+                self.wfile.write(resp)
+            except Exception as e:
+                resp = json.dumps({"success": False, "error": str(e)}).encode('utf-8')
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp)))
+                self.end_headers()
+                self.wfile.write(resp)
+            return
+
+        self.send_error(404, 'Endpoint not found')
 
 def run_server():
     os.chdir(ROOT_DIR)

@@ -17,9 +17,11 @@ class StateStore {
         'cb-dexter-deshawn-off-the-grid'
       ],
       leaderId: 'cb-v-streetkid',
-      cards: []
+      cards: [],
+      sideboard: []
     };
     this.savedDecks = [];
+    this.favoriteDecks = new Set();
     this.filters = {
       search: '',
       factions: new Set(),
@@ -82,9 +84,29 @@ class StateStore {
     // 2. Load card catalog (inlined, local DB cache, or relative JSON)
     if (window.__CYBERPUNK_CARDS__ && Array.isArray(window.__CYBERPUNK_CARDS__)) {
       this.cards = window.__CYBERPUNK_CARDS__;
+      if (window.appDB && this.cards.length > 0) {
+        window.appDB.cacheCards(this.cards);
+      }
     } else {
-      // Check cached cards in DB first for instant offline startup
-      if (window.appDB) {
+      // 1. Fetch latest bundled cards.json first
+      const candidates = [
+        'data/cards.json',
+        './data/cards.json',
+        '../data/cards.json',
+        '/data/cards.json'
+      ];
+      for (const p of candidates) {
+        try {
+          const res = await fetch(p);
+          if (res.ok) {
+            this.cards = await res.json();
+            if (Array.isArray(this.cards) && this.cards.length > 0) break;
+          }
+        } catch (e) {}
+      }
+
+      // 2. Fallback to cached cards in local DB only if fetch was unavailable/empty
+      if ((!this.cards || this.cards.length === 0) && window.appDB) {
         try {
           const cached = await window.appDB.getCachedCards();
           if (cached && cached.length > 0) {
@@ -93,22 +115,8 @@ class StateStore {
         } catch (e) {}
       }
 
-      if (this.cards.length === 0) {
-        try {
-          const res = await fetch('../data/cards.json');
-          this.cards = await res.json();
-        } catch (err) {
-          try {
-            const res = await fetch('/data/cards.json');
-            this.cards = await res.json();
-          } catch (e) {
-            console.error('Could not load cards.json', e);
-          }
-        }
-      }
-
-      // Cache cards into local database for future offline loads
-      if (window.appDB && this.cards.length > 0) {
+      // 3. Cache latest cards into local database for future offline loads
+      if (window.appDB && this.cards && this.cards.length > 0) {
         window.appDB.cacheCards(this.cards);
       }
     }
@@ -117,24 +125,33 @@ class StateStore {
     if (window.__CYBERPUNK_STARTER_DECKS__ && Array.isArray(window.__CYBERPUNK_STARTER_DECKS__)) {
       this.starterDecks = window.__CYBERPUNK_STARTER_DECKS__;
     } else {
-      try {
-        const res = await fetch('../data/starter_decks.json');
-        this.starterDecks = await res.json();
-      } catch (err) {
+      const deckCandidates = [
+        'data/starter_decks.json',
+        './data/starter_decks.json',
+        '../data/starter_decks.json',
+        '/data/starter_decks.json'
+      ];
+      for (const p of deckCandidates) {
         try {
-          const res = await fetch('/data/starter_decks.json');
-          this.starterDecks = await res.json();
-        } catch (e) {
-          this.starterDecks = [];
-        }
+          const res = await fetch(p);
+          if (res.ok) {
+            this.starterDecks = await res.json();
+            if (Array.isArray(this.starterDecks) && this.starterDecks.length > 0) break;
+          }
+        } catch (err) {}
       }
+      if (!this.starterDecks) this.starterDecks = [];
     }
 
-    // 4. Load inventory and saved decks from DB / storage
-    await this.loadInventory();
-    await this.loadSavedDecks();
+    // 4. Load inventory and saved decks from desktop disk / DB / storage
+    const desktopState = await this.fetchDesktopState();
+    await this.loadInventory(desktopState);
+    await this.loadSavedDecks(desktopState);
+    await this.loadFavoriteDecks(desktopState);
 
-    if (!this.activeDeck.cards || this.activeDeck.cards.length === 0) {
+    if (desktopState && desktopState.activeDeck && Array.isArray(desktopState.activeDeck.cards) && desktopState.activeDeck.cards.length > 0) {
+      this.loadDeck(desktopState.activeDeck);
+    } else if (!this.activeDeck.cards || this.activeDeck.cards.length === 0) {
       if (this.savedDecks.length > 0) {
         this.loadDeck(this.savedDecks[0]);
       } else if (this.starterDecks.length > 0) {
@@ -145,7 +162,52 @@ class StateStore {
     this.emit('cards_loaded', this.cards);
   }
 
-  async loadInventory() {
+  async fetchDesktopState() {
+    // 1. Try native PyWebView JS bridge if ready
+    if (window.pywebview && window.pywebview.api && typeof window.pywebview.api.load_user_state === 'function') {
+      try {
+        const state = await window.pywebview.api.load_user_state();
+        if (state && typeof state === 'object' && Object.keys(state).length > 0) {
+          return state;
+        }
+      } catch (e) {}
+    }
+
+    // 2. Try local desktop HTTP API endpoint (/api/user_state)
+    try {
+      const res = await fetch('/api/user_state', { cache: 'no-store' });
+      if (res.ok) {
+        const state = await res.json();
+        if (state && typeof state === 'object') {
+          return state;
+        }
+      }
+    } catch (e) {}
+
+    return null;
+  }
+
+  syncDesktopState(updates) {
+    if (!updates || typeof updates !== 'object') return;
+
+    // 1. Sync via native PyWebView JS bridge if available
+    if (window.pywebview && window.pywebview.api && typeof window.pywebview.api.save_user_state === 'function') {
+      try {
+        window.pywebview.api.save_user_state(updates);
+      } catch (e) {}
+    }
+
+    // 2. Sync via local desktop HTTP API endpoint (/api/user_state)
+    try {
+      fetch('/api/user_state', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  async loadInventory(desktopState = null) {
     let dbInventory = null;
     if (window.appDB) {
       try {
@@ -153,7 +215,18 @@ class StateStore {
       } catch (e) {}
     }
 
-    if (dbInventory && Object.keys(dbInventory).length > 0) {
+    const hasOwnedCards = (inv) => inv && typeof inv === 'object' && Object.values(inv).some(v => (Number(v) || 0) > 0);
+    const hasAnyEntries = (inv) => inv && typeof inv === 'object' && Object.keys(inv).length > 0;
+
+    const deskInv = desktopState && desktopState.inventory ? desktopState.inventory : null;
+
+    if (hasOwnedCards(deskInv)) {
+      this.inventory = deskInv;
+    } else if (hasOwnedCards(dbInventory)) {
+      this.inventory = dbInventory;
+    } else if (hasAnyEntries(deskInv)) {
+      this.inventory = deskInv;
+    } else if (hasAnyEntries(dbInventory)) {
       this.inventory = dbInventory;
     } else {
       const isV2 = localStorage.getItem('cyber_tcg_inventory_empty_v2');
@@ -183,9 +256,11 @@ class StateStore {
 
   saveInventory() {
     localStorage.setItem('cyber_tcg_inventory', JSON.stringify(this.inventory));
+    localStorage.setItem('cyber_tcg_inventory_empty_v2', 'true');
     if (window.appDB) {
       window.appDB.saveAllInventory(this.inventory);
     }
+    this.syncDesktopState({ inventory: this.inventory });
     this.emit('inventory_changed', this.inventory);
   }
 
@@ -231,7 +306,7 @@ class StateStore {
     this.saveInventory();
   }
 
-  async loadSavedDecks() {
+  async loadSavedDecks(desktopState = null) {
     let dbDecks = null;
     if (window.appDB) {
       try {
@@ -239,7 +314,11 @@ class StateStore {
       } catch (e) {}
     }
 
-    if (Array.isArray(dbDecks) && dbDecks.length > 0) {
+    const deskDecks = desktopState && Array.isArray(desktopState.savedDecks) ? desktopState.savedDecks : null;
+
+    if (deskDecks && deskDecks.length > 0) {
+      this.savedDecks = deskDecks;
+    } else if (Array.isArray(dbDecks) && dbDecks.length > 0) {
       this.savedDecks = dbDecks;
     } else {
       const saved = localStorage.getItem('cyber_tcg_saved_decks');
@@ -263,7 +342,52 @@ class StateStore {
     if (window.appDB) {
       window.appDB.saveAllDecks(this.savedDecks);
     }
+    this.syncDesktopState({ savedDecks: this.savedDecks, activeDeck: this.activeDeck });
     this.emit('saved_decks_changed', this.savedDecks);
+  }
+
+  async loadFavoriteDecks(desktopState = null) {
+    let favList = [];
+    if (desktopState && Array.isArray(desktopState.favoriteDecks)) {
+      favList = desktopState.favoriteDecks;
+    } else {
+      const stored = localStorage.getItem('cyber_tcg_favorite_decks');
+      if (stored) {
+        try {
+          favList = JSON.parse(stored);
+        } catch (e) {
+          favList = [];
+        }
+      }
+    }
+    this.favoriteDecks = new Set(Array.isArray(favList) ? favList : []);
+  }
+
+  saveFavoriteDecks() {
+    const arr = Array.from(this.favoriteDecks);
+    localStorage.setItem('cyber_tcg_favorite_decks', JSON.stringify(arr));
+    this.syncDesktopState({ favoriteDecks: arr });
+    this.emit('favorites_changed', arr);
+  }
+
+  toggleFavoriteDeck(deckId) {
+    if (!deckId) return false;
+    const isNow = !this.favoriteDecks.has(deckId);
+    if (isNow) {
+      this.favoriteDecks.add(deckId);
+    } else {
+      this.favoriteDecks.delete(deckId);
+    }
+    this.saveFavoriteDecks();
+    return isNow;
+  }
+
+  isFavoriteDeck(deckId) {
+    return this.favoriteDecks.has(deckId);
+  }
+
+  getFavoriteDecksCount() {
+    return this.favoriteDecks.size;
   }
 
   loadDeck(deckObj) {
@@ -275,6 +399,10 @@ class StateStore {
         this.activeDeck.legends.push(this.activeDeck.leaderId);
       }
     }
+    if (!this.activeDeck.sideboard) {
+      this.activeDeck.sideboard = [];
+    }
+    this.syncDesktopState({ activeDeck: this.activeDeck });
     this.emit('deck_changed', this.activeDeck);
   }
 
@@ -295,7 +423,8 @@ class StateStore {
       name: name,
       faction: 'Neutral',
       legends: [],
-      cards: []
+      cards: [],
+      sideboard: []
     };
     this.saveCurrentDeck();
     this.emit('deck_changed', this.activeDeck);
@@ -405,6 +534,77 @@ class StateStore {
     this.emit('deck_changed', this.activeDeck);
   }
 
+  getDeckTotalSideboardCards() {
+    return (this.activeDeck.sideboard || []).reduce((sum, item) => sum + item.count, 0);
+  }
+
+  addCardToSideboard(cardId) {
+    const card = this.getCardById(cardId);
+    if (!card) return { success: false, reason: 'Card not found.' };
+
+    if (card.type === 'Legend') {
+      return { success: false, reason: 'Legends belong in the 3-Legend Identity Zone, not Sideboard.' };
+    }
+
+    if (!this.activeDeck.sideboard) {
+      this.activeDeck.sideboard = [];
+    }
+
+    const currentTotal = this.getDeckTotalSideboardCards();
+    if (currentTotal >= 15) {
+      return { success: false, reason: 'Sideboard limit reached (Maximum 15 cards allowed).' };
+    }
+
+    // Check 3-copy rule across main deck and sideboard combined
+    const cardTitle = (card.card_title || card.name).toLowerCase();
+    const countInDeck = (this.activeDeck.cards || []).reduce((sum, item) => {
+      const itemCard = this.getCardById(item.cardId);
+      if (!itemCard) return sum;
+      const itemTitle = (itemCard.card_title || itemCard.name).toLowerCase();
+      if (itemTitle === cardTitle || (card.variant_of && (card.variant_of === itemCard.id || card.variant_of === itemCard.variant_of))) {
+        return sum + item.count;
+      }
+      return sum;
+    }, 0);
+
+    const countInSideboard = (this.activeDeck.sideboard || []).reduce((sum, item) => {
+      const itemCard = this.getCardById(item.cardId);
+      if (!itemCard) return sum;
+      const itemTitle = (itemCard.card_title || itemCard.name).toLowerCase();
+      if (itemTitle === cardTitle || (card.variant_of && (card.variant_of === itemCard.id || card.variant_of === itemCard.variant_of))) {
+        return sum + item.count;
+      }
+      return sum;
+    }, 0);
+
+    if (countInDeck + countInSideboard >= 3) {
+      return { success: false, reason: `Max 3 copies allowed across Main Deck and Sideboard for ${card.card_title || card.name}.` };
+    }
+
+    const existing = this.activeDeck.sideboard.find(c => c.cardId === cardId);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      this.activeDeck.sideboard.push({ cardId: card.id, count: 1 });
+    }
+
+    this.emit('deck_changed', this.activeDeck);
+    return { success: true };
+  }
+
+  removeCardFromSideboard(cardId) {
+    if (!this.activeDeck.sideboard) return;
+    const existingIdx = this.activeDeck.sideboard.findIndex(c => c.cardId === cardId);
+    if (existingIdx === -1) return;
+
+    if (this.activeDeck.sideboard[existingIdx].count > 1) {
+      this.activeDeck.sideboard[existingIdx].count -= 1;
+    } else {
+      this.activeDeck.sideboard.splice(existingIdx, 1);
+    }
+    this.emit('deck_changed', this.activeDeck);
+  }
+
   getCardById(id) {
     return this.cards.find(c => c.id === id || c.netdeck_id === id);
   }
@@ -416,10 +616,12 @@ class StateStore {
   validateDeck() {
     const legends = this.activeDeck.legends || [];
     const total = this.getDeckTotalCards();
+    const sideboardTotal = this.getDeckTotalSideboardCards();
     const ramPool = this.getDeckCumulativeRAM();
 
     const hasExact3Legends = legends.length === 3;
     const isCardCountValid = total >= 40 && total <= 50;
+    const isSideboardValid = sideboardTotal <= 15;
 
     // Check RAM violations
     let ramViolation = null;
@@ -434,7 +636,7 @@ class StateStore {
       }
     }
 
-    const isLegal = hasExact3Legends && isCardCountValid && !ramViolation;
+    const isLegal = hasExact3Legends && isCardCountValid && isSideboardValid && !ramViolation;
 
     let message = '';
     if (legends.length < 3) {
@@ -445,13 +647,15 @@ class StateStore {
       message = `Need ${40 - total} more cards (${total}/40–50 required).`;
     } else if (total > 50) {
       message = `Exceeds 50 card limit (${total}/50 cards, remove ${total - 50}).`;
+    } else if (sideboardTotal > 15) {
+      message = `Sideboard exceeds 15 card limit (${sideboardTotal}/15 cards).`;
     } else if (ramViolation) {
       message = `RAM Error: ${ramViolation}`;
     } else {
-      message = `Tournament Legal (3 Legends + ${total}/40–50 Cards)`;
+      message = `Tournament Legal (3 Legends + ${total}/40–50 Cards${sideboardTotal > 0 ? ` + ${sideboardTotal} Sideboard` : ''})`;
     }
 
-    return { isLegal, total, legendsCount: legends.length, ramPool, message };
+    return { isLegal, total, sideboardTotal, legendsCount: legends.length, ramPool, message };
   }
 }
 

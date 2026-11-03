@@ -224,9 +224,10 @@ class DeckBuilderController {
     const validation = window.stateStore.validateDeck();
     if (this.deckStatusBadge) {
       this.deckStatusBadge.className = `deck-status-badge ${validation.isLegal ? 'legal' : 'illegal'}`;
+      const sbSummary = validation.sideboardTotal > 0 ? ` • ${validation.sideboardTotal}/15 SIDEBOARD` : '';
       this.deckStatusBadge.innerHTML = `
         <span>${validation.isLegal ? '✓' : '⚠️'}</span>
-        <span>${validation.legendsCount}/3 LEGENDS • ${validation.total}/40–50 CARDS • ${validation.isLegal ? 'LEGAL' : validation.message}</span>
+        <span>${validation.legendsCount}/3 LEGENDS • ${validation.total}/40–50 CARDS${sbSummary} • ${validation.isLegal ? 'LEGAL' : validation.message}</span>
       `;
     }
 
@@ -236,7 +237,8 @@ class DeckBuilderController {
 
     if (countBadge) {
       countBadge.className = `deck-cards-count-badge ${isCountLegal ? 'legal' : isOverflow ? 'overflow' : 'incomplete'}`;
-      countBadge.textContent = `${validation.total} / 40–50 Cards`;
+      const sbTag = validation.sideboardTotal > 0 ? ` (+${validation.sideboardTotal} Side)` : '';
+      countBadge.textContent = `${validation.total} / 40–50 Cards${sbTag}`;
     }
 
     const mobileBarName = document.getElementById('mobile-deck-bar-name');
@@ -247,14 +249,21 @@ class DeckBuilderController {
     const mobileBarCount = document.getElementById('mobile-deck-bar-count');
     if (mobileBarCount) {
       mobileBarCount.className = `mobile-deck-bar-count ${validation.isLegal ? 'legal' : isOverflow ? 'overflow' : 'incomplete'}`;
-      mobileBarCount.textContent = `${validation.legendsCount}/3 Legends • ${validation.total}/40–50 Cards ${validation.isLegal ? '✓' : ''}`;
+      const sbInfo = validation.sideboardTotal > 0 ? ` • ${validation.sideboardTotal} Side` : '';
+      mobileBarCount.textContent = `${validation.legendsCount}/3 Legends • ${validation.total}/40–50 Cards${sbInfo} ${validation.isLegal ? '✓' : ''}`;
     }
 
     // Update Subtab Badges
     const totalMainCards = validation.total;
     const totalLegends = validation.legendsCount;
+    const totalSb = validation.sideboardTotal || 0;
     if (this.deckTabCounter) {
-      this.deckTabCounter.textContent = totalLegends > 0 ? `${totalMainCards} (+${totalLegends}L)` : `${totalMainCards}`;
+      let countStr = `${totalMainCards}`;
+      const tags = [];
+      if (totalLegends > 0) tags.push(`${totalLegends}L`);
+      if (totalSb > 0) tags.push(`${totalSb}S`);
+      if (tags.length > 0) countStr += ` (+${tags.join(',')})`;
+      this.deckTabCounter.textContent = countStr;
     }
     if (this.poolTabCounter && window.stateStore.cards) {
       this.poolTabCounter.textContent = `${window.stateStore.cards.length}`;
@@ -388,81 +397,188 @@ class DeckBuilderController {
             Main deck is empty. Click "+ Deck" on non-Legend cards (Units, Programs, Gear) to add them (40–50 required).
           </div>
         `;
-        return;
-      }
-
-      // Sort deck cards by Cost, then Name
-      const sortedItems = [...deck.cards].sort((a, b) => {
-        const cardA = window.stateStore.getCardById(a.cardId);
-        const cardB = window.stateStore.getCardById(b.cardId);
-        if (!cardA || !cardB) return 0;
-        return (cardA.cost || 0) - (cardB.cost || 0) || cardA.name.localeCompare(cardB.name);
-      });
-
-      sortedItems.forEach(item => {
-        const card = window.stateStore.getCardById(item.cardId);
-        if (!card) return;
-
-        const row = document.createElement('div');
-        row.className = 'deck-card-row';
-
-        const colorHex = card.color === 'Red' ? 'var(--neon-magenta)' 
-                       : card.color === 'Yellow' ? 'var(--neon-yellow)' 
-                       : card.color === 'Green' ? 'var(--neon-green)' 
-                       : 'var(--neon-cyan)';
-
-        row.innerHTML = `
-          <div class="deck-card-main">
-            <div class="deck-card-cost">€$ ${card.cost !== null ? card.cost : '-'}</div>
-            <div class="deck-card-name" style="border-left: 3px solid ${colorHex}; padding-left: 6px;">
-              ${card.name} <span style="font-size: 0.7rem; color: var(--text-dim);">(${card.type})</span>
-            </div>
-          </div>
-          <div class="deck-card-actions">
-            <button class="deck-qty-btn remove" data-action="minus" title="Remove 1 copy">-</button>
-            <span class="deck-card-qty">${item.count}</span>
-            <button class="deck-qty-btn" data-action="plus" title="Add 1 copy">+</button>
-            <button class="deck-qty-btn remove" data-action="delete" title="Delete from deck">×</button>
-          </div>
-        `;
-
-        row.querySelector('[data-action="minus"]').addEventListener('click', () => {
-          window.cyberAudio.remove();
-          window.stateStore.removeCardFromDeck(card.id);
+      } else {
+        // Sort deck cards by Cost, then Name
+        const sortedItems = [...deck.cards].sort((a, b) => {
+          const cardA = window.stateStore.getCardById(a.cardId);
+          const cardB = window.stateStore.getCardById(b.cardId);
+          if (!cardA || !cardB) return 0;
+          return (cardA.cost || 0) - (cardB.cost || 0) || cardA.name.localeCompare(cardB.name);
         });
 
-        const cardMainEl = row.querySelector('.deck-card-main');
-        if (cardMainEl) {
-          cardMainEl.style.cursor = 'pointer';
-          cardMainEl.title = `Click to inspect ${card.name}`;
-          cardMainEl.addEventListener('click', () => {
-            if (window.app && window.app.openInspectModal) {
-              window.cyberAudio.click();
-              window.app.openInspectModal(card);
+        sortedItems.forEach(item => {
+          const card = window.stateStore.getCardById(item.cardId);
+          if (!card) return;
+
+          const row = document.createElement('div');
+          row.className = 'deck-card-row';
+
+          const colorHex = card.color === 'Red' ? 'var(--neon-magenta)' 
+                         : card.color === 'Yellow' ? 'var(--neon-yellow)' 
+                         : card.color === 'Green' ? 'var(--neon-green)' 
+                         : 'var(--neon-cyan)';
+
+          row.innerHTML = `
+            <div class="deck-card-main">
+              <div class="deck-card-cost">€$ ${card.cost !== null ? card.cost : '-'}</div>
+              <div class="deck-card-name" style="border-left: 3px solid ${colorHex}; padding-left: 6px;">
+                ${card.name} <span style="font-size: 0.7rem; color: var(--text-dim);">(${card.type})</span>
+              </div>
+            </div>
+            <div class="deck-card-actions">
+              <button class="deck-qty-btn remove" data-action="minus" title="Remove 1 copy">-</button>
+              <span class="deck-card-qty">${item.count}</span>
+              <button class="deck-qty-btn" data-action="plus" title="Add 1 copy">+</button>
+              <button class="deck-qty-btn remove" data-action="delete" title="Delete from deck">×</button>
+            </div>
+          `;
+
+          row.querySelector('[data-action="minus"]').addEventListener('click', () => {
+            window.cyberAudio.remove();
+            window.stateStore.removeCardFromDeck(card.id);
+          });
+
+          const cardMainEl = row.querySelector('.deck-card-main');
+          if (cardMainEl) {
+            cardMainEl.style.cursor = 'pointer';
+            cardMainEl.title = `Click to inspect ${card.name}`;
+            cardMainEl.addEventListener('click', () => {
+              if (window.app && window.app.openInspectModal) {
+                window.cyberAudio.click();
+                window.app.openInspectModal(card);
+              }
+            });
+          }
+
+          row.querySelector('[data-action="plus"]').addEventListener('click', () => {
+            const res = window.stateStore.addCardToDeck(card.id);
+            if (res && res.success) {
+              window.cyberAudio.add();
+            } else if (res && res.reason) {
+              window.app.showToast(res.reason, 'warn');
             }
           });
-        }
 
-        row.querySelector('[data-action="plus"]').addEventListener('click', () => {
-          const res = window.stateStore.addCardToDeck(card.id);
-          if (res && res.success) {
-            window.cyberAudio.add();
-          } else if (res && res.reason) {
-            window.app.showToast(res.reason, 'warn');
-          }
+          row.querySelector('[data-action="delete"]').addEventListener('click', () => {
+            window.cyberAudio.remove();
+            const idx = deck.cards.findIndex(c => c.cardId === card.id);
+            if (idx !== -1) {
+              deck.cards.splice(idx, 1);
+              window.stateStore.emit('deck_changed', deck);
+            }
+          });
+
+          this.deckCardsContainer.appendChild(row);
+        });
+      }
+    }
+
+    // 3b. Dedicated Sideboard Cards Section
+    const sideboardZoneEl = document.getElementById('deck-sideboard-zone');
+    if (sideboardZoneEl) {
+      sideboardZoneEl.innerHTML = '';
+      const sideboardItems = deck.sideboard || [];
+      const totalSb = sideboardItems.reduce((sum, i) => sum + i.count, 0);
+
+      const sbSection = document.createElement('div');
+      sbSection.className = 'deck-sideboard-section';
+
+      const isOverflow = totalSb > 15;
+
+      sbSection.innerHTML = `
+        <div class="deck-sideboard-header">
+          <div class="deck-sideboard-title-wrap">
+            <span class="deck-sideboard-icon">🛡️</span>
+            <span class="deck-sideboard-title">SIDEBOARD</span>
+            <span class="deck-sideboard-badge ${isOverflow ? 'overflow' : ''}">${totalSb} / 15 CARDS</span>
+          </div>
+          <div class="deck-sideboard-hint">Tournament Reserve (Max 15)</div>
+        </div>
+        ${sideboardItems.length === 0 ? `
+          <div class="deck-sideboard-empty">
+            No cards in sideboard. Click "+ Side" on any card in the Card Pool to assign tournament reserves.
+          </div>
+        ` : `
+          <div class="deck-sideboard-list" id="deck-sideboard-items-list"></div>
+        `}
+      `;
+
+      const listEl = sbSection.querySelector('#deck-sideboard-items-list');
+      if (listEl) {
+        const sortedSb = [...sideboardItems].sort((a, b) => {
+          const cardA = window.stateStore.getCardById(a.cardId);
+          const cardB = window.stateStore.getCardById(b.cardId);
+          if (!cardA || !cardB) return 0;
+          return (cardA.cost || 0) - (cardB.cost || 0) || cardA.name.localeCompare(cardB.name);
         });
 
-        row.querySelector('[data-action="delete"]').addEventListener('click', () => {
-          window.cyberAudio.remove();
-          const idx = deck.cards.findIndex(c => c.cardId === card.id);
-          if (idx !== -1) {
-            deck.cards.splice(idx, 1);
-            window.stateStore.emit('deck_changed', deck);
-          }
-        });
+        sortedSb.forEach(item => {
+          const card = window.stateStore.getCardById(item.cardId);
+          if (!card) return;
 
-        this.deckCardsContainer.appendChild(row);
-      });
+          const row = document.createElement('div');
+          row.className = 'deck-card-row';
+
+          const colorHex = card.color === 'Red' ? 'var(--neon-magenta)' 
+                         : card.color === 'Yellow' ? 'var(--neon-yellow)' 
+                         : card.color === 'Green' ? 'var(--neon-green)' 
+                         : 'var(--neon-cyan)';
+
+          row.innerHTML = `
+            <div class="deck-card-main">
+              <div class="deck-card-cost">€$ ${card.cost !== null ? card.cost : '-'}</div>
+              <div class="deck-card-name" style="border-left: 3px solid ${colorHex}; padding-left: 6px;">
+                ${card.name} <span style="font-size: 0.7rem; color: var(--neon-cyan);">[Sideboard]</span>
+              </div>
+            </div>
+            <div class="deck-card-actions">
+              <button class="deck-qty-btn remove" data-action="minus" title="Remove 1 from sideboard">-</button>
+              <span class="deck-card-qty">${item.count}</span>
+              <button class="deck-qty-btn" data-action="plus" title="Add 1 to sideboard">+</button>
+              <button class="deck-qty-btn remove" data-action="delete" title="Delete from sideboard">×</button>
+            </div>
+          `;
+
+          row.querySelector('[data-action="minus"]').addEventListener('click', () => {
+            window.cyberAudio.remove();
+            window.stateStore.removeCardFromSideboard(card.id);
+          });
+
+          const cardMainEl = row.querySelector('.deck-card-main');
+          if (cardMainEl) {
+            cardMainEl.style.cursor = 'pointer';
+            cardMainEl.title = `Click to inspect ${card.name}`;
+            cardMainEl.addEventListener('click', () => {
+              if (window.app && window.app.openInspectModal) {
+                window.cyberAudio.click();
+                window.app.openInspectModal(card);
+              }
+            });
+          }
+
+          row.querySelector('[data-action="plus"]').addEventListener('click', () => {
+            const res = window.stateStore.addCardToSideboard(card.id);
+            if (res && res.success) {
+              window.cyberAudio.add();
+            } else if (res && res.reason) {
+              window.app.showToast(res.reason, 'warn');
+            }
+          });
+
+          row.querySelector('[data-action="delete"]').addEventListener('click', () => {
+            window.cyberAudio.remove();
+            const idx = (deck.sideboard || []).findIndex(c => c.cardId === card.id);
+            if (idx !== -1) {
+              deck.sideboard.splice(idx, 1);
+              window.stateStore.emit('deck_changed', deck);
+            }
+          });
+
+          listEl.appendChild(row);
+        });
+      }
+
+      sideboardZoneEl.appendChild(sbSection);
     }
 
     // 4. Mini Eddie Cost Curve
@@ -507,10 +623,12 @@ class DeckBuilderController {
 
     const legends = deck.legends || [];
     const mainCards = deck.cards || [];
+    const sideboardCards = deck.sideboard || [];
 
     const totalMainCards = mainCards.reduce((sum, c) => sum + c.count, 0);
     const totalLegends = legends.length;
-    const totalAll = totalMainCards + totalLegends;
+    const totalSideboardCards = sideboardCards.reduce((sum, c) => sum + c.count, 0);
+    const totalAll = totalMainCards + totalLegends + totalSideboardCards;
 
     // Count breakdown by type
     let unitsCount = 0;
@@ -537,6 +655,8 @@ class DeckBuilderController {
     if (countGearsEl) countGearsEl.textContent = gearsCount;
     const countProgsEl = document.getElementById('deck-filter-count-programs');
     if (countProgsEl) countProgsEl.textContent = programsCount;
+    const countSbEl = document.getElementById('deck-filter-count-sideboard');
+    if (countSbEl) countSbEl.textContent = totalSideboardCards;
 
     // Update Deck title and count tag
     const titleEl = document.getElementById('deck-selected-title');
@@ -549,7 +669,8 @@ class DeckBuilderController {
       const isLegal = totalMainCards >= 40 && totalMainCards <= 50;
       const isOverflow = totalMainCards > 50;
       countTagEl.className = `deck-selected-count-tag ${isLegal ? 'legal' : isOverflow ? 'overflow' : 'incomplete'}`;
-      countTagEl.textContent = `${totalMainCards} / 40–50 Cards (${totalLegends}/3 Legends)`;
+      const sbText = totalSideboardCards > 0 ? ` • ${totalSideboardCards}/15 Sideboard` : '';
+      countTagEl.textContent = `${totalMainCards} / 40–50 Cards (${totalLegends}/3 Legends${sbText})`;
     }
 
     // Empty deck state check
@@ -591,7 +712,7 @@ class DeckBuilderController {
     }
 
     // 2. Main Deck Cards
-    if (this.deckFilterType !== 'Legend') {
+    if (this.deckFilterType !== 'Legend' && this.deckFilterType !== 'Sideboard') {
       // Sort main cards by cost, then by name
       const sortedCards = [...mainCards].sort((a, b) => {
         const cardA = window.stateStore.getCardById(a.cardId);
@@ -613,7 +734,35 @@ class DeckBuilderController {
         itemsToRender.push({
           card,
           count: item.count,
-          isLegend: false
+          isLegend: false,
+          isSideboard: false
+        });
+      });
+    }
+
+    // 3. Sideboard Cards
+    if (this.deckFilterType === 'all' || this.deckFilterType === 'Sideboard') {
+      const sortedSb = [...sideboardCards].sort((a, b) => {
+        const cardA = window.stateStore.getCardById(a.cardId);
+        const cardB = window.stateStore.getCardById(b.cardId);
+        if (!cardA || !cardB) return 0;
+        return (cardA.cost || 0) - (cardB.cost || 0) || cardA.name.localeCompare(cardB.name);
+      });
+
+      sortedSb.forEach(item => {
+        const card = window.stateStore.getCardById(item.cardId);
+        if (!card) return;
+        if (query) {
+          const match = (card.name || '').toLowerCase().includes(query) ||
+                        (card.color || '').toLowerCase().includes(query) ||
+                        (card.type || '').toLowerCase().includes(query);
+          if (!match) return;
+        }
+        itemsToRender.push({
+          card,
+          count: item.count,
+          isLegend: false,
+          isSideboard: true
         });
       });
     }
@@ -661,6 +810,50 @@ class DeckBuilderController {
           e.stopPropagation();
           window.cyberAudio.remove();
           window.stateStore.removeLegendFromDeck(card.id);
+        });
+      } else if (item.isSideboard) {
+        const isSufficient = owned >= count;
+        footer.innerHTML = `
+          <div class="deck-view-qty-row">
+            <div class="deck-view-qty-controls">
+              <button class="deck-view-btn deck-view-btn-dec" data-action="dec" title="Remove 1 copy from sideboard">−</button>
+              <div class="deck-view-count-badge" style="border-color: var(--neon-cyan); color: var(--neon-cyan); background: rgba(0, 240, 255, 0.15);" title="${count} copies of ${card.name} in sideboard">
+                🛡️ ${count}x SIDEBOARD
+              </div>
+              <button class="deck-view-btn deck-view-btn-inc" data-action="inc" title="Add 1 copy to sideboard">＋</button>
+            </div>
+            <button class="deck-view-btn deck-view-btn-delete" data-action="delete" title="Remove all copies from sideboard">🗑️</button>
+          </div>
+          <div class="deck-view-inv-status ${isSufficient ? 'ok' : 'shortage'}">
+            <span>${isSufficient ? `✓ Owned: ${owned} in inventory` : `⚠️ Shortage: Need ${count - owned} (Have ${owned})`}</span>
+          </div>
+        `;
+
+        footer.querySelector('[data-action="dec"]').addEventListener('click', (e) => {
+          e.stopPropagation();
+          window.cyberAudio.remove();
+          window.stateStore.removeCardFromSideboard(card.id);
+        });
+
+        footer.querySelector('[data-action="inc"]').addEventListener('click', (e) => {
+          e.stopPropagation();
+          const res = window.stateStore.addCardToSideboard(card.id);
+          if (res && res.success) {
+            window.cyberAudio.add();
+          } else if (res && res.reason) {
+            window.cyberAudio.playTone(200, 'sawtooth', 0.15, 0.05);
+            window.app.showToast(res.reason, 'warn');
+          }
+        });
+
+        footer.querySelector('[data-action="delete"]').addEventListener('click', (e) => {
+          e.stopPropagation();
+          window.cyberAudio.remove();
+          const idx = (deck.sideboard || []).findIndex(c => c.cardId === card.id);
+          if (idx !== -1) {
+            deck.sideboard.splice(idx, 1);
+            window.stateStore.emit('deck_changed', deck);
+          }
         });
       } else {
         const isSufficient = owned >= count;

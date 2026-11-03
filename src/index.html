@@ -29,7 +29,7 @@
       <img src="assets/logo.png" alt="Cyberpunk TCG" class="brand-logo-img">
       <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
         <span class="brand-badge" id="app-card-count-badge">COMPANION • 189 CARDS</span>
-        <span class="brand-badge version-badge" style="background: rgba(0, 240, 255, 0.15); border-color: var(--neon-cyan); color: var(--neon-cyan); font-weight: 700;">v3.2.0</span>
+        <span class="brand-badge version-badge" style="background: rgba(0, 240, 255, 0.15); border-color: var(--neon-cyan); color: var(--neon-cyan); font-weight: 700;">v3.3.0</span>
       </div>
     </div>
 
@@ -270,6 +270,7 @@
                   <button class="filter-pill" data-deck-filter="Unit">Units (<span id="deck-filter-count-units">0</span>)</button>
                   <button class="filter-pill" data-deck-filter="Gear">Gears (<span id="deck-filter-count-gears">0</span>)</button>
                   <button class="filter-pill" data-deck-filter="Program">Programs (<span id="deck-filter-count-programs">0</span>)</button>
+                  <button class="filter-pill" data-deck-filter="Sideboard">Sideboard (<span id="deck-filter-count-sideboard">0</span>)</button>
                 </div>
               </div>
             </div>
@@ -324,6 +325,9 @@
           <!-- Cards in Deck List -->
           <div class="deck-cards-list" id="deck-cards-list"></div>
 
+          <!-- Sideboard Zone -->
+          <div id="deck-sideboard-zone"></div>
+
           <!-- Mini Eddie Cost Curve -->
           <div class="analytics-curve-container">
             <span class="curve-title">EDDIE COST CURVE (€$):</span>
@@ -376,16 +380,17 @@
             <input type="text" id="preset-search" class="search-input" placeholder="Search decks by name, legend, archetype, or color...">
           </div>
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);" id="preset-count-display">
-            16 Decks Available (4 Core Starters + 12 NetDeck.gg Community)
+            146 Decks Available (4 Core Starters + 142 CyberpunkTCG.com Community)
           </div>
         </div>
 
         <!-- Filter Category Pills -->
         <div class="filter-pills-row">
           <span class="filter-label">CATEGORY:</span>
-          <button class="filter-pill active" data-preset-cat="all">All Decks (59)</button>
+          <button class="filter-pill active" data-preset-cat="all">All Decks (146)</button>
+          <button class="filter-pill" data-preset-cat="favorites" style="border-color: rgba(252, 238, 10, 0.4); color: var(--neon-yellow);">★ Favorites (<span id="preset-fav-count">0</span>)</button>
           <button class="filter-pill" data-preset-cat="official">⭐ Core Starters (4)</button>
-          <button class="filter-pill" data-preset-cat="community">🌐 CyberpunkTCG.com Community (55)</button>
+          <button class="filter-pill" data-preset-cat="community">🌐 CyberpunkTCG.com Community (142)</button>
         </div>
 
         <!-- Filter Color Pills -->
@@ -418,7 +423,7 @@
               <span class="about-pill-badge cyan">CC BY-NC 4.0 INTERNATIONAL</span>
               <span class="about-pill-badge green">100% OFFLINE-CAPABLE</span>
               <span class="about-pill-badge yellow">189 INDEXED CARDS (INCL. 38 ALT-ARTS)</span>
-              <span class="about-pill-badge cyan">VERSION 3.2.0</span>
+              <span class="about-pill-badge cyan">VERSION 3.3.0</span>
             </div>
           </div>
         </div>
@@ -504,19 +509,23 @@
                 <tbody>
                   <tr>
                     <td>App Version</td>
-                    <td>1.4.0 (HUD Edition)</td>
+                    <td>3.3.0 (Tournament & Sideboard Edition)</td>
                   </tr>
                   <tr>
                     <td>Card Database</td>
-                    <td>151 Indexed Cards</td>
+                    <td>189 Indexed Cards (151 Core + 38 Alt-Arts)</td>
                   </tr>
                   <tr>
-                    <td>Net Decks</td>
-                    <td>59 Pre-built Starter Decks</td>
+                    <td>Decks Library</td>
+                    <td>146 Tournament & Community Decks</td>
                   </tr>
                   <tr>
                     <td>Rule Engine</td>
-                    <td>Standard 40–50 Cards, Max 3 Copies, 1 Legend</td>
+                    <td>3-Legend Identity, 40–50 Main Deck, Max 15 Sideboard, Max 3 Copies, RAM Limits</td>
+                  </tr>
+                  <tr>
+                    <td>Sideboard & Favorites</td>
+                    <td>Full 15-Card Sideboard System & Favorite Decks Sync</td>
                   </tr>
                   <tr>
                     <td>Camera Scanner</td>
@@ -528,7 +537,7 @@
                   </tr>
                   <tr>
                     <td>Platforms</td>
-                    <td>Android APK, Windows .EXE, Web Monolith</td>
+                    <td>Android APK, Windows .EXE / PyWebView, Web Monolith</td>
                   </tr>
                 </tbody>
               </table>
@@ -550,7 +559,7 @@
   <footer class="app-footer">
     <div class="footer-status-pill">
       <div class="status-dot"></div>
-      <span>SYSTEM STATUS: CONNECTED • 151 CARDS INDEXED</span>
+      <span>SYSTEM STATUS: CONNECTED • 189 CARDS INDEXED • 146 DECKS • V3.3.0</span>
     </div>
     <div>CYBERPUNK TRADING CARD GAME // NETRUNNER COMPANION</div>
   </footer>

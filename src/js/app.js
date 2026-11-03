@@ -255,11 +255,29 @@ class App {
     const allPresets = window.stateStore.starterDecks || [];
     const offCount = allPresets.filter(d => d.category === 'Official Starter').length;
     const commCount = allPresets.filter(d => d.category !== 'Official Starter').length;
+
+    const updateFavCountBadge = () => {
+      const favCount = window.stateStore.getFavoriteDecksCount();
+      const favBadge = document.getElementById('preset-fav-count');
+      if (favBadge) favBadge.textContent = favCount;
+    };
+    updateFavCountBadge();
+
+    window.stateStore.on('favorites_changed', () => {
+      updateFavCountBadge();
+      if (this.presetFilters && this.presetFilters.category === 'favorites') {
+        this.renderStarterDecks();
+      }
+    });
+
     catPills.forEach(pill => {
       const cat = pill.getAttribute('data-preset-cat');
       if (cat === 'all') pill.textContent = `All Decks (${allPresets.length})`;
-      else if (cat === 'official') pill.textContent = `⭐ Official Starters (${offCount})`;
+      else if (cat === 'official') pill.textContent = `⭐ Core Starters (${offCount})`;
       else if (cat === 'community') pill.textContent = `🌐 CyberpunkTCG.com Community (${commCount})`;
+      else if (cat === 'favorites') {
+        pill.innerHTML = `★ Favorites (<span id="preset-fav-count">${window.stateStore.getFavoriteDecksCount()}</span>)`;
+      }
 
       pill.addEventListener('click', () => {
         window.cyberAudio.click();
@@ -303,6 +321,9 @@ class App {
 
     const filtered = allPresets.filter(preset => {
       // Category filter
+      if (filters.category === 'favorites' && !window.stateStore.isFavoriteDeck(preset.id)) {
+        return false;
+      }
       if (filters.category === 'official' && preset.category !== 'Official Starter') {
         return false;
       }
@@ -375,7 +396,7 @@ class App {
         const col = c ? c.color : preset.faction;
         const colHex = colorHexes[col] || '#00f0ff';
         return `
-          <div class="preset-legend-chip" style="border-left-color: ${colHex};" title="${fullName}">
+          <div class="preset-legend-chip" data-leg-id="${id}" style="border-left-color: ${colHex}; cursor: pointer;" title="Click to inspect ${fullName}">
             <img src="${img}" class="preset-legend-img" alt="${title}" onerror="this.onerror=null; this.src='../${img}';">
             <span>${title}</span>
           </div>
@@ -383,22 +404,71 @@ class App {
       }).join('');
 
       const totalCards = preset.cards.reduce((sum, i) => sum + i.count, 0);
+      const sideboardList = preset.sideboard || [];
+      const totalSideboard = sideboardList.reduce((sum, i) => sum + i.count, 0);
+
+      let sideboardHtml = '';
+      if (totalSideboard > 0) {
+        const sideboardChips = sideboardList.map(item => {
+          const c = window.stateStore.getCardById(item.cardId);
+          const title = c ? c.card_title || c.name : item.cardId;
+          const fullName = c ? c.name : item.cardId;
+          const img = c ? (c.image_local || `assets/cards/${item.cardId}.webp`) : `assets/cards/${item.cardId}.webp`;
+          const col = c ? c.color : 'Neutral';
+          const colHex = colorHexes[col] || '#00f0ff';
+          return `
+            <div class="preset-sideboard-chip" style="border-left-color: ${colHex};" data-inspect-card="${item.cardId}" title="Click to inspect ${fullName} (${item.count} in Sideboard)">
+              <img src="${img}" class="preset-sideboard-img" alt="${title}" onerror="this.onerror=null; this.src='../${img}';">
+              <span class="preset-sideboard-count">${item.count}×</span>
+              <span class="preset-sideboard-name">${title}</span>
+            </div>
+          `;
+        }).join('');
+
+        sideboardHtml = `
+          <div class="preset-sideboard-section">
+            <div class="preset-sideboard-header-row">
+              <span class="preset-sideboard-title">
+                <span>🛡️</span> SIDEBOARD
+              </span>
+              <span class="preset-sideboard-badge">${totalSideboard} CARDS</span>
+            </div>
+            <div class="preset-sideboard-row">
+              ${sideboardChips}
+            </div>
+          </div>
+        `;
+      }
+
+      const countBadgeHtml = totalSideboard > 0
+        ? `<span class="brand-badge">${totalCards} CARDS <span class="badge-sideboard-tag">+${totalSideboard} SIDE</span></span>`
+        : `<span class="brand-badge">${totalCards} CARDS</span>`;
+
+      const isFav = window.stateStore.isFavoriteDeck(preset.id);
+      const favBtnHtml = `
+        <button class="preset-favorite-btn ${isFav ? 'is-favorite' : ''}" data-fav-preset="${preset.id}" title="${isFav ? 'Remove from Favorites' : 'Add to Favorite Decks'}">
+          ${isFav ? '★' : '☆'}
+        </button>
+      `;
 
       cardEl.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: start; gap: 8px;">
-          <div>
+          <div style="flex: 1;">
             <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
               <span style="font-family: var(--font-mono); font-size: 0.72rem; color: ${borderHex}; font-weight: bold; text-transform: uppercase;">
                 ${preset.faction} ALIGNMENT
               </span>
               ${badgeHtml}
             </div>
-            <div style="font-size: 1.25rem; font-weight: bold; color: #fff; margin-top: 4px;">
-              ${preset.name}
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+              <div style="font-size: 1.25rem; font-weight: bold; color: #fff;">
+                ${preset.name}
+              </div>
+              ${favBtnHtml}
             </div>
             ${preset.author && !isOfficial ? `<div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 2px;">Community deck by <strong>${preset.author}</strong></div>` : ''}
           </div>
-          <span class="brand-badge">${totalCards} CARDS</span>
+          ${countBadgeHtml}
         </div>
 
         <div style="margin-top: 6px;">
@@ -410,7 +480,9 @@ class App {
           </div>
         </div>
 
-        <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-top: 6px;">
+        ${sideboardHtml}
+
+        <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-top: 8px;">
           ${preset.description}
         </div>
 
@@ -420,6 +492,46 @@ class App {
           </button>
         </div>
       `;
+
+      cardEl.querySelectorAll('.preset-legend-chip').forEach(chip => {
+        chip.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const legId = chip.getAttribute('data-leg-id');
+          const c = window.stateStore.getCardById(legId);
+          if (c && window.app && window.app.openInspectModal) {
+            window.cyberAudio.click();
+            window.app.openInspectModal(c);
+          }
+        });
+      });
+
+      cardEl.querySelectorAll('.preset-sideboard-chip').forEach(chip => {
+        chip.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const cardId = chip.getAttribute('data-inspect-card');
+          const c = window.stateStore.getCardById(cardId);
+          if (c && window.app && window.app.openInspectModal) {
+            window.cyberAudio.click();
+            window.app.openInspectModal(c);
+          }
+        });
+      });
+
+      const favBtn = cardEl.querySelector('[data-fav-preset]');
+      if (favBtn) {
+        favBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isNowFav = window.stateStore.toggleFavoriteDeck(preset.id);
+          window.cyberAudio.click();
+          favBtn.classList.toggle('is-favorite', isNowFav);
+          favBtn.textContent = isNowFav ? '★' : '☆';
+          favBtn.title = isNowFav ? 'Remove from Favorites' : 'Add to Favorite Decks';
+          this.showToast(isNowFav ? `★ Added "${preset.name}" to favorites` : `☆ Removed "${preset.name}" from favorites`);
+          if (this.presetFilters && this.presetFilters.category === 'favorites') {
+            this.renderStarterDecks();
+          }
+        });
+      }
 
       cardEl.querySelector('[data-load-preset]').addEventListener('click', () => {
         window.cyberAudio.success();

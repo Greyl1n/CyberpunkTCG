@@ -1,6 +1,7 @@
 # Cyberpunk TCG // Fan Companion & Deck Builder
 
-An interactive companion, card inventory manager, and deck builder for the **Cyberpunk Trading Card Game** (*Welcome to Night City* set).
+**Version 3.3.0 (Tournament & Sideboard Edition)**  
+An interactive companion, card inventory manager, tournament deck builder, and community deck archive for the **Cyberpunk Trading Card Game** (*Welcome to Night City* set).
 
 > [!NOTE]
 > **Disclaimer & Non-Affiliation:** This is an independent fan-made companion tool. This project is not affiliated with, endorsed by, or supported by WeirdCo Games, CD PROJEKT RED, R. Talsorian Games, or any related entity. All card names, game mechanics, and artwork remain the property of their respective owners.
@@ -10,16 +11,16 @@ An interactive companion, card inventory manager, and deck builder for the **Cyb
 ## ⚡ Key Features
 
 - **🖥️ Standalone Windows Desktop App (`dist/Cyberpunk_TCG.exe`):**
-  - Completely self-contained `.exe` bundling Python runtime, native desktop GUI window, all 151 card images, and audio engine.
+  - Completely self-contained `.exe` bundling Python runtime, native desktop GUI window, all 189 card images, and audio engine.
   - Zero dependencies or installation required.
 
 - **🌐 Zero-Dependency Monolith HTML (`dist/cyberpunk_tcg_monolith.html`):**
   - Standalone single-file application with all HTML, CSS, JavaScript, datasets, and starter decks inlined.
   - Runs in any modern browser (Chrome, Edge, Firefox) completely offline.
 
-- **🗃️ 151 Indexed Cards & Artwork:**
+- **🗃️ 189 Indexed Cards & Artwork (151 Core + 38 Alt-Arts):**
   - Complete database covering the *Welcome to Night City* release and expansion pack.
-  - **151 high-resolution card artwork renders** stored locally in `assets/cards/` for 100% offline access.
+  - **189 high-resolution card artwork renders** stored locally in `assets/cards/` for 100% offline access.
   - Authentic characters: **V (Streetkid), Adam Smasher (Ender of Legends), Johnny Silverhand (Rocking Renegade), Yorinobu Arasaka, Rogue Amendiares, Dexter DeShawn, Rebecca**, and more.
   - Complete card anatomy and stats:
     - **Card Types:** `Legend`, `Unit`, `Program`, `Gear`.
@@ -38,26 +39,30 @@ An interactive companion, card inventory manager, and deck builder for the **Cyb
 - **🔍 Full Card Inspector Modal:**
   - Multi-tier resilient image resolution with active DOM cache and directory fallbacks.
   - Dynamic neon glow matching each card's faction color.
-  - Click any active Legend in the 3-Legend Zone or card name in the deck list to inspect.
+  - Click any active Legend in the 3-Legend Zone, sideboard chip, or card name in the deck list to inspect.
   - Dismissible with close button, backdrop click, or `Escape` key.
 
-- **🛠️ Tournament Deck Builder:**
-  - Enforces tournament rules:
+- **🛠️ Tournament Deck Builder with Dedicated Sideboard:**
+  - Enforces official tournament rules:
     - **Exactly 3 Legends** required.
     - **40 to 50 Cards** in main deck.
-    - **Max 3 copies** of any non-Legend card.
+    - **Up to 15 Cards** in Sideboard (with dedicated zone, counters, and +/- controls).
+    - **Max 3 copies** of any non-Legend card across main deck and sideboard.
     - **RAM Requirement Validation**.
   - Dedicated **3-Legend Identity Zone** with full thumbnail visibility, RAM telemetry, and click-to-inspect.
+  - Dedicated **Sideboard Zone (Max 15 Cards)** with quick swap, count badge, and "+ Side" action buttons on card catalog.
   - Real-time **Eddie Cost (€$) Curve** and cumulative RAM telemetry.
 
-- **⚡ 59 Core & Community Decks:**
+- **⚡ 146 Pre-Built & Community Decks with Sideboards & Favorites:**
   - **4 Core Starter Decks** (*Arasaka Embracing Destruction*, *The Heist*, *Afterlife Syndicate*, *Arasaka Corporate Dynasty*).
-  - **55 Community Decks** curated directly from [cyberpunktcg.com/decks?tab=community](https://cyberpunktcg.com/decks?tab=community).
-  - Searchable by name, author, archetype, or color.
+  - **142 Community Decks** curated directly from [cyberpunktcg.com/decks?tab=community](https://cyberpunktcg.com/decks?tab=community).
+  - **🛡️ Dedicated Sideboard Preview:** Decks with sideboards display an interactive sideboard strip with card chips, quantities, and click-to-inspect.
+  - **★ Favorite Decks:** 1-click star toggle (`★` / `☆`) to bookmark decks. Favorites persist across sessions (in `localStorage` and desktop `user_state.json`) and can be filtered instantly via the **★ Favorites (X)** category pill.
+  - Searchable by name, author, archetype, legend, or color.
   - Faction-themed **"⚡ Load into Deck Builder"** buttons matching each deck's primary color.
 
 - **📤 Deck & Inventory Sharing, Backup & File Downloads:**
-  - **Export Decks:** Export via compact Base64 codes (`CPTCG_...`), formatted text decklists, or raw JSON, with **💾 Save to File** (`.cptcg`, `.txt`, `.json`) and **📋 Copy to Clipboard**.
+  - **Export Decks:** Export via compact Base64 codes (`CPTCG_...`), formatted text decklists (with `// Sideboard` section), or raw JSON, with **💾 Save to File** (`.cptcg`, `.txt`, `.json`) and **📋 Copy to Clipboard**.
   - **Universal Import:** 1-click import supporting deck codes, deck JSON, text lists, and full inventory JSON backups.
 
 ---
@@ -193,13 +198,13 @@ Cyberpunk_TCG/
 │   └── js/                     # Modular controllers (state, audio, deck_builder, scanner, etc.)
 │
 ├── data/                       # Card datasets and rules
-│   ├── cards.json              # 151 cards with complete stats & rules
-│   ├── starter_decks.json      # 59 starter and community tournament legal decks
+│   ├── cards.json              # 189 cards (151 core + 38 alt-arts) with complete stats & rules
+│   ├── starter_decks.json      # 146 starter and community and community tournament legal decks
 │   ├── cardmarket_prices.json  # Live pricing data from Cardmarket
 │   ├── sets.json               # Expansion sets manifest
 │   └── rules_manifest.json     # Deck building constraints & tournament rules
 │
-├── assets/                     # 151 high-resolution card artwork renders (.webp)
+├── assets/                     # 189 high-resolution card artwork renders (.webp)
 │   ├── cards/                  # Offline card artwork library
 │   ├── background.webp         # Cyberpunk theme background
 │   ├── logo.png                # Application branding logo
